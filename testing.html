@@ -118,15 +118,95 @@
 	</style>
 	
 
-	<div id="socialmedialist" class="basic">
-		<a href="#" id="facebook" class="media fab fa-facebook-f"></a>
-		<a href="#" id="whatsapp" class="media fab fa-whatsapp"></a>
-		<a href="#" id="instagram" class="media fab fa-instagram"></a>
-		<a href="#" id="xing" class="media fab fa-xing"></a>
-		<a href="#" id="linkedin" class="media fab fa-linkedin-in"></a>
-		<a href="#" id="linktree" class="media fas fa-link"></a>
-		<a href="#" id="mail" class="media far fa-envelope"></a>
+	<div id="socialmedialistdata">
+		<div id="socialmedialist" class="">
+			<a href="#" id="facebook" class="media fab fa-facebook-f"></a>
+			<a href="#" id="whatsapp" class="media fab fa-whatsapp"></a>
+			<a href="#" id="instagram" class="media fab fa-instagram"></a>
+			<a href="#" id="xing" class="media fab fa-xing"></a>
+			<a href="#" id="linkedin" class="media fab fa-linkedin-in"></a>
+			<a href="#" id="linktree" class="media fas fa-link"></a>
+			<a href="#" id="mail" class="media far fa-envelope"></a>
+		</div>
 	</div>
+
+	<code id="export">
+
+	</code>
+
+	<div>
+
+		<ul>
+			<li>
+				<label for="checkfacebook">Facebook
+					<input type="checkbox" name="checkfacebook" id="checkfacebook">
+				</label>
+			</li>
+			<li>
+				<label for="checkwhatsapp">whatsapp
+					<input type="checkbox" name="checkwhatsapp" id="checkwhatsapp">
+				</label>
+			</li>
+			<li>
+				<label for="facebbok">Facebook
+					<input type="checkbox" name="facebook" id="checkfacebook">
+				</label>
+			</li>
+		</ul>
+
+		<button id="test">t</button>
+
+
+
+
+	</div>
+
+	<script>
+
+		function socialmedialist(style, fontcolor, backgroundcolor){
+			var socialmedialist = document.getElementById("socialmedialist");
+			var style;
+			var color;
+			var backgroundcolor;
+
+			// give style class
+			socialmedialist.classList.add(style);
+
+			// give backgroundcolor
+			var elements = document.getElementsByClassName('media');
+			for(var i = 0; i < elements.length; i++){
+				elements[i].style.backgroundColor = backgroundcolor;
+				elements[i].style.color = fontcolor;
+			}
+
+
+
+		}
+
+
+
+
+
+		document.getElementById('test').addEventListener('click', function(){
+
+			var facebook = document.getElementById("facebook");
+			if(document.getElementById('checkfacebook').checked == true){
+				facebook.style.display = 'block';
+			}
+
+			else {
+				facebook.style.display = 'none';
+			}
+
+			socialmedialist('square', '', '');
+
+			var socialmedialistdata = document.getElementById('socialmedialist').innerHTML;
+			var exportdata = document.getElementById('export').innerHTML = socialmedialistdata;
+
+
+		});
+
+	</script>
 	
 </body>
 </html>
