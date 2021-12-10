@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Unbenanntes Dokument</title>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+
+<body>
+	
+	<style>
+		#socialmedialist {
+			display: flex;
+			justify-content: center;
+			text-align: center;
+			background: #2e2e2e;
+			padding: 10px;
+		}
+		
+		.media {
+			padding: 10px;
+			font-size: 14px;
+			height: 12px;
+			width: 12px;
+			border-radius: 10px;
+			margin: 0 5px;
+			background: #fff;
+			color: black;
+			text-decoration: none;
+			text-align: center;
+			vertical-align: middle;
+		}
+		
+		.transpartent > .media {
+			background: transparent !important;;
+			color: #fff !important;
+			border: 1px solid #ffffff30 !important;
+		}
+		
+		/*ROUND*/
+		.round >  .media {
+			border-radius: 100%;
+			background: grey;
+			color: #fff;
+			transition: border-radius .3s ease-in-out;
+		}
+		
+		.round > .media:hover {
+			border-radius: 10%;
+		}
+		
+		/*square*/
+		.square > .media {
+			border-radius: 0;
+			background: grey;
+			color: #fff;
+			transition: padding .2s;
+		}
+		
+		.square > .media:hover {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		
+		.minimal > .media {
+			border: none;
+			color: #fff;
+			background: none;
+			padding-bottom: 10px;
+			border-bottom: 1px solid transparent;
+			border-radius: 0;
+			transition: .2s ease-in-out;
+		}
+		
+		.minimal > .media:hover {
+			border-bottom: 1px solid #fff;
+			transform:translate(0px,-4px);
+		}
+		
+		.basic > .media {
+			background: #fff;
+			color: #323232;
+			border-radius: 2px;
+		}
+		
+		.basic > #whatsapp:hover {
+			color: #fff;
+		}
+		
+		.basic > #facebook:hover {
+			color: #fff;
+		}
+		
+		.basic > #instagram:hover {
+			color: #fff;
+		}
+		
+		.basic > #xing:hover {
+			color: #fff;
+		}
+		
+		.basic > #linkedin:hover {
+			color: #fff;
+		}
+		
+		.basic > #linktree:hover {
+			color: #fff;
+			background: #0273A6;
+		}
+		
+		.basic > #mail:hover {
+			color: #fff;
+			background: #0273A6;
+		}
+		
+		
+		
+	</style>
+	
+
+	<div id="socialmedialist" class="basic">
+		<a href="#" id="facebook" class="media fab fa-facebook-f"></a>
+		<a href="#" id="whatsapp" class="media fab fa-whatsapp"></a>
+		<a href="#" id="instagram" class="media fab fa-instagram"></a>
+		<a href="#" id="xing" class="media fab fa-xing"></a>
+		<a href="#" id="linkedin" class="media fab fa-linkedin-in"></a>
+		<a href="#" id="linktree" class="media fas fa-link"></a>
+		<a href="#" id="mail" class="media far fa-envelope"></a>
+	</div>
+	
+</body>
+</html>
