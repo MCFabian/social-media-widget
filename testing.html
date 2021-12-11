@@ -9,6 +9,35 @@
 <body>
 	
 	<style>
+
+		.box {
+			border: 1px solid #949494;
+			padding: 20px;
+			display: flex;
+			flex-direction: column;
+		}
+
+		input {
+			padding: 10px;
+			border: 1px solid #949494;
+			background-color: #fff;
+			box-shadow: none;
+		}
+
+		label {
+			font-family: Arial, Helvetica, sans-serif;
+			margin: 10px 0;
+		}
+
+		#export {
+			width: 100%;
+			border: 1px solid #949494;
+			background-color: #fff;
+		}
+
+	</style>
+	
+	<style>
 		#socialmedialist {
 			display: flex;
 			justify-content: center;
@@ -130,9 +159,7 @@
 		</div>
 	</div>
 
-	<code id="export">
 
-	</code>
 
 	<div>
 
@@ -143,18 +170,40 @@
 				</label>
 			</li>
 			<li>
-				<label for="checkwhatsapp">whatsapp
+				<label for="checkwhatsapp">WhatsApp
 					<input type="checkbox" name="checkwhatsapp" id="checkwhatsapp">
 				</label>
 			</li>
 			<li>
-				<label for="facebbok">Facebook
-					<input type="checkbox" name="facebook" id="checkfacebook">
+				<label for="checkinstagram">Instgram
+					<input type="checkbox" name="checkinstagram" id="checkinstagram">
 				</label>
 			</li>
 		</ul>
 
-		<button id="test">t</button>
+		<div class="box">
+			<label for="style">Style festlegen
+				<input required type="text" id='style'>
+			</label>
+
+	
+			<label for="color">Farbe festlegen
+				<input type="text" id='color'>
+			</label>
+
+	
+			<label for="background">Hintergrundfarbe festlegen
+				<input type="text" id='background'>
+			</label>
+
+			<button id="test">Übernehmen</button>
+			<hr>
+			<label for="export">Exportcode
+				<textarea id="export">
+
+				</textarea>
+			</label>
+		</div>
 
 
 
@@ -170,6 +219,7 @@
 			var backgroundcolor;
 
 			// give style class
+			socialmedialist.removeAttribute('class');
 			socialmedialist.classList.add(style);
 
 			// give backgroundcolor
@@ -183,13 +233,12 @@
 
 		}
 
-
-
-
-
 		document.getElementById('test').addEventListener('click', function(){
 
+			// check for icons
 			var facebook = document.getElementById("facebook");
+			var whatsapp = document.getElementById("whatsapp");
+			var instagram = document.getElementById("instagram");
 			if(document.getElementById('checkfacebook').checked == true){
 				facebook.style.display = 'block';
 			}
@@ -198,11 +247,33 @@
 				facebook.style.display = 'none';
 			}
 
-			socialmedialist('square', '', '');
+			if(document.getElementById('checkwhatsapp').checked == true){
+				whatsapp.style.display = 'block';
+			}
 
-			var socialmedialistdata = document.getElementById('socialmedialist').innerHTML;
+			else {
+				whatsapp.style.display = 'none';
+			}
+
+			if(document.getElementById('checkinstagram').checked == true){
+				instagram.style.display = 'block';
+			}
+
+			else {
+				instagram.style.display = 'none';
+			}
+
+			
+			// style und farben eintragen
+			var style = document.getElementById('style').value;
+			var ifontcolor = document.getElementById('color').value;
+			var ibackgroundcolor = document.getElementById('background').value;
+
+			socialmedialist(style, ifontcolor, ibackgroundcolor);
+
+			// Code ausgeben
+			var socialmedialistdata = document.getElementById('socialmedialistdata').innerHTML;
 			var exportdata = document.getElementById('export').innerHTML = socialmedialistdata;
-
 
 		});
 
