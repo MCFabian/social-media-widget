@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>Unbenanntes Dokument</title>
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
 </head>
 
 <body>
@@ -17,16 +18,25 @@
 			flex-direction: column;
 		}
 
-		input {
+		input, select {
 			padding: 10px;
 			border: 1px solid #949494;
 			background-color: #fff;
 			box-shadow: none;
+			display: block;
+		}
+		
+		input:focus {
+			border-color: #3BADFF;
 		}
 
 		label {
 			font-family: Arial, Helvetica, sans-serif;
 			margin: 10px 0;
+		}
+		
+		ul {
+			list-style: none;
 		}
 
 		#export {
@@ -164,9 +174,11 @@
 	<div>
 
 		<ul>
+			<strong>Kanäle auswählen</strong>
 			<li>
 				<label for="checkfacebook">Facebook
 					<input type="checkbox" name="checkfacebook" id="checkfacebook">
+					<input placeholder="Link eingeben - Standard: Facebook" type="text" name="linkfacebook" id="linkfacebook">
 				</label>
 			</li>
 			<li>
@@ -179,21 +191,47 @@
 					<input type="checkbox" name="checkinstagram" id="checkinstagram">
 				</label>
 			</li>
+			<li>
+				<label for="checkxing">Xing
+					<input type="checkbox" name="checkxing" id="checkxing">
+				</label>
+			</li>
+			<li>
+				<label for="checklinkedin">LinkedIn
+					<input type="checkbox" name="checklinkedin" id="checklinkedin">
+				</label>
+			</li>
+			<li>
+				<label for="checklinktree">LinkTree
+					<input type="checkbox" name="checklinktree" id="checklinktree">
+				</label>
+			</li>
+			<li>
+				<label for="checkmail">Mail
+					<input type="checkbox" name="checkmail" id="checkmail">
+				</label>
+			</li>
 		</ul>
 
 		<div class="box">
 			<label for="style">Style festlegen
-				<input required type="text" id='style'>
+				<select id="style">
+					<option value="basic">Basic</option>
+					<option value="round">Rund</option>
+					<option value="square">Quadrat</option>
+					<option value="minimal">Minimal</option>
+				</select>
+				
 			</label>
 
 	
 			<label for="color">Farbe festlegen
-				<input type="text" id='color'>
+				<input type="text" id="color">
 			</label>
 
 	
 			<label for="background">Hintergrundfarbe festlegen
-				<input type="text" id='background'>
+				<input type="text" id="background">
 			</label>
 
 			<button id="test">Übernehmen</button>
@@ -235,10 +273,27 @@
 
 		document.getElementById('test').addEventListener('click', function(){
 
-			// check for icons
+			// Auswahl überprüfen
+			// Facebook
 			var facebook = document.getElementById("facebook");
+			var linkfacebook = document.getElementById("linkfacebook").value;
+			alert(linkfacebook);
+			
+			 if(linkfacebook.length == 0){
+				facebook.setAttribute('href', "https://de-de.facebook.com/");
+			}
+			
+			 else {
+				facebook.setAttribute('href', linkfacebook);
+			}
+														 
+		
 			var whatsapp = document.getElementById("whatsapp");
 			var instagram = document.getElementById("instagram");
+			var xing = document.getElementById("xing");
+			var linkedin = document.getElementById("linkedin");
+			var linktree = document.getElementById("linktree");
+			var mail = document.getElementById("mail");
 			if(document.getElementById('checkfacebook').checked == true){
 				facebook.style.display = 'block';
 			}
@@ -262,10 +317,43 @@
 			else {
 				instagram.style.display = 'none';
 			}
+			
+			if(document.getElementById('checkxing').checked == true){
+				xing.style.display = 'block';
+			}
+
+			else {
+				xing.style.display = 'none';
+			}
+			
+			if(document.getElementById('checklinkedin').checked == true){
+				linkedin.style.display = 'block';
+			}
+
+			else {
+				linkedin.style.display = 'none';
+			}
+			
+			if(document.getElementById('checklinktree').checked == true){
+				linktree.style.display = 'block';
+			}
+
+			else {
+				linktree.style.display = 'none';
+			}
+		
+			if(document.getElementById('checkmail').checked == true){
+				mail.style.display = 'block';
+			}
+
+			else {
+				mail.style.display = 'none';
+			}
 
 			
 			// style und farben eintragen
 			var style = document.getElementById('style').value;
+			alert(style);
 			var ifontcolor = document.getElementById('color').value;
 			var ibackgroundcolor = document.getElementById('background').value;
 
