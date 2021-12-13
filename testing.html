@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Unbenanntes Dokument</title>
+<title>Social Media Generator</title>
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
 </head>
@@ -11,6 +11,11 @@
 	
 	<style>
 
+		p.hint {
+			padding: 5px;
+			border-left: 2px solid #949494;
+		}
+		
 		.box {
 			border: 1px solid #949494;
 			padding: 20px;
@@ -26,13 +31,21 @@
 			display: block;
 		}
 		
-		input:focus {
+		input:focus, input:hover {
 			border-color: #3BADFF;
 		}
 
-		label {
+		label, h1, h2, p {
 			font-family: Arial, Helvetica, sans-serif;
 			margin: 10px 0;
+		}
+		
+		p {
+			font-weight: 400;
+		}
+		
+		label {
+			font-weight: 600;
 		}
 		
 		ul {
@@ -43,6 +56,23 @@
 			width: 100%;
 			border: 1px solid #949494;
 			background-color: #fff;
+		}
+		
+		button {
+			padding: 15px;
+			font-weight: 600;
+			border: 1px solid #3BADFF;
+			color: #fff;
+			background: #3BADFF;
+			cursor: pointer;
+		}
+		
+		button, input {
+			border-radius: 3px;
+		}
+		
+		button:hover {
+			border-color: #2B89BF;
 		}
 
 	</style>
@@ -156,7 +186,7 @@
 		
 	</style>
 	
-
+	
 	<div id="socialmedialistdata">
 		<div id="socialmedialist" class="">
 			<a href="#" id="facebook" class="media fab fa-facebook-f"></a>
@@ -174,7 +204,8 @@
 	<div>
 
 		<ul>
-			<strong>Kanäle auswählen</strong>
+			<h2>Kanäle auswählen</h2>
+			<p class="hint">Bitte die zutreffenden Kanäle auswählen. Wird keine verlinkung angebgeben, so wird auf die Hersteller-Seite verlinkt.</p>
 			<li>
 				<label for="checkfacebook">Facebook
 					<input type="checkbox" name="checkfacebook" id="checkfacebook">
@@ -184,11 +215,13 @@
 			<li>
 				<label for="checkwhatsapp">WhatsApp
 					<input type="checkbox" name="checkwhatsapp" id="checkwhatsapp">
+					<input placeholder="Nummer eingeben" type="text" name="linkwhatsapp" id="linkwhatsapp">
 				</label>
 			</li>
 			<li>
 				<label for="checkinstagram">Instgram
 					<input type="checkbox" name="checkinstagram" id="checkinstagram">
+					<input placeholder="Link eingeben" type="text" name="linkinstagram" id="linkinstagram">
 				</label>
 			</li>
 			<li>
@@ -215,6 +248,7 @@
 
 		<div class="box">
 			<label for="style">Style festlegen
+				<p class="hint">Wählen Sie einen der vorgebenen Stile für das Social-Media-Widget.</p>
 				<select id="style">
 					<option value="basic">Basic</option>
 					<option value="round">Rund</option>
@@ -226,12 +260,23 @@
 
 	
 			<label for="color">Farbe festlegen
+				<p class="hint">Legen Sie eine Farbe für die Icons fest, wird keine Farbe festgelegt, so greifen die Standard-Farben. Zugelassene Formate sind Hex, RGB-A, CSS-Farbworte, HSL.</p>
 				<input type="text" id="color">
 			</label>
 
 	
 			<label for="background">Hintergrundfarbe festlegen
+				<p class="hint">Legen Sie eine Hintergrundfarbe für die Iconcontainer fest, wird keine Farbe festgelegt, so greifen die Standard-Farben. Zugelassene Formate sind Hex, RGB-A, CSS-Farbworte, HSL.</p>
 				<input type="text" id="background">
+			</label>
+			
+			<label for="alignment">Zentrierung
+				<p class="hint">Wählen Sie eine Anordnung der Social-Media-Icons.</p>
+				<select id="alignment">
+					<option value="left">Links</option>
+					<option value="center">Mittig</option>
+					<option value="right">Rechts</option>
+				</select>
 			</label>
 
 			<button id="test">Übernehmen</button>
@@ -250,15 +295,18 @@
 
 	<script>
 
-		function socialmedialist(style, fontcolor, backgroundcolor){
+		function socialmedialist(style, fontcolor, backgroundcolor, alignment){
 			var socialmedialist = document.getElementById("socialmedialist");
 			var style;
 			var color;
 			var backgroundcolor;
+			var alignment;
 
 			// give style class
 			socialmedialist.removeAttribute('class');
 			socialmedialist.classList.add(style);
+			
+			socialmedialist.style.justifyContent = alignment;
 
 			// give backgroundcolor
 			var elements = document.getElementsByClassName('media');
@@ -277,9 +325,8 @@
 			// Facebook
 			var facebook = document.getElementById("facebook");
 			var linkfacebook = document.getElementById("linkfacebook").value;
-			alert(linkfacebook);
 			
-			 if(linkfacebook.length == 0){
+			if(linkfacebook.length == 0){
 				facebook.setAttribute('href', "https://de-de.facebook.com/");
 			}
 			
@@ -287,8 +334,21 @@
 				facebook.setAttribute('href', linkfacebook);
 			}
 														 
-		
+			// whatsapp
 			var whatsapp = document.getElementById("whatsapp");
+			var linkwhatsapp = document.getElementById("linkwhatsapp").value;
+			var linkwhatapp = " https://wa.me/" +linkwhatsapp;
+						
+			
+			if(linkwhatsapp.length == 0){
+				whatsapp.setAttribute('href', "https://whatsapp.com/");
+			}
+			
+			 else {
+				whatsapp.setAttribute('href', linkwhatapp);
+			}
+			
+			// instagram
 			var instagram = document.getElementById("instagram");
 			var xing = document.getElementById("xing");
 			var linkedin = document.getElementById("linkedin");
@@ -353,11 +413,12 @@
 			
 			// style und farben eintragen
 			var style = document.getElementById('style').value;
-			alert(style);
+			//alert(style);
 			var ifontcolor = document.getElementById('color').value;
 			var ibackgroundcolor = document.getElementById('background').value;
+			var alignment = document.getElementById('alignment').value;
 
-			socialmedialist(style, ifontcolor, ibackgroundcolor);
+			socialmedialist(style, ifontcolor, ibackgroundcolor, alignment);
 
 			// Code ausgeben
 			var socialmedialistdata = document.getElementById('socialmedialistdata').innerHTML;
