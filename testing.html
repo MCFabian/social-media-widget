@@ -56,6 +56,7 @@
 			width: 100%;
 			border: 1px solid #949494;
 			background-color: #fff;
+			min-height: 400px;
 		}
 		
 		button {
@@ -77,7 +78,7 @@
 
 	</style>
 	
-	<style>
+	<style id="styledata">
 		#socialmedialist {
 			display: flex;
 			justify-content: center;
@@ -188,10 +189,14 @@
 	
 	
 	<div id="socialmedialistdata">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 		<div id="socialmedialist" class="">
 			<a href="#" id="facebook" class="media fab fa-facebook-f"></a>
 			<a href="#" id="whatsapp" class="media fab fa-whatsapp"></a>
 			<a href="#" id="instagram" class="media fab fa-instagram"></a>
+			<a href="#" id="youtube" class="media fab fa-youtube"></a>
+			<a href="#" id="twitter" class="media fab fa-twitter"></a>
+			<a href="#" id="tiktok" class="media fab fa-tiktok"></a>
 			<a href="#" id="xing" class="media fab fa-xing"></a>
 			<a href="#" id="linkedin" class="media fab fa-linkedin-in"></a>
 			<a href="#" id="linktree" class="media fas fa-link"></a>
@@ -202,7 +207,6 @@
 
 
 	<div>
-
 		<ul>
 			<h2>Kanäle auswählen</h2>
 			<p class="hint">Bitte die zutreffenden Kanäle auswählen. Wird keine verlinkung angebgeben, so wird auf die Hersteller-Seite verlinkt.</p>
@@ -225,23 +229,45 @@
 				</label>
 			</li>
 			<li>
+				<label for="checkyoutube">YouTube
+					<input type="checkbox" name="checkyoutube" id="checkyoutube">
+					<input placeholder="Link eingeben" type="text" name="linkyoutube" id="linkyoutube">
+				</label>
+			</li>
+			<li>
+				<label for="checktwitter">Twitter
+					<input type="checkbox" name="checktwitter" id="checktwitter">
+					<input placeholder="Link eingeben" type="text" name="linktwitter" id="linktwitter">
+				</label>
+			</li>
+			<li>
+				<label for="checktiktok">TikTok
+					<input type="checkbox" name="checktiktok" id="checktiktok">
+					<input placeholder="Link eingeben" type="text" name="linktiktok" id="linktiktok">
+				</label>
+			</li>
+			<li>
 				<label for="checkxing">Xing
 					<input type="checkbox" name="checkxing" id="checkxing">
+					<input placeholder="Link eingeben" type="text" name="linkxing" id="linkxing">
 				</label>
 			</li>
 			<li>
 				<label for="checklinkedin">LinkedIn
 					<input type="checkbox" name="checklinkedin" id="checklinkedin">
+					<input placeholder="Link eingeben" type="text" name="linklinkedin" id="linklinkedin">
 				</label>
 			</li>
 			<li>
 				<label for="checklinktree">LinkTree
 					<input type="checkbox" name="checklinktree" id="checklinktree">
+					<input placeholder="Link eingeben" type="text" name="linklinktree" id="linklinktree">
 				</label>
 			</li>
 			<li>
 				<label for="checkmail">Mail
 					<input type="checkbox" name="checkmail" id="checkmail">
+					<input placeholder="E-Mail eingeben" type="email" name="linkmail" id="linkmail">
 				</label>
 			</li>
 		</ul>
@@ -286,6 +312,7 @@
 
 				</textarea>
 			</label>
+			<button id="copybutton">Kopieren</button>
 		</div>
 
 
@@ -350,10 +377,84 @@
 			
 			// instagram
 			var instagram = document.getElementById("instagram");
+			var linkinstagram = document.getElementById("linkinstagram").value;
+						
+			
+			if(linkinstagram.length == 0){
+				instagram.setAttribute('href', "https://instagram.com/");
+			}
+			
+			 else {
+				instagram.setAttribute('href', linkinstagram);
+			}
+			
+			//YouTube
+			var youtube = document.getElementById("youtube");
+			var linkyoutube = document.getElementById("linkyoutube").value;
+			
+			if(linkyoutube.length == 0){
+				youtube.setAttribute('href', "https://youtube.com/");
+			}
+			
+			 else {
+				youtube.setAttribute('href', linkyoutube);
+			}
+			
+			//xing
 			var xing = document.getElementById("xing");
+			var linkxing = document.getElementById("linkxing").value;
+						
+			
+			if(linkxing.length == 0){
+				xing.setAttribute('href', "https://xing.com/");
+			}
+			
+			 else {
+				xing.setAttribute('href', linkxing);
+			}
+			
+			//linkedin
 			var linkedin = document.getElementById("linkedin");
+			var linklinkedin = document.getElementById("linklinkedin").value;
+						
+			
+			if(linklinkedin.length == 0){
+				linkedin.setAttribute('href', "https://linkedin.com/");
+			}
+			
+			 else {
+				linkedin.setAttribute('href', linklinkedin);
+			}
+			
+			//linktree
 			var linktree = document.getElementById("linktree");
+			var linklinktree = document.getElementById("linklinktree").value;
+						
+			
+			if(linklinktree.length == 0){
+				linktree.setAttribute('href', "https://linktr.ee/");
+			}
+			
+			 else {
+				linktree.setAttribute('href', linklinktree);
+			}
+			
+			//mail
 			var mail = document.getElementById("mail");
+			var linkmail = document.getElementById("linkmail").value;
+			linktomail = 'mailto:' +linkmail;
+						
+			
+			if(linkmail.length == 0){
+				mail.setAttribute('href', "https://www.google.de");
+			}
+			
+			 else {
+				mail.setAttribute('href', linktomail);
+			}
+			
+			
+			//check for visibility
 			if(document.getElementById('checkfacebook').checked == true){
 				facebook.style.display = 'block';
 			}
@@ -376,6 +477,14 @@
 
 			else {
 				instagram.style.display = 'none';
+			}
+			
+			if(document.getElementById('checkyoutube').checked == true){
+				youtube.style.display = 'block';
+			}
+
+			else {
+				youtube.style.display = 'none';
 			}
 			
 			if(document.getElementById('checkxing').checked == true){
@@ -422,9 +531,19 @@
 
 			// Code ausgeben
 			var socialmedialistdata = document.getElementById('socialmedialistdata').innerHTML;
-			var exportdata = document.getElementById('export').innerHTML = socialmedialistdata;
+			var styledata = '<style>' +document.getElementById("styledata").innerHTML +'</style>';
+			var exportdata = document.getElementById('export');
+			exportdata.innerHTML = styledata +socialmedialistdata;
 
 		});
+		
+		document.getElementById("copybutton").addEventListener("click", function(){
+			var copyText = document.getElementById("export");
+			  /* Select the text field */
+			copyText.select();
+			copyText.setSelectionRange(0, 99999); /* For mobile devices */
+			navigator.clipboard.writeText(copyText.innerHTML);
+		})
 
 	</script>
 	
