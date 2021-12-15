@@ -42,14 +42,16 @@
 		}
 
 		.success {
-			background: green;
+			background: rgba(40, 163, 71, 0.9);
 			color: #fff;
+			border: 1px solid #3faf6c;
 			animation: slidein 4s;
 		}
 
 		.error {
-			background: red;
+			background: #882f3e;
 			color: #fff;
+			border: 1px solid #882f3e;
 			animation: slidein 4s;
 		}
 
@@ -117,7 +119,7 @@
 
 		#export {
 			width: 100%;
-			border: 1px solid #949494;
+			border: 1px solid #d6d6d6;
 			background-color: #fff;
 			min-height: 400px;
 		}
@@ -162,6 +164,12 @@
 			margin: auto;
 			position: fixed;
 			z-index: 3;
+			font-weight: 600;
+		}
+
+		#socialmedialistdata {
+			border: 1px solid #d6d6d6;
+			background: #f3f3f3;
 		}
 
 	</style>
@@ -171,7 +179,6 @@
 			display: flex;
 			justify-content: center;
 			text-align: center;
-			background: #2e2e2e;
 			padding: 10px;
 		}
 		
@@ -183,7 +190,7 @@
 			border-radius: 10px;
 			margin: 0 5px;
 			background: #fff;
-			color: black;
+			color: rgb(34, 34, 34);
 			text-decoration: none;
 			text-align: center;
 			vertical-align: middle;
@@ -469,7 +476,8 @@
 			<button id="test">Übernehmen</button>
 		</div>
 		<div>
-			<code id="socialmedialistdata">
+			<label for="socialmediadata">Vorschau</label>
+			<div id="socialmedialistdata">
 				<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 				<div id="socialmedialist" class="basic">
 					<a target="_blank" href="#" id="facebook" class="media fab fa-facebook-f"></a>
@@ -484,12 +492,9 @@
 					<a target="_blank" href="#" id="mail" class="media far fa-envelope"></a>
 					<a target="_blank" href="#" id="phone" class="media fas fa-phone"></a>
 				</div>
-			</code>
-			<label for="export">Exportcode
-				<textarea id="export">
-	
-				</textarea>
-			</label>
+			</div>
+			<label for="export">Exportcode</label>
+			<textarea id="export"></textarea>
 			<button id="copybutton">Kopieren</button>
 		</div>
 	</div>
@@ -769,10 +774,25 @@
 			var exportdata = document.getElementById('export');
 			exportdata.innerHTML = styledata +socialmedialistdata;
 
-			notification('success', 'Der Code wurde erfolgreich erstellt.');
+
+			var inputElements = document.getElementsByTagName("input");
+			for (var i = 0; i < inputElements.length; i++){
+				if (inputElements[i].type == "checkbox"){
+					if (inputElements[i].checked){
+						notification('success', 'Der Code wurde erfolgreich erstellt.');
+						return true;
+					}
+
+					else{
+						notification('error', 'Sie haben keine Auswahl für getroffen. Es konnte kein Code erstellt werden.');
+						return false;
+				}
+
+			}
+		}
+
 
 			
-
 		});
 		
 		document.getElementById("copybutton").addEventListener("click", function(){
@@ -785,7 +805,6 @@
 
 		function notification(type, text){
 			var notification = document.getElementById("notification");
-			notification.removeAttribute('class');
 			
 			if(type == 'error'){
 				notification.classList.add("error");
@@ -800,7 +819,12 @@
 			}
 
 			notification.innerHTML = text;
+			
+			setTimeout(function(){
+				notification.removeAttribute('class')
+			}, 4000);
 
+			
 		}
 
 	</script>
