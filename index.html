@@ -254,14 +254,14 @@
 		}
 
 		.wrapper {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			grid-template-rows: 1fr 1fr;
-    		gap: 20px 20px;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			padding: 25px; 
 		}
 
 		.wrapper > div {
-			
+			flex: 1;
 		}
 
 		#notification {
