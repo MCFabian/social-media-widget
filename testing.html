@@ -146,6 +146,57 @@
 			border-bottom: 1px solid #fff;
 			transform:translate(0px,-4px);
 		}
+
+		.darker > .media {
+			border: none;
+			color: #fff;
+			background: none;
+			padding-bottom: 10px;
+			transition: .2s ease-in-out;
+			position: relative;
+			border-radius: 0;
+			z-index: 2;
+		}
+
+		.darker >.media::after {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: "";
+			background: rgba(0, 0, 0, 0.0);
+			z-index: 1;
+			transition: .2s ease-in;
+		}
+
+		.darker > .media:hover::after {
+			background: rgba(0, 0, 0, 0.25);
+		}
+
+		.move > .media {
+			position: relative;
+			background: none;
+			border: 1px solid #fff;
+			border-radius: 0;
+			z-index: 1;
+		}
+
+		.move > .media::after {
+			width: 0;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: "";
+			background: #fff;
+			transition: .2s ease-in-out;
+			z-index: -1;
+		}
+
+		.move > .media:hover::after {
+			width: 100%;
+		}
 		
 		.basic > .media {
 			background: #fff;
@@ -155,22 +206,42 @@
 		
 		.basic > #whatsapp:hover {
 			color: #fff;
+			background: #25D366;
 		}
 		
 		.basic > #facebook:hover {
 			color: #fff;
+			background: #1877f2;
 		}
 		
 		.basic > #instagram:hover {
 			color: #fff;
+			background: linear-gradient(45deg,#9f36b7, #ec4354);
+		}
+
+		.basic > #youtube:hover {
+			color: #fff;
+			background: #ff0000;
+		}
+
+		.basic > #twitter:hover {
+			color: #fff;
+			background: #1d9bf0;
+		}
+
+		.basic > #tiktok:hover {
+			color: #fff;
+			background: #fe2c55;
 		}
 		
 		.basic > #xing:hover {
 			color: #fff;
+			background: #1A7576;
 		}
 		
 		.basic > #linkedin:hover {
 			color: #fff;
+			background: #0073b1;
 		}
 		
 		.basic > #linktree:hover {
@@ -182,15 +253,20 @@
 			color: #fff;
 			background: #0273A6;
 		}
+
+		.basic > #phone:hover {
+			color: #fff;
+			background: #0273A6;
+		}
 		
 		
 		
 	</style>
 	
 	
-	<div id="socialmedialistdata">
+	<code id="socialmedialistdata">
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-		<div id="socialmedialist" class="">
+		<div id="socialmedialist" class="basic">
 			<a target="_blank" href="#" id="facebook" class="media fab fa-facebook-f"></a>
 			<a target="_blank" href="#" id="whatsapp" class="media fab fa-whatsapp"></a>
 			<a target="_blank" href="#" id="instagram" class="media fab fa-instagram"></a>
@@ -203,7 +279,7 @@
 			<a target="_blank" href="#" id="mail" class="media far fa-envelope"></a>
 			<a target="_blank" href="#" id="phone" class="media fas fa-phone"></a>
 		</div>
-	</div>
+	</code>
 
 
 
@@ -287,6 +363,8 @@
 					<option value="round">Rund</option>
 					<option value="square">Quadrat</option>
 					<option value="minimal">Minimal</option>
+					<option value="darker">Verdunkeln</option>
+					<option value="move">Verschieben</option>
 				</select>
 				
 			</label>
@@ -348,8 +426,6 @@
 				elements[i].style.backgroundColor = backgroundcolor;
 				elements[i].style.color = fontcolor;
 			}
-
-
 
 		}
 
@@ -419,7 +495,7 @@
 				twitter.setAttribute('href', linktwitter);
 			}
 
-			//Twitter
+			//TikTok
 			var tiktok = document.getElementById("tiktok");
 			var linktiktok = document.getElementById("linktiktok").value;
 			
