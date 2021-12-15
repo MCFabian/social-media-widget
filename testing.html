@@ -129,6 +129,39 @@
 			text-align: center;
 		}
 
+		#bugreport {
+			padding: 25px;
+			background: #f0f0f0;
+			border-top: 1px solid #d6d6d6;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			text-align: center;
+		}
+
+		#bugreport .button {
+			position: relative;
+			box-sizing: border-box;
+			outline: currentcolor none 0px;
+			border: 0px none;
+			margin: 0px;
+			cursor: pointer;
+			appearance: none;
+			text-decoration: none;
+			font-weight: 700;
+			font-size: 0.875rem;
+			min-width: 64px;
+			padding: 15px 16px;
+			border-radius: 4px;
+			color: rgb(255, 255, 255);
+			background-color: #f47b6b;
+		}
+
+		.button > i {
+			margin: auto 5px auto 0;
+		}
+
 		input[type=text], input[type=email],  select {
 			padding: 10px;
 			border: 1px solid #d6d6d6;
@@ -580,6 +613,9 @@
 			<textarea id="export"></textarea>
 
 		</div>
+	</div>
+	<div id="bugreport">
+		<a href="https://github.com/MCFabian/social-media-widget/issues/new" class="button"><i class="fas fa-bug"></i>Bug melden via GitHub</a>
 	</div>
 
 	<script>
