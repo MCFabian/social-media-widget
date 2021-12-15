@@ -11,33 +11,90 @@
 	
 	<style>
 
-		p.hint {
-			padding: 5px;
-			border-left: 2px solid #949494;
+		@keyframes slidein {
+			from {top: -100%;}
+			
+			25% {top: 30px;}
+
+			75% {top: 30px;}
+
+			to {top: -100%;}
+		}
+
+		html {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		.hint {
+			background: #f3f3f3;
+			color: #727272;
+			border: 1px solid #d6d6d6;
+			border-radius: 3px;
+			font-size: .8rem;
+			font-weight: 400;
+			padding: 10px;
+			width: auto;
+			position: relative;
+			margin: 10px 0;
+			text-align: left;
+			display: block;
+			line-height: 1.4;
+		}
+
+		.success {
+			background: green;
+			color: #fff;
+			animation: slidein 4s;
+		}
+
+		.error {
+			background: red;
+			color: #fff;
+			animation: slidein 4s;
+		}
+
+		hr {
+			background: #d6d6d6;
+			height: 1px;
+			width: 100%;
+			border: none;
+			margin: 10px 0;
 		}
 		
 		.box {
-			border: 1px solid #949494;
-			padding: 20px;
+			border: 1px solid #d6d6d6;
 			display: flex;
+			padding: 15px;
 			flex-direction: column;
 		}
 
-		input, select {
+		input[type=text], input[type=email],  select {
 			padding: 10px;
-			border: 1px solid #949494;
+			border: 1px solid #d6d6d6;
 			background-color: #fff;
 			box-shadow: none;
 			display: block;
+			width: 100%;
+			box-sizing: border-box;
+		}
+
+		input[type=checkbox] {
+			margin-right: 5px;
+			cursor: pointer;
 		}
 		
 		input:focus, input:hover {
 			border-color: #3BADFF;
 		}
 
+		label {
+			display: flex;
+  			align-items: flex-start;
+		}
+
 		label, h1, h2, p {
 			font-family: Arial, Helvetica, sans-serif;
-			margin: 10px 0;
+			margin-bottom: 5px;
 		}
 		
 		p {
@@ -50,6 +107,12 @@
 		
 		ul {
 			list-style: none;
+			padding: 0;
+		}
+
+		li {
+			padding: 15px 0;
+			border-bottom: 1px solid#d6d6d6;
 		}
 
 		#export {
@@ -74,6 +137,31 @@
 		
 		button:hover {
 			border-color: #2B89BF;
+		}
+
+		.wrapper {
+			display: flex;
+			flex-direction: row;
+			padding: 25px; 
+		}
+
+		.wrapper > div {
+			flex: 1;
+		}
+
+		#notification {
+			border-radius: 3px;
+			font-size: .8rem;
+			font-weight: 400;
+			padding: 10px;
+			text-align: left;
+			top: -100%;
+			width: 50%;
+			left: 0;
+			right: 0;
+			margin: auto;
+			position: fixed;
+			z-index: 3;
 		}
 
 	</style>
@@ -260,149 +348,150 @@
 		}
 		
 		
-		
 	</style>
-	
-	
-	<code id="socialmedialistdata">
-		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-		<div id="socialmedialist" class="basic">
-			<a target="_blank" href="#" id="facebook" class="media fab fa-facebook-f"></a>
-			<a target="_blank" href="#" id="whatsapp" class="media fab fa-whatsapp"></a>
-			<a target="_blank" href="#" id="instagram" class="media fab fa-instagram"></a>
-			<a target="_blank" href="#" id="youtube" class="media fab fa-youtube"></a>
-			<a target="_blank" href="#" id="twitter" class="media fab fa-twitter"></a>
-			<a target="_blank" href="#" id="tiktok" class="media fab fa-tiktok"></a>
-			<a target="_blank" href="#" id="xing" class="media fab fa-xing"></a>
-			<a target="_blank" href="#" id="linkedin" class="media fab fa-linkedin-in"></a>
-			<a target="_blank" href="#" id="linktree" class="media fas fa-link"></a>
-			<a target="_blank" href="#" id="mail" class="media far fa-envelope"></a>
-			<a target="_blank" href="#" id="phone" class="media fas fa-phone"></a>
-		</div>
-	</code>
-
-
-
-	<div>
-		<ul>
-			<h2>Kanäle auswählen</h2>
-			<p class="hint">Bitte die zutreffenden Kanäle auswählen. Wird keine verlinkung angebgeben, so wird auf die Hersteller-Seite verlinkt.</p>
-			<li>
-				<label for="checkfacebook">Facebook
-					<input type="checkbox" name="checkfacebook" id="checkfacebook">
+	<div id="notification"></div>
+	<div class="wrapper">
+		<div class="box">
+			<ul>
+				<h2>Kanäle auswählen</h2>
+				<p class="hint">Bitte die zutreffenden Kanäle auswählen. Wird keine verlinkung angebgeben, so wird auf die Hersteller-Seite verlinkt.</p>
+				<li>
+					<label for="checkfacebook">
+						<input type="checkbox" name="checkfacebook" id="checkfacebook">
+						Facebook
+					</label>
 					<input placeholder="Link eingeben - Standard: Facebook" type="text" name="linkfacebook" id="linkfacebook">
-				</label>
-			</li>
-			<li>
-				<label for="checkwhatsapp">WhatsApp
-					<input type="checkbox" name="checkwhatsapp" id="checkwhatsapp">
+				</li>
+				<li>
+					<label for="checkwhatsapp">
+						<input type="checkbox" name="checkwhatsapp" id="checkwhatsapp">
+						WhatsApp
+					</label>
 					<input placeholder="Nummer eingeben" type="text" name="linkwhatsapp" id="linkwhatsapp">
-				</label>
-			</li>
-			<li>
-				<label for="checkinstagram">Instgram
-					<input type="checkbox" name="checkinstagram" id="checkinstagram">
+				</li>
+				<li>
+					<label for="checkinstagram">
+						<input type="checkbox" name="checkinstagram" id="checkinstagram">
+						Instgram
+					</label>
 					<input placeholder="Link eingeben" type="text" name="linkinstagram" id="linkinstagram">
-				</label>
-			</li>
-			<li>
-				<label for="checkyoutube">YouTube
-					<input type="checkbox" name="checkyoutube" id="checkyoutube">
+				</li>
+				<li>
+					<label for="checkyoutube">
+						<input type="checkbox" name="checkyoutube" id="checkyoutube">
+						YouTube
+					</label>
 					<input placeholder="Link eingeben" type="text" name="linkyoutube" id="linkyoutube">
-				</label>
-			</li>
-			<li>
-				<label for="checktwitter">Twitter
-					<input type="checkbox" name="checktwitter" id="checktwitter">
+				</li>
+				<li>
+					<label for="checktwitter">
+						<input type="checkbox" name="checktwitter" id="checktwitter">
+						Twitter
+					</label>
 					<input placeholder="Link eingeben" type="text" name="linktwitter" id="linktwitter">
-				</label>
-			</li>
-			<li>
-				<label for="checktiktok">TikTok
-					<input type="checkbox" name="checktiktok" id="checktiktok">
+				</li>
+				<li>
+					<label for="checktiktok">
+						<input type="checkbox" name="checktiktok" id="checktiktok">
+						TikTok
+					</label>
 					<input placeholder="Link eingeben" type="text" name="linktiktok" id="linktiktok">
-				</label>
-			</li>
-			<li>
-				<label for="checkxing">Xing
-					<input type="checkbox" name="checkxing" id="checkxing">
+				</li>
+				<li>
+					<label for="checkxing">
+						<input type="checkbox" name="checkxing" id="checkxing">
+						Xing
+					</label>
 					<input placeholder="Link eingeben" type="text" name="linkxing" id="linkxing">
-				</label>
-			</li>
-			<li>
-				<label for="checklinkedin">LinkedIn
-					<input type="checkbox" name="checklinkedin" id="checklinkedin">
+				</li>
+				<li>
+					<label for="checklinkedin">
+						<input type="checkbox" name="checklinkedin" id="checklinkedin">
+						LinkedIn
+					</label>
 					<input placeholder="Link eingeben" type="text" name="linklinkedin" id="linklinkedin">
-				</label>
-			</li>
-			<li>
-				<label for="checklinktree">LinkTree
-					<input type="checkbox" name="checklinktree" id="checklinktree">
+				</li>
+				<li>
+					<label for="checklinktree">
+						<input type="checkbox" name="checklinktree" id="checklinktree">
+						LinkTree
+					</label>
 					<input placeholder="Link eingeben" type="text" name="linklinktree" id="linklinktree">
-				</label>
-			</li>
-			<li>
-				<label for="checkmail">Mail
-					<input type="checkbox" name="checkmail" id="checkmail">
+				</li>
+				<li>
+					<label for="checkmail">
+						<input type="checkbox" name="checkmail" id="checkmail">
+						Mail
+					</label>
 					<input placeholder="E-Mail eingeben" type="email" name="linkmail" id="linkmail">
-				</label>
-			</li>
-			<li>
-				<label for="checkphone">Telefon
-					<input type="checkbox" name="checkphone" id="checkphone">
+				</li>
+				<li>
+					<label for="checkphone">
+						<input type="checkbox" name="checkphone" id="checkphone">
+						Telefon
+					</label>
 					<input placeholder="Telefonnr. eingeben" type="text" name="linkphone" id="linkphone">
-				</label>
-			</li>
-		</ul>
+				</li>
+			</ul>
+		</div>
 
 		<div class="box">
-			<label for="style">Style festlegen
-				<p class="hint">Wählen Sie einen der vorgebenen Stile für das Social-Media-Widget.</p>
-				<select id="style">
-					<option value="basic">Basic</option>
-					<option value="round">Rund</option>
-					<option value="square">Quadrat</option>
-					<option value="minimal">Minimal</option>
-					<option value="darker">Verdunkeln</option>
-					<option value="move">Verschieben</option>
-				</select>
-				
-			</label>
-
+			<label for="style">Style festlegen</label>
+			<p class="hint">Wählen Sie einen der vorgebenen Stile für das Social-Media-Widget.</p>
+			<select id="style">
+				<option value="basic">Basic</option>
+				<option value="round">Rund</option>
+				<option value="square">Quadrat</option>
+				<option value="minimal">Minimal</option>
+				<option value="darker">Verdunkeln</option>
+				<option value="move">Verschieben</option>
+			</select>
+			<hr>
 	
-			<label for="color">Farbe festlegen
-				<p class="hint">Legen Sie eine Farbe für die Icons fest, wird keine Farbe festgelegt, so greifen die Standard-Farben. Zugelassene Formate sind Hex, RGB-A, CSS-Farbworte, HSL.</p>
-				<input type="text" id="color">
-			</label>
-
+			<label for="color">Farbe festlegen</label>
+			<p class="hint">Legen Sie eine Farbe für die Icons fest, wird keine Farbe festgelegt, so greifen die Standard-Farben. Zugelassene Formate sind Hex, RGB-A, CSS-Farbworte, HSL.</p>
+			<input placeholder="#fff" type="text" id="color">
+			<hr>
 	
-			<label for="background">Hintergrundfarbe festlegen
-				<p class="hint">Legen Sie eine Hintergrundfarbe für die Iconcontainer fest, wird keine Farbe festgelegt, so greifen die Standard-Farben. Zugelassene Formate sind Hex, RGB-A, CSS-Farbworte, HSL.</p>
-				<input type="text" id="background">
-			</label>
-			
-			<label for="alignment">Zentrierung
-				<p class="hint">Wählen Sie eine Anordnung der Social-Media-Icons.</p>
-				<select id="alignment">
-					<option value="left">Links</option>
-					<option value="center">Mittig</option>
-					<option value="right">Rechts</option>
-				</select>
-			</label>
+			<label for="background">Hintergrundfarbe festlegen</label>
+			<p class="hint">Legen Sie eine Hintergrundfarbe für die Iconcontainer fest, wird keine Farbe festgelegt, so greifen die Standard-Farben. Zugelassene Formate sind Hex, RGB-A, CSS-Farbworte, HSL.</p>
+			<input placeholder="#fff" type="text" id="background">
+			<hr>
+			<label for="alignment">Zentrierung</label>
+			<p class="hint">Wählen Sie eine Anordnung der Social-Media-Icons.</p>
+			<select id="alignment">
+				<option value="left">Links</option>
+				<option value="center">Mittig</option>
+				<option value="right">Rechts</option>
+			</select>
+			<hr>
 
 			<button id="test">Übernehmen</button>
-			<hr>
+		</div>
+		<div>
+			<code id="socialmedialistdata">
+				<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+				<div id="socialmedialist" class="basic">
+					<a target="_blank" href="#" id="facebook" class="media fab fa-facebook-f"></a>
+					<a target="_blank" href="#" id="whatsapp" class="media fab fa-whatsapp"></a>
+					<a target="_blank" href="#" id="instagram" class="media fab fa-instagram"></a>
+					<a target="_blank" href="#" id="youtube" class="media fab fa-youtube"></a>
+					<a target="_blank" href="#" id="twitter" class="media fab fa-twitter"></a>
+					<a target="_blank" href="#" id="tiktok" class="media fab fa-tiktok"></a>
+					<a target="_blank" href="#" id="xing" class="media fab fa-xing"></a>
+					<a target="_blank" href="#" id="linkedin" class="media fab fa-linkedin-in"></a>
+					<a target="_blank" href="#" id="linktree" class="media fas fa-link"></a>
+					<a target="_blank" href="#" id="mail" class="media far fa-envelope"></a>
+					<a target="_blank" href="#" id="phone" class="media fas fa-phone"></a>
+				</div>
+			</code>
 			<label for="export">Exportcode
 				<textarea id="export">
-
+	
 				</textarea>
 			</label>
 			<button id="copybutton">Kopieren</button>
 		</div>
-
-
-
-
 	</div>
 
 	<script>
@@ -667,7 +756,7 @@
 			
 			// style und farben eintragen
 			var style = document.getElementById('style').value;
-			//alert(style);
+
 			var ifontcolor = document.getElementById('color').value;
 			var ibackgroundcolor = document.getElementById('background').value;
 			var alignment = document.getElementById('alignment').value;
@@ -680,6 +769,10 @@
 			var exportdata = document.getElementById('export');
 			exportdata.innerHTML = styledata +socialmedialistdata;
 
+			notification('success', 'Der Code wurde erfolgreich erstellt.');
+
+			
+
 		});
 		
 		document.getElementById("copybutton").addEventListener("click", function(){
@@ -689,6 +782,26 @@
 			copyText.setSelectionRange(0, 99999); /* For mobile devices */
 			navigator.clipboard.writeText(copyText.innerHTML);
 		})
+
+		function notification(type, text){
+			var notification = document.getElementById("notification");
+			notification.removeAttribute('class');
+			
+			if(type == 'error'){
+				notification.classList.add("error");
+			}
+
+			if(type == 'success'){
+				notification.classList.add("success")
+			}
+
+			else {
+				notification.classList.add("hint");
+			}
+
+			notification.innerHTML = text;
+
+		}
 
 	</script>
 	
