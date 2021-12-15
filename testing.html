@@ -4,7 +4,9 @@
 <meta charset="utf-8">
 <title>Social Media Generator</title>
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
@@ -22,7 +24,12 @@
 		}
 
 		html {
-			font-family: Arial, Helvetica, sans-serif;
+			font-family: 'Inria Sans', sans-serif;
+			color: #333333;
+		}
+
+		body {
+			background: #f5f5f5;
 		}
 
 		.hint {
@@ -42,17 +49,19 @@
 		}
 
 		.success {
-			background: rgba(40, 163, 71, 0.9);
-			color: #fff;
-			border: 1px solid #3faf6c;
+			background: #d9f6d4;
+			color: #3cc748;
+			border: 1px solid #bcebb4;
 			animation: slidein 4s;
+			padding: 20px;
 		}
 
 		.error {
-			background: #882f3e;
-			color: #fff;
-			border: 1px solid #882f3e;
+			background-color: #ffe4e4;
+			color: #E94B50;
+			border: 1px solid #f3b7b9;
 			animation: slidein 4s;
+			padding: 20px;
 		}
 
 		hr {
@@ -68,6 +77,10 @@
 			display: flex;
 			padding: 15px;
 			flex-direction: column;
+			border-radius: 10px;
+			margin: 0 30px;
+			/* box-shadow:  11px 11px 22px #ededed, -11px -11px 22px #ffffff; */
+			background: #fff;
 		}
 
 		input[type=text], input[type=email],  select {
@@ -95,26 +108,35 @@
 		}
 
 		label, h1, h2, p {
-			font-family: Arial, Helvetica, sans-serif;
+			font-family: 'Inria Sans', sans-serif;
 			margin-bottom: 5px;
+			color: rgb(61, 70, 80);
+		}
+
+		h2 {
+			font-weight: 400;
+			padding: 0;
 		}
 		
 		p {
 			font-weight: 400;
+			font-size: .8rem;
+			color: rgb(90, 105, 120);
+			margin: 5px 0;
 		}
 		
 		label {
-			font-weight: 600;
+			font-weight: 500;
 		}
 		
 		ul {
 			list-style: none;
-			padding: 0;
-		}
-
-		li {
 			padding: 15px 0;
-			border-bottom: 1px solid#d6d6d6;
+			margin: 0;
+			display: grid; 
+			grid-template-columns: 1fr 1fr; 
+			grid-template-rows: 1fr 1fr ; 
+			gap: 20px 20px; 
 		}
 
 		#export {
@@ -125,13 +147,36 @@
 		}
 		
 		button {
-			padding: 15px;
-			font-weight: 600;
-			border: 1px solid #3BADFF;
-			color: #fff;
-			background: #3BADFF;
+			display: inline-flex;
+			-moz-box-align: center;
+			align-items: center;
+			-moz-box-pack: center;
+			justify-content: center;
+			position: relative;
+			box-sizing: border-box;
+			outline: currentcolor none 0px;
+			border: 0px none;
+			margin: 0px;
 			cursor: pointer;
+			user-select: none;
+			vertical-align: middle;
+			appearance: none;
+			text-decoration: none;
+			font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+			font-weight: 500;
+			font-size: 0.875rem;
+			line-height: 1.75;
+			letter-spacing: 0.02857em;
+			text-transform: uppercase;
+			min-width: 64px;
+			padding: 6px 16px;
+			border-radius: 4px;
+			transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+			color: rgb(255, 255, 255);
+			background-color: rgb(25, 118, 210);
+			box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
 		}
+
 		
 		button, input {
 			border-radius: 3px;
@@ -152,10 +197,9 @@
 		}
 
 		#notification {
-			border-radius: 3px;
-			font-size: .8rem;
+			border-radius: 10px;
+			font-size: .9rem;
 			font-weight: 400;
-			padding: 10px;
 			text-align: left;
 			top: -100%;
 			width: 50%;
@@ -164,7 +208,6 @@
 			margin: auto;
 			position: fixed;
 			z-index: 3;
-			font-weight: 600;
 		}
 
 		#socialmedialistdata {
@@ -359,9 +402,10 @@
 	<div id="notification"></div>
 	<div class="wrapper">
 		<div class="box">
+			<h2>Kanäle auswählen</h2>
+			<p class="">Bitte die zutreffenden Kanäle auswählen. Wird keine verlinkung angebgeben, so wird auf die Hersteller-Seite verlinkt.</p>
+			<hr>
 			<ul>
-				<h2>Kanäle auswählen</h2>
-				<p class="hint">Bitte die zutreffenden Kanäle auswählen. Wird keine verlinkung angebgeben, so wird auf die Hersteller-Seite verlinkt.</p>
 				<li>
 					<label for="checkfacebook">
 						<input class="checkboxes" type="checkbox" name="checkfacebook" id="checkfacebook">
@@ -369,13 +413,7 @@
 					</label>
 					<input placeholder="Link eingeben - Standard: Facebook" type="text" name="linkfacebook" id="linkfacebook">
 				</li>
-				<li>
-					<label for="checkwhatsapp">
-						<input class="checkboxes" type="checkbox" name="checkwhatsapp" id="checkwhatsapp">
-						WhatsApp
-					</label>
-					<input placeholder="Nummer eingeben" type="text" name="linkwhatsapp" id="linkwhatsapp">
-				</li>
+
 				<li>
 					<label for="checkinstagram">
 						<input class="checkboxes" type="checkbox" name="checkinstagram" id="checkinstagram">
@@ -439,12 +477,21 @@
 					</label>
 					<input placeholder="Telefonnr. eingeben" type="text" name="linkphone" id="linkphone">
 				</li>
+				<li>
+					<label for="checkwhatsapp">
+						<input class="checkboxes" type="checkbox" name="checkwhatsapp" id="checkwhatsapp">
+						WhatsApp
+					</label>
+					<p>Bitte die Landesvorwahl "0" durch +49 für Deutschland ersetzen.</p>
+					<input placeholder="Nummer eingeben" type="text" name="linkwhatsapp" id="linkwhatsapp">
+				</li>
 			</ul>
 		</div>
 
 		<div class="box">
+			<h2>Design auswählen</h2>
 			<label for="style">Style festlegen</label>
-			<p class="hint">Wählen Sie einen der vorgebenen Stile für das Social-Media-Widget.</p>
+			<p class="">Wählen Sie einen der vorgebenen Stile für das Social-Media-Widget.</p>
 			<select id="style">
 				<option value="basic">Basic</option>
 				<option value="round">Rund</option>
@@ -456,16 +503,16 @@
 			<hr>
 	
 			<label for="color">Farbe festlegen</label>
-			<p class="hint">Legen Sie eine Farbe für die Icons fest, wird keine Farbe festgelegt, so greifen die Standard-Farben. Zugelassene Formate sind Hex, RGB-A, CSS-Farbworte, HSL.</p>
+			<p class="">Legen Sie eine Farbe für die Icons fest, wird keine Farbe festgelegt, so greifen die Standard-Farben. Zugelassene Formate sind Hex, RGB-A, CSS-Farbworte, HSL.</p>
 			<input placeholder="#fff" type="text" id="color">
 			<hr>
 	
 			<label for="background">Hintergrundfarbe festlegen</label>
-			<p class="hint">Legen Sie eine Hintergrundfarbe für die Iconcontainer fest, wird keine Farbe festgelegt, so greifen die Standard-Farben. Zugelassene Formate sind Hex, RGB-A, CSS-Farbworte, HSL.</p>
+			<p class="">Legen Sie eine Hintergrundfarbe für die Iconcontainer fest, wird keine Farbe festgelegt, so greifen die Standard-Farben. Zugelassene Formate sind Hex, RGB-A, CSS-Farbworte, HSL.</p>
 			<input placeholder="#fff" type="text" id="background">
 			<hr>
 			<label for="alignment">Zentrierung</label>
-			<p class="hint">Wählen Sie eine Anordnung der Social-Media-Icons.</p>
+			<p class="">Wählen Sie eine Anordnung der Social-Media-Icons.</p>
 			<select id="alignment">
 				<option value="left">Links</option>
 				<option value="center">Mittig</option>
@@ -475,27 +522,28 @@
 
 			<button id="test">Übernehmen</button>
 		</div>
-		<div>
-			<label for="socialmediadata">Vorschau</label>
+		<div class="box">
+			<h2>Vorschau</h2>
 			<div id="socialmedialistdata">
 				<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 				<div id="socialmedialist" class="basic">
-					<a target="_blank" href="#" id="facebook" class="media fab fa-facebook-f"></a>
-					<a target="_blank" href="#" id="whatsapp" class="media fab fa-whatsapp"></a>
-					<a target="_blank" href="#" id="instagram" class="media fab fa-instagram"></a>
-					<a target="_blank" href="#" id="youtube" class="media fab fa-youtube"></a>
-					<a target="_blank" href="#" id="twitter" class="media fab fa-twitter"></a>
-					<a target="_blank" href="#" id="tiktok" class="media fab fa-tiktok"></a>
-					<a target="_blank" href="#" id="xing" class="media fab fa-xing"></a>
-					<a target="_blank" href="#" id="linkedin" class="media fab fa-linkedin-in"></a>
-					<a target="_blank" href="#" id="linktree" class="media fas fa-link"></a>
-					<a target="_blank" href="#" id="mail" class="media far fa-envelope"></a>
-					<a target="_blank" href="#" id="phone" class="media fas fa-phone"></a>
+					<a title="Facebook" target="_blank" href="#" id="facebook" class="media fab fa-facebook-f"></a>
+					<a title="WhatsApp" target="_blank" href="#" id="whatsapp" class="media fab fa-whatsapp"></a>
+					<a title="Instgram" target="_blank" href="#" id="instagram" class="media fab fa-instagram"></a>
+					<a title="YoutTube" target="_blank" href="#" id="youtube" class="media fab fa-youtube"></a>
+					<a title="Twitter" target="_blank" href="#" id="twitter" class="media fab fa-twitter"></a>
+					<a title="TikTok" target="_blank" href="#" id="tiktok" class="media fab fa-tiktok"></a>
+					<a title="Xing" target="_blank" href="#" id="xing" class="media fab fa-xing"></a>
+					<a title="LinkedIn" target="_blank" href="#" id="linkedin" class="media fab fa-linkedin-in"></a>
+					<a title="LinkTree" target="_blank" href="#" id="linktree" class="media fas fa-link"></a>
+					<a title="E-Mail" target="_blank" href="#" id="mail" class="media far fa-envelope"></a>
+					<a title="Telefon" target="_blank" href="#" id="phone" class="media fas fa-phone"></a>
 				</div>
 			</div>
+			<hr>
 			<label for="export">Exportcode</label>
 			<textarea id="export"></textarea>
-			<button id="copybutton">Kopieren</button>
+
 		</div>
 	</div>
 
@@ -789,13 +837,13 @@
 			
 		});
 		
-		document.getElementById("copybutton").addEventListener("click", function(){
+/* 		document.getElementById("copybutton").addEventListener("click", function(){
 			var copyText = document.getElementById("export");
-			  /* Select the text field */
+
 			copyText.select();
-			copyText.setSelectionRange(0, 99999); /* For mobile devices */
+			copyText.setSelectionRange(0, 99999); 
 			navigator.clipboard.writeText(copyText.innerHTML);
-		})
+		}) */
 
 		function notification(type, text){
 			var notification = document.getElementById("notification");
