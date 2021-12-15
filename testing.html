@@ -233,7 +233,6 @@
 			border: 0px none;
 			margin: 0px;
 			cursor: pointer;
-
 			appearance: none;
 			text-decoration: none;
 			font-weight: 700;
@@ -308,7 +307,7 @@
 		}
 		
 		.transpartent > .media {
-			background: transparent !important;;
+			background: transparent !important;
 			color: #fff !important;
 			border: 1px solid #ffffff30 !important;
 		}
@@ -408,62 +407,130 @@
 			background: #fff;
 			color: #323232;
 			border-radius: 2px;
+			transition: .2s ease-in;
+		}
+
+		.basic-asside > .media {
+			background: #fff;
+			color: #323232;
+			border-radius: 2px;
+			transition: .2s ease-in;
+			padding: 20px;
+		}
+
+		.basic-asside > .media + .media {
+			padding: 25px;
+			border-top: 1px solid #ddd;
+			margin: 0 !important;
+		}
+
+		.basic-buble-asside > .media {
+			background: #fff;
+			color: #323232;
+			transition: .2s ease-in;
+			border-radius: 100%;
+			box-shadow: -9px -1px 15px -6px rgba(0,0,0,0.41);
+			margin: 5px 0;
+			padding: 20px;
 		}
 		
-		.basic > #whatsapp:hover {
+		.basic > #whatsapp:hover,
+		.basic-asside > #whatsapp:hover,
+		.basic-buble-asside > #whatsapp:hover{
 			color: #fff;
 			background: #25D366;
 		}
 		
-		.basic > #facebook:hover {
+		.basic > #facebook:hover,
+		.basic-asside > #facebook:hover,
+		.basic-buble-asside > #facebook:hover {
 			color: #fff;
 			background: #1877f2;
 		}
 		
-		.basic > #instagram:hover {
+		.basic > #instagram:hover,
+		.basic-asside > #instagram:hover,
+		.basic-buble-asside > #instagram:hover  {
 			color: #fff;
-			background: linear-gradient(45deg,#9f36b7, #ec4354);
+			background: #ec4354;
 		}
 
-		.basic > #youtube:hover {
+		.basic > #youtube:hover,
+		.basic-asside > #youtube:hover,
+		.basic-buble-asside > #youtube:hover {
 			color: #fff;
 			background: #ff0000;
 		}
 
-		.basic > #twitter:hover {
+		.basic > #twitter:hover,
+		.basic-asside > #twitter:hover,
+		.basic-buble-asside > #twitter:hover {
 			color: #fff;
 			background: #1d9bf0;
 		}
 
-		.basic > #tiktok:hover {
+		.basic > #tiktok:hover,
+		.basic-asside > #tiktok:hover,
+		.basic-buble-asside > #tiktok:hover {
 			color: #fff;
 			background: #fe2c55;
 		}
 		
-		.basic > #xing:hover {
+		.basic > #xing:hover,
+		.basic-asside > #xing:hover,
+		.basic-buble-asside > #xing:hover {
 			color: #fff;
 			background: #1A7576;
 		}
 		
-		.basic > #linkedin:hover {
+		.basic > #linkedin:hover,
+		.basic-asside > #linkedin:hover,
+		.basic-buble-asside > #linkedin:hover {
 			color: #fff;
 			background: #0073b1;
 		}
 		
-		.basic > #linktree:hover {
+		.basic > #linktree:hover,
+		.basic-asside > #linktree:hover,
+		.basic-buble-asside > #linktree:hover {
 			color: #fff;
 			background: #0273A6;
 		}
 		
-		.basic > #mail:hover {
+		.basic > #mail:hover,
+		.basic-asside > #mail:hover,
+		.basic-buble-asside > #mail:hover {
 			color: #fff;
 			background: #0273A6;
 		}
 
-		.basic > #phone:hover {
+		.basic > #phone:hover,
+		.basic-asside > #phone:hover,
+		.basic-buble-asside > #phone:hover {
 			color: #fff;
 			background: #0273A6;
 		}
+
+		.basic-asside {
+			position: fixed;
+			display: flex;
+			flex-direction: column;
+			right: 0;
+			top: 250px;
+			padding: 0 !important;
+			box-shadow: -9px -1px 15px -6px rgba(0,0,0,0.41);
+		}
+
+		.basic-buble-asside {
+			position: fixed;
+			display: flex;
+			flex-direction: column;
+			right: 15px;
+			top: 250px;
+			padding: 0 !important;
+		}
+
+
 		
 		
 	</style>
@@ -567,6 +634,8 @@
 				<option value="minimal">Minimal</option>
 				<option value="darker">Verdunkeln</option>
 				<option value="move">Verschieben</option>
+				<option value="basic-asside">Seitlich - Nur SEO Kachel</option>
+				<option value="basic-buble-asside">Seitlich - Nur SEO Kachel - Rund</option>
 			</select>
 			<hr>
 	
@@ -588,7 +657,7 @@
 			</select>
 			<hr>
 
-			<button id="test">Übernehmen</button>
+			<button id="generate">Übernehmen</button>
 		</div>
 		<div class="box">
 			<h2>Vorschau</h2>
@@ -615,7 +684,7 @@
 		</div>
 	</div>
 	<div id="bugreport">
-		<a href="https://github.com/MCFabian/social-media-widget/issues/new" class="button"><i class="fas fa-bug"></i>Bug melden via GitHub</a>
+		<a target="_blank" href="https://github.com/MCFabian/social-media-widget/issues/new" class="button"><i class="fas fa-bug"></i>Bug melden via GitHub</a>
 	</div>
 
 	<script>
@@ -642,7 +711,7 @@
 
 		}
 
-		document.getElementById('test').addEventListener('click', function(){
+		document.getElementById('generate').addEventListener('click', function(){
 
 			// Auswahl überprüfen
 			// Facebook
