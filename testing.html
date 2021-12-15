@@ -189,18 +189,19 @@
 	
 	
 	<div id="socialmedialistdata">
-		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 		<div id="socialmedialist" class="">
-			<a href="#" id="facebook" class="media fab fa-facebook-f"></a>
-			<a href="#" id="whatsapp" class="media fab fa-whatsapp"></a>
-			<a href="#" id="instagram" class="media fab fa-instagram"></a>
-			<a href="#" id="youtube" class="media fab fa-youtube"></a>
-			<a href="#" id="twitter" class="media fab fa-twitter"></a>
-			<a href="#" id="tiktok" class="media fab fa-tiktok"></a>
-			<a href="#" id="xing" class="media fab fa-xing"></a>
-			<a href="#" id="linkedin" class="media fab fa-linkedin-in"></a>
-			<a href="#" id="linktree" class="media fas fa-link"></a>
-			<a href="#" id="mail" class="media far fa-envelope"></a>
+			<a target="_blank" href="#" id="facebook" class="media fab fa-facebook-f"></a>
+			<a target="_blank" href="#" id="whatsapp" class="media fab fa-whatsapp"></a>
+			<a target="_blank" href="#" id="instagram" class="media fab fa-instagram"></a>
+			<a target="_blank" href="#" id="youtube" class="media fab fa-youtube"></a>
+			<a target="_blank" href="#" id="twitter" class="media fab fa-twitter"></a>
+			<a target="_blank" href="#" id="tiktok" class="media fab fa-tiktok"></a>
+			<a target="_blank" href="#" id="xing" class="media fab fa-xing"></a>
+			<a target="_blank" href="#" id="linkedin" class="media fab fa-linkedin-in"></a>
+			<a target="_blank" href="#" id="linktree" class="media fas fa-link"></a>
+			<a target="_blank" href="#" id="mail" class="media far fa-envelope"></a>
+			<a target="_blank" href="#" id="phone" class="media fas fa-phone"></a>
 		</div>
 	</div>
 
@@ -268,6 +269,12 @@
 				<label for="checkmail">Mail
 					<input type="checkbox" name="checkmail" id="checkmail">
 					<input placeholder="E-Mail eingeben" type="email" name="linkmail" id="linkmail">
+				</label>
+			</li>
+			<li>
+				<label for="checkphone">Telefon
+					<input type="checkbox" name="checkphone" id="checkphone">
+					<input placeholder="Telefonnr. eingeben" type="text" name="linkphone" id="linkphone">
 				</label>
 			</li>
 		</ul>
@@ -399,6 +406,30 @@
 			 else {
 				youtube.setAttribute('href', linkyoutube);
 			}
+
+			//Twitter
+			var twitter = document.getElementById("twitter");
+			var linktwitter = document.getElementById("linktwitter").value;
+			
+			if(linktwitter.length == 0){
+				twitter.setAttribute('href', "https://twitter.com/");
+			}
+			
+			 else {
+				twitter.setAttribute('href', linktwitter);
+			}
+
+			//Twitter
+			var tiktok = document.getElementById("tiktok");
+			var linktiktok = document.getElementById("linktiktok").value;
+			
+			if(linktiktok.length == 0){
+				tiktok.setAttribute('href', "https://tiktok.com/");
+			}
+			
+			 else {
+				tiktok.setAttribute('href', linktiktok);
+			}
 			
 			//xing
 			var xing = document.getElementById("xing");
@@ -452,6 +483,20 @@
 			 else {
 				mail.setAttribute('href', linktomail);
 			}
+
+			//phone
+			var phone = document.getElementById("phone");
+			var linkphone = document.getElementById("linkphone").value;
+			linktophone = 'tel:' +linkphone;
+						
+			
+			if(linkphone.length == 0){
+				phone.setAttribute('href', "https://www.google.de");
+			}
+			
+			 else {
+				phone.setAttribute('href', linktophone);
+			}
 			
 			
 			//check for visibility
@@ -486,6 +531,22 @@
 			else {
 				youtube.style.display = 'none';
 			}
+
+			if(document.getElementById('checktwitter').checked == true){
+				twitter.style.display = 'block';
+			}
+
+			else {
+				twitter.style.display = 'none';
+			}
+
+			if(document.getElementById('checktiktok').checked == true){
+				tiktok.style.display = 'block';
+			}
+
+			else {
+				tiktok.style.display = 'none';
+			}
 			
 			if(document.getElementById('checkxing').checked == true){
 				xing.style.display = 'block';
@@ -517,6 +578,14 @@
 
 			else {
 				mail.style.display = 'none';
+			}
+
+			if(document.getElementById('checkphone').checked == true){
+				phone.style.display = 'block';
+			}
+
+			else {
+				phone.style.display = 'none';
 			}
 
 			
