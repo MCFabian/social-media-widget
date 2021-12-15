@@ -364,77 +364,77 @@
 				<p class="hint">Bitte die zutreffenden Kanäle auswählen. Wird keine verlinkung angebgeben, so wird auf die Hersteller-Seite verlinkt.</p>
 				<li>
 					<label for="checkfacebook">
-						<input type="checkbox" name="checkfacebook" id="checkfacebook">
+						<input class="checkboxes" type="checkbox" name="checkfacebook" id="checkfacebook">
 						Facebook
 					</label>
 					<input placeholder="Link eingeben - Standard: Facebook" type="text" name="linkfacebook" id="linkfacebook">
 				</li>
 				<li>
 					<label for="checkwhatsapp">
-						<input type="checkbox" name="checkwhatsapp" id="checkwhatsapp">
+						<input class="checkboxes" type="checkbox" name="checkwhatsapp" id="checkwhatsapp">
 						WhatsApp
 					</label>
 					<input placeholder="Nummer eingeben" type="text" name="linkwhatsapp" id="linkwhatsapp">
 				</li>
 				<li>
 					<label for="checkinstagram">
-						<input type="checkbox" name="checkinstagram" id="checkinstagram">
+						<input class="checkboxes" type="checkbox" name="checkinstagram" id="checkinstagram">
 						Instgram
 					</label>
 					<input placeholder="Link eingeben" type="text" name="linkinstagram" id="linkinstagram">
 				</li>
 				<li>
 					<label for="checkyoutube">
-						<input type="checkbox" name="checkyoutube" id="checkyoutube">
+						<input class="checkboxes" type="checkbox" name="checkyoutube" id="checkyoutube">
 						YouTube
 					</label>
 					<input placeholder="Link eingeben" type="text" name="linkyoutube" id="linkyoutube">
 				</li>
 				<li>
 					<label for="checktwitter">
-						<input type="checkbox" name="checktwitter" id="checktwitter">
+						<input class="checkboxes" type="checkbox" name="checktwitter" id="checktwitter">
 						Twitter
 					</label>
 					<input placeholder="Link eingeben" type="text" name="linktwitter" id="linktwitter">
 				</li>
 				<li>
 					<label for="checktiktok">
-						<input type="checkbox" name="checktiktok" id="checktiktok">
+						<input class="checkboxes" type="checkbox" name="checktiktok" id="checktiktok">
 						TikTok
 					</label>
 					<input placeholder="Link eingeben" type="text" name="linktiktok" id="linktiktok">
 				</li>
 				<li>
 					<label for="checkxing">
-						<input type="checkbox" name="checkxing" id="checkxing">
+						<input class="checkboxes" type="checkbox" name="checkxing" id="checkxing">
 						Xing
 					</label>
 					<input placeholder="Link eingeben" type="text" name="linkxing" id="linkxing">
 				</li>
 				<li>
 					<label for="checklinkedin">
-						<input type="checkbox" name="checklinkedin" id="checklinkedin">
+						<input class="checkboxes" type="checkbox" name="checklinkedin" id="checklinkedin">
 						LinkedIn
 					</label>
 					<input placeholder="Link eingeben" type="text" name="linklinkedin" id="linklinkedin">
 				</li>
 				<li>
 					<label for="checklinktree">
-						<input type="checkbox" name="checklinktree" id="checklinktree">
+						<input class="checkboxes" type="checkbox" name="checklinktree" id="checklinktree">
 						LinkTree
 					</label>
 					<input placeholder="Link eingeben" type="text" name="linklinktree" id="linklinktree">
 				</li>
 				<li>
 					<label for="checkmail">
-						<input type="checkbox" name="checkmail" id="checkmail">
+						<input class="checkboxes" type="checkbox" name="checkmail" id="checkmail">
 						Mail
 					</label>
 					<input placeholder="E-Mail eingeben" type="email" name="linkmail" id="linkmail">
 				</li>
 				<li>
 					<label for="checkphone">
-						<input type="checkbox" name="checkphone" id="checkphone">
+						<input class="checkboxes" type="checkbox" name="checkphone" id="checkphone">
 						Telefon
 					</label>
 					<input placeholder="Telefonnr. eingeben" type="text" name="linkphone" id="linkphone">
@@ -775,21 +775,15 @@
 			exportdata.innerHTML = styledata +socialmedialistdata;
 
 
-			var inputElements = document.getElementsByTagName("input");
-			for (var i = 0; i < inputElements.length; i++){
-				if (inputElements[i].type == "checkbox"){
-					if (inputElements[i].checked){
-						notification('success', 'Der Code wurde erfolgreich erstellt.');
-						return true;
-					}
+			var checked = document.querySelectorAll('input:checked');
 
-					else{
-						notification('error', 'Sie haben keine Auswahl für getroffen. Es konnte kein Code erstellt werden.');
-						return false;
-				}
-
+			if (checked.length === 0) {
+				// there are no checked checkboxes
+				notification('error', 'Es wurde keine Auswahl getroffen. Es konnte keine Code generiert werden.');
+			} else {
+				// there are some checked checkboxes
+				notification('success', 'Der Code für die Auswahl wurde generiert.');
 			}
-		}
 
 
 			
