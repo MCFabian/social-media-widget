@@ -416,13 +416,12 @@
 			color: #323232;
 			border-radius: 2px;
 			transition: .2s ease-in;
-			padding: 20px;
+			padding: 25px;
+			margin: 0 !important;
 		}
 
 		.basic-asside > .media + .media {
-			padding: 25px;
-			border-top: 1px solid #ddd;
-			margin: 0 !important;
+			border-top: 1px solid #ddd;	
 		}
 
 		.basic-buble-asside > .media {
@@ -621,6 +620,14 @@
 					<p>Bitte die Landesvorwahl "0" durch +49 für Deutschland ersetzen.</p>
 					<input placeholder="Nummer eingeben" type="text" name="linkwhatsapp" id="linkwhatsapp">
 				</li>
+				<li>
+					<label for="checkcustom">
+						<input class="checkboxes" type="checkbox" name="checkcustomicon" id="checkcustomicon">
+						Eigenes Icon mit Link
+					</label>
+					<input type="text" id="customiconclass" placeholder="Icon Class eingeben">
+					<input placeholder="Link eingeben" type="text" name="linkcustomicon" id="linkcustomicon">
+				</li>
 			</ul>
 		</div>
 
@@ -676,6 +683,7 @@
 					<a title="LinkTree" target="_blank" href="#" id="linktree" class="media fas fa-link"></a>
 					<a title="E-Mail" target="_blank" href="#" id="mail" class="media far fa-envelope"></a>
 					<a title="Telefon" target="_blank" href="#" id="phone" class="media fas fa-phone"></a>
+					<a title="" target="_blank" href="#" id="customicon" class="media"></a>
 				</div>
 			</div>
 			<hr>
@@ -856,6 +864,30 @@
 			 else {
 				phone.setAttribute('href', linktophone);
 			}
+
+			//customicon
+			var customicon = document.getElementById("customicon");
+			var linkcustomicon = document.getElementById("linkcustomicon").value;
+			var customiconclass = document.getElementById("customiconclass").value;
+			
+			if(customiconclass.length == 0){
+				alert("nichts");
+			}
+
+			else{
+				customicon.removeAttribute('class');
+				customicon.classList.add('media');
+				customicon.classList.add(customiconclass);
+			}
+						
+			
+			if(linkcustomicon.length == 0){
+				customicon.setAttribute('href', "https://www.google.de");
+			}
+			
+			 else {
+				customicon.setAttribute('href', linkcustomicon);
+			}
 			
 			
 			//check for visibility
@@ -945,6 +977,14 @@
 
 			else {
 				phone.style.display = 'none';
+			}
+
+			if(document.getElementById('checkcustomicon').checked == true){
+				customicon.style.display = 'block';
+			}
+
+			else {
+				customicon.style.display = 'none';
 			}
 
 			
