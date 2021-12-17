@@ -295,7 +295,6 @@ button:hover {
     pointer-events: none;
     transition: .2s;
     text-align: center;
-    width: 50%;
 }
 
 .expandme {
