@@ -351,6 +351,7 @@ function notification(type, text){
     
     setTimeout(function(){
         notification.removeAttribute('class')
+        notification.innerHTML = "";
     }, 4000);
 
     
