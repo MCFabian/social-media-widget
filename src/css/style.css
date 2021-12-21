@@ -1,10 +1,7 @@
 @keyframes slidein {
     from {top: -100%;}
-    
     25% {top: 30px;}
-
     75% {top: 30px;}
-
     to {top: -100%;}
 }
 
@@ -64,7 +61,7 @@ hr {
     flex-direction: column;
     border-radius: 10px;
     margin: 0 30px;
-    /* box-shadow:  11px 11px 22px #ededed, -11px -11px 22px #ffffff; */
+    margin-bottom: 25px;
     position: relative;
     background: #fff;
 }
@@ -256,7 +253,7 @@ button:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 25px 25px 150px 25px;
+    padding: 45px 45px 150px 45px;
 }
 
 .wrapper > div {
@@ -288,6 +285,7 @@ button:hover {
 #socialmedialistdata {
     border: 1px solid #d6d6d6;
     background: #f3f3f3;
+    padding: 15px;
 }
 
 .expander {

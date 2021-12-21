@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Social Media Generator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="src/css/style.css">
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +17,6 @@
 			display: flex;
 			justify-content: center;
 			text-align: center;
-			padding: 10px;
 		}
 		
 		.media {
@@ -148,6 +148,7 @@
 			transition: .2s ease-in;
 			padding: 25px;
 			margin: 0 !important;
+			z-index: 2;
 		}
 
 		.basic-asside > .media + .media {
@@ -162,6 +163,7 @@
 			box-shadow: -9px -1px 15px -6px rgba(0,0,0,0.41);
 			margin: 5px 0;
 			padding: 20px;
+			z-index: 2;
 		}
 		
 		.basic > #whatsapp:hover,

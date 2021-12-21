@@ -320,13 +320,10 @@ document.getElementById('generate').addEventListener('click', function(){
     
 });
 
-/* 		document.getElementById("copybutton").addEventListener("click", function(){
-    var copyText = document.getElementById("export");
+    document.getElementById("copybutton").addEventListener("click", function(){
 
-    copyText.select();
-    copyText.setSelectionRange(0, 99999); 
-    navigator.clipboard.writeText(copyText.innerHTML);
-}) */
+      
+})
 
 function notification(type, text){
     var notification = document.getElementById("notification");
