@@ -320,10 +320,10 @@ document.getElementById('generate').addEventListener('click', function(){
     
 });
 
-    document.getElementById("copybutton").addEventListener("click", function(){
+
 
       
-})
+
 
 function notification(type, text){
     var notification = document.getElementById("notification");
@@ -353,3 +353,19 @@ function notification(type, text){
 
     
 }
+
+
+    document.getElementById("style").addEventListener("change", function(){
+        if(document.getElementById("style").value == "own"){
+            document.getElementById("setown").classList.add("show");
+            document.getElementById("setown").classList.remove("hide");
+        }
+    
+        else {
+            //notification("success", "nichts");
+            document.getElementById("setown").classList.add("hide");
+            document.getElementById("setown").classList.remove("show");
+        }
+
+
+    })

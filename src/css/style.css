@@ -312,3 +312,11 @@ button:hover {
     opacity: 1;
     pointer-events: all;
 }
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
