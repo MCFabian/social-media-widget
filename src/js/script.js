@@ -299,6 +299,13 @@ document.getElementById('generate').addEventListener('click', function(){
 
     socialmedialist(style, ifontcolor, ibackgroundcolor, alignment);
 
+    if(document.getElementById("style").value == "own"){
+        ownstyle();
+        alert("Style übernehmen");
+    }
+
+    else {alert("nichts sollte passieren")}
+
     // Code ausgeben
     var socialmedialistdata = document.getElementById('socialmedialistdata').innerHTML;
     var styledata = '<style>' +document.getElementById("styledata").innerHTML +'</style>';
@@ -321,8 +328,29 @@ document.getElementById('generate').addEventListener('click', function(){
 });
 
 
+function ownstyle(){
+    var customborderwidth = document.getElementById("borderwidth").value;
+    var custombordertype = document.getElementById("bordertype").value;
+    var custombordercolor = document.getElementById("bordercolor").value;
 
-      
+    var hoverbgcolor = document.getElementById("hoverbg").value;
+
+    var hoverbackgroundcss = ".hoverclass .media:hover{background-color: " +hoverbgcolor +"}";
+
+    
+
+
+    var elements = document.getElementsByClassName('media');
+    for(var i = 0; i < elements.length; i++){
+        elements[i].style.borderStyle = custombordertype;
+        elements[i].style.borderColor = custombordercolor;
+        elements[i].style.borderWidth = customborderwidth +"px";
+        document.getElementById("hovestyle").innerHTML = hoverbackgroundcss;
+        document.getElementById("socialmedialist").classList.add("hoverclass");
+
+    }
+
+}
 
 
 function notification(type, text){

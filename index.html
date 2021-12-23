@@ -13,6 +13,9 @@
 </head>
 
 <body>
+
+	<style id="hovestyle"></style>
+
 	<style id="styledata">
 		#socialmedialist {
 			display: flex;
@@ -405,7 +408,7 @@
 				<label for="">Eigenen Style festlegen</label>
 				<p class="">Sie können einen eigenen Style festlegen.</p>
 	
-				<label for="borderwidth">Konturstärke</label>
+				<label for="borderwidth">Konturstärke in PX</label>
 				<input min="0" type="number" name="borderwidth" id="borderwidth">
 
 				<label for="bordercolor">Konturfarbe</label>
@@ -414,9 +417,13 @@
 				<label for="bordertype">Konturtype</label>
 				<select name="bordertype" id="bordertype">
 					<option value="solid">solid</option>
-					<option value="solid">dotted</option>
+					<option value="dotted">dotted</option>
+					<option value="double">double</option>
+					<option value="dashed">dashed</option>
 				</select>
 
+				<label for="hoverbg">Hintergrundfarbe bei Hover</label>
+				<input placeholder="#fff" type="text" name="hoverbg" id="hoverbg">
 			</div>
 			<hr>
 	
