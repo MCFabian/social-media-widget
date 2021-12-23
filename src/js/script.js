@@ -320,11 +320,6 @@ document.getElementById('generate').addEventListener('click', function(){
     
 });
 
-    document.getElementById("copybutton").addEventListener("click", function(){
-
-      
-})
-
 function notification(type, text){
     var notification = document.getElementById("notification");
     var notificationicon;
