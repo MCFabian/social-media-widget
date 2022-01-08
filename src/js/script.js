@@ -1,9 +1,10 @@
-function socialmedialist(style, fontcolor, backgroundcolor, alignment){
+function socialmedialist(style, fontcolor, backgroundcolor, alignment, iconsize){
     var socialmedialist = document.getElementById("socialmedialist");
     var style;
     var color;
     var backgroundcolor;
     var alignment;
+    //var iconsize;
 
     // give style class
     socialmedialist.removeAttribute('class');
@@ -16,6 +17,7 @@ function socialmedialist(style, fontcolor, backgroundcolor, alignment){
     for(var i = 0; i < elements.length; i++){
         elements[i].style.backgroundColor = backgroundcolor;
         elements[i].style.color = fontcolor;
+        //elements[i].style.fontSize = iconsize +"px";
     }
 
 }
@@ -292,19 +294,17 @@ document.getElementById('generate').addEventListener('click', function(){
     
     // style und farben eintragen
     var style = document.getElementById('style').value;
-
+    //var iconsize = document.getElementById("iconsize").value;
+    //alert(iconsize);
     var ifontcolor = document.getElementById('color').value;
     var ibackgroundcolor = document.getElementById('background').value;
     var alignment = document.getElementById('alignment').value;
 
     socialmedialist(style, ifontcolor, ibackgroundcolor, alignment);
 
-    if(document.getElementById("style").value == "own"){
-        ownstyle();
-        alert("Style übernehmen");
-    }
+    ownstyle();
+    //alert("Style übernehmen");
 
-    else {alert("nichts sollte passieren")}
 
     // Code ausgeben
     var socialmedialistdata = document.getElementById('socialmedialistdata').innerHTML;
@@ -382,18 +382,19 @@ function notification(type, text){
     
 }
 
+//More styles
+document.getElementById("morestyles").addEventListener("click", function(){
+        var morestylestoggle = document.getElementById("morestyles");
+        var morestylescontainer = document.getElementById("setown");
+        
+        morestylescontainer.classList.toggle("show");
 
-    document.getElementById("style").addEventListener("change", function(){
-        if(document.getElementById("style").value == "own"){
-            document.getElementById("setown").classList.add("show");
-            document.getElementById("setown").classList.remove("hide");
+        if(morestylescontainer.classList.contains("show")){
+            morestylestoggle.innerHTML = "<i class='fas fa-minus'></i>Optionen verstecken";
         }
-    
-        else {
-            //notification("success", "nichts");
-            document.getElementById("setown").classList.add("hide");
-            document.getElementById("setown").classList.remove("show");
+        
+        if(!morestylescontainer.classList.contains("show")) {
+            morestylestoggle.innerHTML = "<i class='fas fa-plus'></i>Mehr Optionen";
         }
 
-
-    })
+})

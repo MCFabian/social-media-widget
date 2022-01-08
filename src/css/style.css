@@ -198,6 +198,8 @@ p {
 a.link {
     text-decoration: dotted;
     color: #d46a5c;
+    font-weight: 400;
+    font-size: .8rem;
 }
 
 label {
@@ -240,6 +242,14 @@ button {
     background-color: #f47b6b;
     }
 
+#morestyles {
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+#morestyles i {
+    margin-right: 5px;
+}
 
 button, input {
     border-radius: 3px;
@@ -314,13 +324,13 @@ button:hover {
 }
 
 .show {
-    height: 100%;
-    pointer-events: all;
-    opacity: 1;
+    height: 100% !important;
+    pointer-events: all !important;
+    opacity: 1 !important;
     transition: 0.3s ease-in;
 }
 
-.hide {
+.setown {
     height: 0;
     pointer-events: none;
     opacity: 0;
