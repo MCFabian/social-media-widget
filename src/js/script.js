@@ -291,7 +291,6 @@ document.getElementById('generate').addEventListener('click', function(){
         customicon.style.display = 'none';
     }
 
-    
     // style und farben eintragen
     var style = document.getElementById('style').value;
     //var iconsize = document.getElementById("iconsize").value;
@@ -302,16 +301,21 @@ document.getElementById('generate').addEventListener('click', function(){
 
     socialmedialist(style, ifontcolor, ibackgroundcolor, alignment);
 
-    ownstyle();
-    //alert("Style übernehmen");
+    if((!!document.getElementById("borderwidth").value == '') || (!!document.getElementById("bordertype").value == '') || (!!document.getElementById("bordercolor").value == '')) {
+        
+    }
 
+    else {
+        ownstyle();
+    }
+
+    checkforhint();
 
     // Code ausgeben
     var socialmedialistdata = document.getElementById('socialmedialistdata').innerHTML;
     var styledata = '<style>' +document.getElementById("styledata").innerHTML +'</style>';
     var exportdata = document.getElementById('export');
     exportdata.innerHTML = styledata +socialmedialistdata;
-
 
     var checked = document.querySelectorAll('input:checked');
 
@@ -390,11 +394,33 @@ document.getElementById("morestyles").addEventListener("click", function(){
         morestylescontainer.classList.toggle("show");
 
         if(morestylescontainer.classList.contains("show")){
-            morestylestoggle.innerHTML = "<i class='fas fa-minus'></i>Optionen verstecken";
+            morestylestoggle.innerHTML = "<i class='fas fa-minus'></i>Erweitertes Styling verbergen";
         }
         
         if(!morestylescontainer.classList.contains("show")) {
-            morestylestoggle.innerHTML = "<i class='fas fa-plus'></i>Mehr Optionen";
+            morestylestoggle.innerHTML = "<i class='fas fa-plus'></i>Erweitertes Styling";
         }
 
 })
+
+// check for hint
+
+function checkforhint(){
+
+    //document.getElementById("style").addEventListener("change", function(){
+        var stylevalue = document.getElementById("style").value;
+    
+        if((stylevalue == "basic-asside") || (stylevalue == "basic-buble-asside")){
+            document.getElementById("hint").innerHTML = "Die Vorschau wurde verschoben";
+            document.getElementById("hint").classList.add("hint");
+        }
+    
+        else {
+            document.getElementById("hint").innerHTML = "";
+            document.getElementById("hint").classList.remove("hint");
+        }
+    //})
+
+}
+
+

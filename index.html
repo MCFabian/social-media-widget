@@ -358,7 +358,7 @@
 						<input class="checkboxes" type="checkbox" name="checkwhatsapp" id="checkwhatsapp">
 						WhatsApp
 					</label>
-					<p>Bitte die Landesvorwahl "0" durch +49 für Deutschland ersetzen.</p>
+					<p>Bitte die Landesvorwahl <strong>"0" durch +49</strong> für Deutschland ersetzen.</p>
 					<input placeholder="Nummer eingeben" type="text" name="linkwhatsapp" id="linkwhatsapp">
 				</li>
 				<li>
@@ -402,7 +402,7 @@
 				<option value="basic-buble-asside">Seitlich - Nur SEO Kachel - Rund</option>
 			</select>
 
-			<a id="morestyles" class="link" href="#"><i class="fas fa-plus"></i>Mehr Optionen</a>
+			<a id="morestyles" class="link" href="#"><i class="fas fa-plus"></i>Erweitertes Styling</a>
 
 			<div class="setown" id="setown">
 				<hr>
@@ -410,21 +410,19 @@
 				<p class="">Sie können einen eigenen Style festlegen.</p>
 	
 				<label for="borderwidth">Konturstärke in PX</label>
-				<input min="0" type="number" name="borderwidth" id="borderwidth">
+				<input min="0" type="number" name="borderwidth" id="borderwidth" placeholder="0px">
 
 				<label for="bordercolor">Konturfarbe</label>
 				<input placeholder="#fff" type="text" name="bordercolor" id="bordercolor">
 
 				<label for="bordertype">Konturtype</label>
 				<select name="bordertype" id="bordertype">
+					<option value="none">Bitte wählen</option>
 					<option value="solid">solid</option>
 					<option value="dotted">dotted</option>
 					<option value="double">double</option>
 					<option value="dashed">dashed</option>
 				</select>
-
-<!-- 				<label for="iconsize">Größe der Icons</label>
-				<input min="12" max="30" type="range" name="iconsize" id="iconsize"> -->
 
 				<label for="hoverbg">Hintergrundfarbe bei Hover</label>
 				<input placeholder="#fff" type="text" name="hoverbg" id="hoverbg">
@@ -471,6 +469,7 @@
 					<a title="" target="_blank" href="#" id="customicon" class="media"></a>
 				</div>
 			</div>
+			<div id="hint"></div>
 			<hr>
 			<label for="export">Exportcode</label>
 			<textarea id="export"></textarea>
