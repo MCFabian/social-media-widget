@@ -13,6 +13,30 @@
 </head>
 
 <body>
+
+	<div id="popupcontainer" class="popupcontainer">
+		<div class="popup">
+
+			<h2>Updates</h2>
+			<hr>
+			<ul>
+				<li>Eigene Styles sind nun verfügbar, darunter:
+					<ul>
+						<li>Kontur mit Farbe und Stil</li>
+						<li>Hintergrundfarbe bei MouseOver </li>
+					</ul>
+				</li>
+				<li>Kleine Anpassungen im Hintergrund</li>
+				<li>Das individuelle Symbol hat nun eine Standardfarbe beim Mouseover</li>
+				<li>Dieses tolle Popup</li>
+			</ul>
+			<hr>
+			<button onclick="popup()" class="button">Schließen</button>
+		</div>
+	</div>
+
+	<style id="hovestyle"></style>
+
 	<style id="styledata">
 		#socialmedialist {
 			display: flex;
@@ -286,9 +310,9 @@
 	<div class="wrapper">
 		<div class="box">
 			<h2>Kanäle auswählen</h2>
-			<p class="">Bitte die zutreffenden Kanäle auswählen. Wird keine verlinkung angebgeben, so wird auf die Hersteller-Seite verlinkt.</p>
+			<p>Bitte die zutreffenden Kanäle auswählen. Wird keine Verlinkung angebgeben, so wird auf die Hersteller-Seite verlinkt.</p>
 			<hr>
-			<ul>
+			<ul id="medias">
 				<li>
 					<label for="checkfacebook">
 						<input class="checkboxes" type="checkbox" name="checkfacebook" id="checkfacebook">
@@ -365,7 +389,7 @@
 						<input class="checkboxes" type="checkbox" name="checkwhatsapp" id="checkwhatsapp">
 						WhatsApp
 					</label>
-					<p>Bitte die Landesvorwahl "0" durch +49 für Deutschland ersetzen.</p>
+					<p>Bitte die Landesvorwahl <strong>"0" durch +49</strong> für Deutschland ersetzen.</p>
 					<input placeholder="Nummer eingeben" type="text" name="linkwhatsapp" id="linkwhatsapp">
 				</li>
 				<li>
@@ -408,6 +432,32 @@
 				<option value="basic-asside">Seitlich - Nur SEO Kachel</option>
 				<option value="basic-buble-asside">Seitlich - Nur SEO Kachel - Rund</option>
 			</select>
+
+			<a id="morestyles" class="link" href="#"><i class="fas fa-plus"></i>Erweitertes Styling</a>
+
+			<div class="setown" id="setown">
+				<hr>
+				<label for="">Eigenen Style festlegen</label>
+				<p class="">Sie können einen eigenen Style festlegen.</p>
+	
+				<label for="borderwidth">Konturstärke in PX</label>
+				<input min="0" type="number" name="borderwidth" id="borderwidth" placeholder="0px">
+
+				<label for="bordercolor">Konturfarbe</label>
+				<input placeholder="#fff" type="text" name="bordercolor" id="bordercolor">
+
+				<label for="bordertype">Konturtype</label>
+				<select name="bordertype" id="bordertype">
+					<option value="none">Bitte wählen</option>
+					<option value="solid">solid</option>
+					<option value="dotted">dotted</option>
+					<option value="double">double</option>
+					<option value="dashed">dashed</option>
+				</select>
+
+				<label for="hoverbg">Hintergrundfarbe bei Hover</label>
+				<input placeholder="#fff" type="text" name="hoverbg" id="hoverbg">
+			</div>
 			<hr>
 	
 			<label for="color">Farbe festlegen</label>
@@ -426,9 +476,10 @@
 				<option value="center">Mittig</option>
 				<option value="right">Rechts</option>
 			</select>
-			<hr>
 
-			<button id="generate">Übernehmen</button>
+
+			<hr>
+			<button class="button" id="generate">Übernehmen</button>
 		</div>
 		<div class="box">
 			<h2>Vorschau</h2>
@@ -449,6 +500,7 @@
 					<a title="" target="_blank" href="#" id="customicon" class="media"></a>
 				</div>
 			</div>
+			<div id="hint"></div>
 			<hr>
 			<label for="export">Exportcode</label>
 			<textarea id="export"></textarea>
@@ -457,6 +509,7 @@
 	</div>
 	<div id="bugreport">
 		<a target="_blank" href="https://github.com/MCFabian/social-media-widget/issues/new" class="button"><i class="fas fa-bug"></i>Bug melden via GitHub</a>
+		<a onclick="popup()" class="button"><i class="fas fa-certificate"></i>What's new?</a>
 	</div>
 
 	<script src="src/js/script.js"></script>

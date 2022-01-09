@@ -122,7 +122,7 @@ hr {
     text-align: center;
 }
 
-#bugreport .button {
+ .button {
     position: relative;
     box-sizing: border-box;
     outline: currentcolor none 0px;
@@ -138,13 +138,18 @@ hr {
     border-radius: 4px;
     color: rgb(255, 255, 255);
     background-color: #f47b6b;
+    transition: .3s;
 }
 
 .button > i {
     margin: auto 5px auto 0;
 }
 
-input[type=text], input[type=email],  select {
+.button:hover {
+    background-color: #cc5f51;
+}
+
+input[type=text], input[type=email], input[type=number], select {
     padding: 10px;
     border: 1px solid #d6d6d6;
     background-color: #fff;
@@ -198,13 +203,15 @@ p {
 a.link {
     text-decoration: dotted;
     color: #d46a5c;
+    font-weight: 400;
+    font-size: .8rem;
 }
 
 label {
     font-weight: 500;
 }
 
-ul {
+#medias {
     list-style: none;
     padding: 15px 0;
     margin: 0;
@@ -240,6 +247,15 @@ button {
     background-color: #f47b6b;
     }
 
+#morestyles {
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+#morestyles i {
+    margin-right: 5px;
+    font-size: .6rem;
+}
 
 button, input {
     border-radius: 3px;
@@ -286,8 +302,27 @@ button:hover {
     border: 1px solid #d6d6d6;
     background: #f3f3f3;
     padding: 15px;
+    position: relative;
+    z-index: 0;
 }
 
+ #socialmedialistdata > #hint {
+    content: "";
+    text-align: center;
+    color: #727272;
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    transform: translateY(-50%);
+    right: 0;
+    left: 0;
+    font-size: 0.85rem;
+    font-style: italic;
+    pointer-events: none;
+    z-index: -1;
+
+}
+ 
 .expander {
     background-color: #d46a5ccc;
     padding: 10px;
@@ -312,3 +347,39 @@ button:hover {
     opacity: 1;
     pointer-events: all;
 }
+
+.show {
+    height: 100% !important;
+    pointer-events: all !important;
+    opacity: 1 !important;
+    transition: 0.3s ease-in;
+}
+
+.setown {
+    height: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.3s ease-out;
+}
+
+.popupcontainer {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    background: #33333311;
+    z-index: 3;
+}
+
+.popup {
+    min-height: 15%;
+    width: 35%;
+    background-color: #fff;
+    border: 1px solid #d6d6d6;
+    padding: 20px;
+    margin: auto;
+    border-radius: 5px;
+}
+

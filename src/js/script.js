@@ -1,9 +1,10 @@
-function socialmedialist(style, fontcolor, backgroundcolor, alignment){
+function socialmedialist(style, fontcolor, backgroundcolor, alignment, iconsize){
     var socialmedialist = document.getElementById("socialmedialist");
     var style;
     var color;
     var backgroundcolor;
     var alignment;
+    //var iconsize;
 
     // give style class
     socialmedialist.removeAttribute('class');
@@ -16,6 +17,7 @@ function socialmedialist(style, fontcolor, backgroundcolor, alignment){
     for(var i = 0; i < elements.length; i++){
         elements[i].style.backgroundColor = backgroundcolor;
         elements[i].style.color = fontcolor;
+        //elements[i].style.fontSize = iconsize +"px";
     }
 
 }
@@ -289,22 +291,31 @@ document.getElementById('generate').addEventListener('click', function(){
         customicon.style.display = 'none';
     }
 
-    
     // style und farben eintragen
     var style = document.getElementById('style').value;
-
+    //var iconsize = document.getElementById("iconsize").value;
+    //alert(iconsize);
     var ifontcolor = document.getElementById('color').value;
     var ibackgroundcolor = document.getElementById('background').value;
     var alignment = document.getElementById('alignment').value;
 
     socialmedialist(style, ifontcolor, ibackgroundcolor, alignment);
 
+    if((!!document.getElementById("borderwidth").value == '') || (!!document.getElementById("bordertype").value == '') || (!!document.getElementById("bordercolor").value == '')) {
+        
+    }
+
+    else {
+        ownstyle();
+    }
+
+    checkforhint();
+
     // Code ausgeben
     var socialmedialistdata = document.getElementById('socialmedialistdata').innerHTML;
     var styledata = '<style>' +document.getElementById("styledata").innerHTML +'</style>';
     var exportdata = document.getElementById('export');
     exportdata.innerHTML = styledata +socialmedialistdata;
-
 
     var checked = document.querySelectorAll('input:checked');
 
@@ -319,6 +330,32 @@ document.getElementById('generate').addEventListener('click', function(){
 
     
 });
+
+
+function ownstyle(){
+    var customborderwidth = document.getElementById("borderwidth").value;
+    var custombordertype = document.getElementById("bordertype").value;
+    var custombordercolor = document.getElementById("bordercolor").value;
+
+    var hoverbgcolor = document.getElementById("hoverbg").value;
+
+    var hoverbackgroundcss = ".hoverclass .media:hover{background-color: " +hoverbgcolor +"}";
+
+    
+
+
+    var elements = document.getElementsByClassName('media');
+    for(var i = 0; i < elements.length; i++){
+        elements[i].style.borderStyle = custombordertype;
+        elements[i].style.borderColor = custombordercolor;
+        elements[i].style.borderWidth = customborderwidth +"px";
+        document.getElementById("hovestyle").innerHTML = hoverbackgroundcss;
+        document.getElementById("socialmedialist").classList.add("hoverclass");
+
+    }
+
+}
+
 
 function notification(type, text){
     var notification = document.getElementById("notification");
@@ -348,3 +385,56 @@ function notification(type, text){
 
     
 }
+
+//More styles
+document.getElementById("morestyles").addEventListener("click", function(){
+        var morestylestoggle = document.getElementById("morestyles");
+        var morestylescontainer = document.getElementById("setown");
+        
+        morestylescontainer.classList.toggle("show");
+
+        if(morestylescontainer.classList.contains("show")){
+            morestylestoggle.innerHTML = "<i class='fas fa-minus'></i>Erweitertes Styling verbergen";
+        }
+        
+        if(!morestylescontainer.classList.contains("show")) {
+            morestylestoggle.innerHTML = "<i class='fas fa-plus'></i>Erweitertes Styling";
+        }
+
+})
+
+// check for hint
+
+function checkforhint(){
+
+    //document.getElementById("style").addEventListener("change", function(){
+        var stylevalue = document.getElementById("style").value;
+    
+        if((stylevalue == "basic-asside") || (stylevalue == "basic-buble-asside")){
+            document.getElementById("hint").innerHTML = "Die Vorschau wurde verschoben";
+            document.getElementById("hint").classList.add("hint");
+        }
+    
+        else {
+            document.getElementById("hint").innerHTML = "";
+            document.getElementById("hint").classList.remove("hint");
+        }
+    //})
+
+}
+
+function popup() {
+    var popup = document.getElementById("popupcontainer");
+
+    if(popup.style.display === 'flex'){
+        popup.style.display = 'none';
+    }
+
+    else{
+        popup.style.display = 'flex';
+    }
+    
+
+}
+
+
