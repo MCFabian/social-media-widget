@@ -14,6 +14,27 @@
 
 <body>
 
+	<div id="popupcontainer" class="popupcontainer">
+		<div class="popup">
+
+			<h2>Updates</h2>
+			<hr>
+			<ul>
+				<li>Eigene Styles sind nun verfügbar, darunter:
+					<ul>
+						<li>Kontur mit Farbe und Stil</li>
+						<li>Hintergrundfarbe bei MouseOver </li>
+					</ul>
+				</li>
+				<li>Kleine Anpassungen im Hintergrund</li>
+				<li>Das individuelle Symbol hat nun eine Standardfarbe beim Mouseover</li>
+				<li>Dieses tolle Popup</li>
+			</ul>
+			<hr>
+			<button onclick="popup()" class="button">Schließen</button>
+		</div>
+	</div>
+
 	<style id="hovestyle"></style>
 
 	<style id="styledata">
@@ -281,7 +302,7 @@
 			<h2>Kanäle auswählen</h2>
 			<p>Bitte die zutreffenden Kanäle auswählen. Wird keine Verlinkung angebgeben, so wird auf die Hersteller-Seite verlinkt.</p>
 			<hr>
-			<ul>
+			<ul id="medias">
 				<li>
 					<label for="checkfacebook">
 						<input class="checkboxes" type="checkbox" name="checkfacebook" id="checkfacebook">
@@ -448,7 +469,7 @@
 
 
 			<hr>
-			<button id="generate">Übernehmen</button>
+			<button class="button" id="generate">Übernehmen</button>
 		</div>
 		<div class="box">
 			<h2>Vorschau</h2>
@@ -478,6 +499,7 @@
 	</div>
 	<div id="bugreport">
 		<a target="_blank" href="https://github.com/MCFabian/social-media-widget/issues/new" class="button"><i class="fas fa-bug"></i>Bug melden via GitHub</a>
+		<a onclick="popup()" class="button"><i class="fas fa-certificate"></i>What's new?</a>
 	</div>
 
 	<script src="src/js/script.js"></script>

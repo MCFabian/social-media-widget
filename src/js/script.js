@@ -423,4 +423,18 @@ function checkforhint(){
 
 }
 
+function popup() {
+    var popup = document.getElementById("popupcontainer");
+
+    if(popup.style.display === 'flex'){
+        popup.style.display = 'none';
+    }
+
+    else{
+        popup.style.display = 'flex';
+    }
+    
+
+}
+
 
