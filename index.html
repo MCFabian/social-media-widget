@@ -20,15 +20,9 @@
 			<h2>Updates</h2>
 			<hr>
 			<ul>
-				<li>Eigene Styles sind nun verfügbar, darunter:
-					<ul>
-						<li>Kontur mit Farbe und Stil</li>
-						<li>Hintergrundfarbe bei MouseOver </li>
-					</ul>
-				</li>
-				<li>Kleine Anpassungen im Hintergrund</li>
-				<li>Das individuelle Symbol hat nun eine Standardfarbe beim Mouseover</li>
-				<li>Dieses tolle Popup</li>
+				<li>Man kann nun zwischen drei Größen für die Darstellung wählen</li>
+				<li>Bei dem CustomIcon wird nun der Link auch als Titel bei MouseOver angezeigt, sofern ein Link vergeben ist</li>
+				<li>Möglichkeit alle Kanäle auszuwählen oder die Auswahl zu entfernen</li>
 			</ul>
 			<hr>
 			<button onclick="popup()" class="button">Schließen</button>
@@ -174,9 +168,32 @@
 			color: #323232;
 			border-radius: 2px;
 			transition: .2s ease-in;
-			padding: 25px;
+			padding: 18px;
 			margin: 0 !important;
 			z-index: 2;
+			font-size: 14px;
+		}
+
+		.basic-asside.large > .media {
+			background: #fff;
+			color: #323232;
+			border-radius: 2px;
+			transition: .2s ease-in;
+			padding: 22px;
+			margin: 0 !important;
+			z-index: 2;
+			font-size: 15px;
+		}
+
+		.basic-asside.small > .media {
+			background: #fff;
+			color: #323232;
+			border-radius: 2px;
+			transition: .2s ease-in;
+			padding: 14px;
+			margin: 0 !important;
+			z-index: 2;
+			font-size: 12px;
 		}
 
 		.basic-asside > .media + .media {
@@ -190,8 +207,41 @@
 			border-radius: 100%;
 			box-shadow: -9px -1px 15px -6px rgba(0,0,0,0.41);
 			margin: 5px 0;
-			padding: 20px;
+			padding: 18px;
 			z-index: 2;
+			font-size: 15px;
+		}
+
+		.basic-buble-asside.small {
+			right: 10px;
+		}
+
+		.basic-buble-asside.small > .media {
+			background: #fff;
+			color: #323232;
+			transition: .2s ease-in;
+			border-radius: 100%;
+			box-shadow: -9px -1px 15px -6px rgba(0,0,0,0.41);
+			margin: 5px 0;
+			padding: 15px;
+			z-index: 2;
+			font-size: 12px;
+		}
+
+		.basic-buble-asside.large {
+			right: 10px;
+		}
+
+		.basic-buble-asside.large > .media {
+			background: #fff;
+			color: #323232;
+			transition: .2s ease-in;
+			border-radius: 100%;
+			box-shadow: -9px -1px 15px -6px rgba(0,0,0,0.41);
+			margin: 5px 0;
+			padding: 22px;
+			z-index: 2;
+			font-size: 18px;
 		}
 		
 		.basic > #whatsapp:hover,
@@ -305,12 +355,28 @@
 			padding: 0 !important;
 		}
 
+		/*Size*/
+		.small .media {
+			font-size: 10px;
+			padding: 7px;
+			width: 10px;
+			height: 10px;
+		}
+
+		.large .media {
+			font-size: 18px;
+			padding: 14px;
+			width: 18px;
+			height: 18px;
+		}
+
 	</style>
 	<div id="notification"></div>
 	<div class="wrapper">
 		<div class="box">
 			<h2>Kanäle auswählen</h2>
 			<p>Bitte die zutreffenden Kanäle auswählen. Wird keine Verlinkung angebgeben, so wird auf die Hersteller-Seite verlinkt.</p>
+			<a onclick="selectall()" id="selectall" class="link">Alle auswählen</a>
 			<hr>
 			<ul id="medias">
 				<li>
@@ -457,6 +523,14 @@
 
 				<label for="hoverbg">Hintergrundfarbe bei Hover</label>
 				<input placeholder="#fff" type="text" name="hoverbg" id="hoverbg">
+
+				<label >Größe</label>
+				<p>Sie können Sie Größe der Social Media Icons in drei Stufen festlegen.</p>
+				<ul class="resize">
+					<li><input value="small" name="resize" id="small" type="radio"><label for="small">Klein</label></li>
+					<li><input checked value="medium" name="resize" id="medium" type="radio"><label for="medium">Standard</label></li>
+					<li><input value="large" name="resize" id="large" type="radio"><label for="large">Groß</label></li>
+				</ul>
 			</div>
 			<hr>
 	
@@ -509,7 +583,7 @@
 	</div>
 	<div id="bugreport">
 		<a target="_blank" href="https://github.com/MCFabian/social-media-widget/issues/new" class="button"><i class="fas fa-bug"></i>Bug melden via GitHub</a>
-		<a onclick="popup()" class="button"><i class="fas fa-certificate"></i>What's new?</a>
+		<a onclick="popup()" id="update" class="button"><i class="fas fa-certificate"></i>What's new?</a>
 	</div>
 
 	<script src="src/js/script.js"></script>

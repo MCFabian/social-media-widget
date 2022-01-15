@@ -1,7 +1,7 @@
 function socialmedialist(style, fontcolor, backgroundcolor, alignment, iconsize){
     var socialmedialist = document.getElementById("socialmedialist");
     var style;
-    var color;
+    //var color;
     var backgroundcolor;
     var alignment;
     //var iconsize;
@@ -11,6 +11,26 @@ function socialmedialist(style, fontcolor, backgroundcolor, alignment, iconsize)
     socialmedialist.classList.add(style);
     
     socialmedialist.style.justifyContent = alignment;
+
+    // give Icon Size
+    var small = document.getElementById("small");
+    var medium = document.getElementById("medium");
+    var large = document.getElementById("large");
+
+    if(small.checked == true){
+        document.getElementById("socialmedialist").classList.add("small");
+        //alert("small");
+    }
+
+    if(large.checked == true){
+        document.getElementById("socialmedialist").classList.add("large");
+        //alert("large");
+    }
+
+    if(medium.checked == true){
+        //alert("I guess it's medium!");
+        document.getElementById("socialmedialist").classList.remove("large", "small");
+    }
 
     // give backgroundcolor
     var elements = document.getElementsByClassName('media');
@@ -23,7 +43,6 @@ function socialmedialist(style, fontcolor, backgroundcolor, alignment, iconsize)
 }
 
 document.getElementById('generate').addEventListener('click', function(){
-
     // Auswahl überprüfen
     // Facebook
     var facebook = document.getElementById("facebook");
@@ -156,7 +175,7 @@ document.getElementById('generate').addEventListener('click', function(){
     //phone
     var phone = document.getElementById("phone");
     var linkphone = document.getElementById("linkphone").value;
-    linktophone = 'tel:' +linkphone;
+    var linktophone = 'tel:' +linkphone;
                 
     
     if(linkphone.length == 0){
@@ -172,7 +191,6 @@ document.getElementById('generate').addEventListener('click', function(){
     var linkcustomicon = document.getElementById("linkcustomicon").value;
     customiconclasstype = document.getElementById("customiconclasstype").value;
     var customiconclass = document.getElementById("customiconclass").value;
-
     
     if(customiconclass.length == 0){
         //alert("nichts");
@@ -187,10 +205,12 @@ document.getElementById('generate').addEventListener('click', function(){
     
     if(linkcustomicon.length == 0){
         customicon.setAttribute('href', "https://www.google.de");
+        customicon.setAttribute('title', '');
     }
     
      else {
         customicon.setAttribute('href', linkcustomicon);
+        customicon.setAttribute('title', linkcustomicon);
     }
     
     
@@ -293,8 +313,6 @@ document.getElementById('generate').addEventListener('click', function(){
 
     // style und farben eintragen
     var style = document.getElementById('style').value;
-    //var iconsize = document.getElementById("iconsize").value;
-    //alert(iconsize);
     var ifontcolor = document.getElementById('color').value;
     var ibackgroundcolor = document.getElementById('background').value;
     var alignment = document.getElementById('alignment').value;
@@ -302,7 +320,7 @@ document.getElementById('generate').addEventListener('click', function(){
     socialmedialist(style, ifontcolor, ibackgroundcolor, alignment);
 
     if((!!document.getElementById("borderwidth").value == '') || (!!document.getElementById("bordertype").value == '') || (!!document.getElementById("bordercolor").value == '')) {
-        
+
     }
 
     else {
@@ -317,7 +335,7 @@ document.getElementById('generate').addEventListener('click', function(){
     var exportdata = document.getElementById('export');
     exportdata.innerHTML = styledata +socialmedialistdata;
 
-    var checked = document.querySelectorAll('input:checked');
+    var checked = document.querySelectorAll('input[type=checkbox]:checked');
 
     if (checked.length === 0) {
         // there are no checked checkboxes
@@ -326,8 +344,6 @@ document.getElementById('generate').addEventListener('click', function(){
         // there are some checked checkboxes
         notification('success', 'Der Code für die Auswahl wurde generiert.');
     }
-
-
     
 });
 
@@ -336,13 +352,8 @@ function ownstyle(){
     var customborderwidth = document.getElementById("borderwidth").value;
     var custombordertype = document.getElementById("bordertype").value;
     var custombordercolor = document.getElementById("bordercolor").value;
-
     var hoverbgcolor = document.getElementById("hoverbg").value;
-
     var hoverbackgroundcss = ".hoverclass .media:hover{background-color: " +hoverbgcolor +"}";
-
-    
-
 
     var elements = document.getElementsByClassName('media');
     for(var i = 0; i < elements.length; i++){
@@ -433,8 +444,31 @@ function popup() {
     else{
         popup.style.display = 'flex';
     }
-    
 
 }
+
+function selectall() {
+    var ele = document.querySelectorAll('input[type=checkbox]');
+
+
+    if(document.querySelectorAll('input[type=checkbox]:checked').length === 0){
+        for(var i=0; i<ele.length; i++){  
+            if(ele[i].type=='checkbox')  
+                ele[i].checked=true;  
+        } 
+        document.getElementById("selectall").innerHTML = "Auswahl aufheben";
+    }
+
+    else{
+        for(var i=0; i<ele.length; i++){  
+            if(ele[i].type=='checkbox')  
+                ele[i].checked=false;  
+        }
+        document.getElementById("selectall").innerHTML = "Alle auswählen"; 
+    }
+
+
+}
+
 
 
