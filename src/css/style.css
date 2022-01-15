@@ -393,7 +393,7 @@ button:hover {
 } 
 
 #update::before {
-    content: "2";
+    content: "3";
     right: -9px;
     top: -9px;
     padding: 8px;
