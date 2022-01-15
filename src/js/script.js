@@ -457,6 +457,7 @@ function selectall() {
                 ele[i].checked=true;  
         } 
         document.getElementById("selectall").innerHTML = "Auswahl aufheben";
+        notification("success", "Auswahl der Kanäle aufgehoben.");
     }
 
     else{
@@ -464,7 +465,8 @@ function selectall() {
             if(ele[i].type=='checkbox')  
                 ele[i].checked=false;  
         }
-        document.getElementById("selectall").innerHTML = "Alle auswählen"; 
+        document.getElementById("selectall").innerHTML = "Alle auswählen";
+        notification("success", "Alle Kanäle ausgewählt.");
     }
 
 
