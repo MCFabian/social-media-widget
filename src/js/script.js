@@ -457,7 +457,7 @@ function selectall() {
                 ele[i].checked=true;  
         } 
         document.getElementById("selectall").innerHTML = "Auswahl aufheben";
-        notification("success", "Auswahl der Kanäle aufgehoben.");
+        notification("success", "Alle Kanäle ausgewählt.");
     }
 
     else{
@@ -466,7 +466,8 @@ function selectall() {
                 ele[i].checked=false;  
         }
         document.getElementById("selectall").innerHTML = "Alle auswählen";
-        notification("success", "Alle Kanäle ausgewählt.");
+
+        notification("success", "Auswahl der Kanäle aufgehoben.");
     }
 
 
