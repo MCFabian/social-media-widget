@@ -1,3 +1,30 @@
+
+:root, :root.light {
+--bodybackground: #f5f5f5;
+--background: #fff;
+--hintbackground: #f3f3f3;
+--fontcolor: #727272;
+--fontcolordarker:rgb(61, 70, 80); 
+--accentcolor: #f47b6b;
+--dividercolor: #d6d6d6;
+}
+
+
+
+
+:root.dark{
+    --bodybackground: #1b1c22; 
+    --background: #25262c;
+    --hintbackground: #1b1c22;
+    --fontcolor: #ffffff60; 
+    --fontcolordarker:#fff; 
+    --accentcolor: #f47b6b;
+    --dividercolor: #ffffff40;
+}
+    
+
+
+
 @keyframes slidein {
     from {top: -100%;}
     25% {top: 30px;}
@@ -7,17 +34,17 @@
 
 html {
     font-family: 'Inria Sans', sans-serif;
-    color: #333333;
+    color: var(--fontcolordarker);
 }
 
 body {
-    background: #f5f5f5;
+    background: var(--bodybackground);
 }
 
 .hint {
-    background: #f3f3f3;
-    color: #727272;
-    border: 1px solid #d6d6d6;
+    background: var(--hintbackground);
+    color: var(--fontcolor);
+    border: 1px solid var(--dividercolor);
     border-radius: 3px;
     font-size: .8rem;
     font-weight: 400;
@@ -35,7 +62,7 @@ body {
     color: #3cc748;
     border: 1px solid #bcebb4;
     animation: slidein 4s;
-    padding: 20px;
+    padding: 15px;
 }
 
 .error {
@@ -43,11 +70,11 @@ body {
     color: #E94B50;
     border: 1px solid #f3b7b9;
     animation: slidein 4s;
-    padding: 20px;
+    padding: 15px;
 }
 
 hr {
-    background: #d6d6d6;
+    background: var(--dividercolor);
     height: 1px;
     width: 100%;
     border: none;
@@ -55,7 +82,7 @@ hr {
 }
 
 .box {
-    border: 1px solid #d6d6d6;
+    border: 1px solid var(--dividercolor);
     display: flex;
     padding: 15px;
     flex-direction: column;
@@ -63,15 +90,15 @@ hr {
     margin: 0 30px;
     margin-bottom: 25px;
     position: relative;
-    background: #fff;
+    background: var(--background);
 }
 
 .box:nth-child(1)::after {
     position: absolute;
     content: "1";
     padding: 15px;
-    background: #f47b6b;
-    color: #fff;
+    background: var(--accentcolor);
+    color: var(--background);
     border-radius: 100%;
     left: -15px;
     top: -15px;
@@ -85,8 +112,8 @@ hr {
     position: absolute;
     content: "2";
     padding: 15px;
-    background: #f47b6b;
-    color: #fff;
+    background: var(--accentcolor);
+    color: var(--background);
     border-radius: 100%;
     left: -15px;
     top: -15px;
@@ -100,8 +127,8 @@ hr {
     position: absolute;
     content: "3";
     padding: 15px;
-    background: #f47b6b;
-    color: #fff;
+    background: var(--accentcolor);
+    color: var(--background);
     border-radius: 100%;
     left: -15px;
     top: -15px;
@@ -113,8 +140,8 @@ hr {
 
 #bugreport {
     padding: 25px;
-    background: #f0f0f0;
-    border-top: 1px solid #d6d6d6;
+    background: var(--hintbackground);
+    border-top: 1px solid var(--dividercolor);
     position: fixed;
     bottom: 0;
     left: 0;
@@ -136,8 +163,8 @@ hr {
     min-width: 64px;
     padding: 15px 16px;
     border-radius: 4px;
-    color: rgb(255, 255, 255);
-    background-color: #f47b6b;
+    color: #fff;
+    background-color: var(--accentcolor);
     transition: .3s;
 }
 
@@ -146,17 +173,18 @@ hr {
 }
 
 .button:hover {
-    background-color: #cc5f51;
+    background-color: var(--accentcolor);
 }
 
 input[type=text], input[type=email], input[type=number], select {
     padding: 10px;
-    border: 1px solid #d6d6d6;
-    background-color: #fff;
+    border: 1px solid var(--dividercolor);
+    background-color: var(--background);
     box-shadow: none;
     display: block;
     width: 100%;
     box-sizing: border-box;
+    color: var(--fontcolordarker);
 }
 
 input[type=checkbox] {
@@ -165,7 +193,7 @@ input[type=checkbox] {
 }
 
 input:focus, input:hover {
-    border-color: #d46a5c;
+    border-color: var(--accentcolor);
 }
 
 textarea {
@@ -189,7 +217,7 @@ input {
 label, h1, h2, p {
     font-family: 'Inria Sans', sans-serif;
     margin-bottom: 5px;
-    color: rgb(61, 70, 80);
+    color: var(--fontcolordarker)
 }
 
 h2 {
@@ -200,13 +228,13 @@ h2 {
 p {
     font-weight: 400;
     font-size: .8rem;
-    color: rgb(90, 105, 120);
+    color: var(--fontcolor);
     margin: 5px 0;
 }
 
 a.link {
     text-decoration: dotted;
-    color: #d46a5c;
+    color: var(--accentcolor);
     font-weight: 400;
     font-size: .8rem;
     cursor: pointer;
@@ -228,8 +256,9 @@ label {
 
 #export {
     width: 100%;
-    border: 1px solid #d6d6d6;
-    background-color: #fff;
+    border: 1px solid var(--dividercolor);
+    background-color: var(--background);
+    color: var(--fontcolordarker);
     min-height: 400px;
 }
 
@@ -249,7 +278,7 @@ button {
     padding: 15px 16px;
     border-radius: 4px;
     color: rgb(255, 255, 255);
-    background-color: #f47b6b;
+    background-color: var(--accentcolor);
     }
 
 #morestyles {
@@ -267,7 +296,7 @@ button, input {
 }
 
 button:hover {
-    border-color: #d46a5c;
+    border-color: var(--accentcolor);
 }
 
 .wrapper {
@@ -298,14 +327,14 @@ button:hover {
 #notification > i,
 .hint > i {
     padding-right: 15px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     vertical-align: sub;
 
 }
 
 #socialmedialistdata {
-    border: 1px solid #d6d6d6;
-    background: #f3f3f3;
+    border: 1px solid var(--dividercolor);
+    background: var(--hintbackground);
     padding: 15px;
     position: relative;
     z-index: 0;
@@ -314,7 +343,7 @@ button:hover {
  #socialmedialistdata > #hint {
     content: "";
     text-align: center;
-    color: #727272;
+    color: var(--fontcolor);
     position: absolute;
     width: 100%;
     height: 60%;
@@ -381,8 +410,8 @@ button:hover {
 .popup {
     min-height: 15%;
     width: 35%;
-    background-color: #fff;
-    border: 1px solid #d6d6d6;
+    background-color: var(--background);
+    border: 1px solid var(--dividercolor);
     padding: 20px;
     margin: auto;
     border-radius: 5px;
@@ -420,7 +449,7 @@ button:hover {
     padding: 7px;
     font-weight: 400;
     cursor: pointer;
-    border: 1px solid #e6e6e6;
+    border: 1px solid var(--dividercolor);
     display: inline-block;
     margin: 0;
     font-size: .8rem;
@@ -448,7 +477,7 @@ button:hover {
   }
   
   .resize input[type="radio"]:checked + label {
-    background: #d46a5c;
+    background: var(--accentcolor);
     color: #fff;
   }
   
@@ -458,7 +487,7 @@ button:hover {
   
   .resize label:hover {
     background: #f0f0f0 !important;
-    color: rgb(90, 105, 120);
+    color: var(--fontcolor)
   }
 
   .resize label {

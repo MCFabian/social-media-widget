@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html id="themehere" >
 <head>
 	<meta charset="utf-8">
 	<title>Social Media Generator</title>
@@ -10,9 +10,10 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 	<link rel="shortcut icon" href="src/img/gen.png" type="image/x-icon">
+
 </head>
 
-<body>
+<body >
 
 	<div id="popupcontainer" class="popupcontainer">
 		<div class="popup">
@@ -589,6 +590,7 @@
 	<div id="bugreport">
 		<a target="_blank" href="https://github.com/MCFabian/social-media-widget/issues/new" class="button"><i class="fas fa-bug"></i>Bug melden via GitHub</a>
 		<a onclick="popup()" id="update" class="button"><i class="fas fa-certificate"></i>What's new?</a>
+		<button onclick="setTheme()">Dark/Light Mode</button>
 	</div>
 
 	<script src="src/js/script.js"></script>
