@@ -35,7 +35,7 @@ body {
     color: #3cc748;
     border: 1px solid #bcebb4;
     animation: slidein 4s;
-    padding: 20px;
+    padding: 15px;
 }
 
 .error {
@@ -43,7 +43,7 @@ body {
     color: #E94B50;
     border: 1px solid #f3b7b9;
     animation: slidein 4s;
-    padding: 20px;
+    padding: 15px;
 }
 
 hr {
@@ -298,7 +298,7 @@ button:hover {
 #notification > i,
 .hint > i {
     padding-right: 15px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     vertical-align: sub;
 
 }
