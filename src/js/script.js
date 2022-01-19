@@ -447,9 +447,29 @@ function popup() {
 
 }
 
+
+
+function setTheme(){
+
+    var body = document.getElementById("themehere");
+
+    if(body.classList.contains("light")){
+        body.classList.remove("light");
+        body.classList.add("dark");
+    }
+
+    else{
+        body.classList.add("light");
+        body.classList.remove("dark");
+    }
+}
+
+
+
+
+
 function selectall() {
     var ele = document.querySelectorAll('input[type=checkbox]');
-
 
     if(document.querySelectorAll('input[type=checkbox]:checked').length === 0){
         for(var i=0; i<ele.length; i++){  
