@@ -1,5 +1,5 @@
 <!doctype html>
-<html id="themehere" >
+<html id="themehere" class="dark">
 <head>
 	<meta charset="utf-8">
 	<title>Social Media Generator</title>
@@ -18,12 +18,12 @@
 	<div id="popupcontainer" class="popupcontainer">
 		<div class="popup">
 
-			<h2>Updates + Plesk</h2>
+			<h2>Updates</h2>
 			<hr>
 			<ul>
-				<li>Man kann nun zwischen drei Größen für die Darstellung wählen</li>
-				<li>Bei dem CustomIcon wird nun der Link auch als Titel bei MouseOver angezeigt, sofern ein Link vergeben ist</li>
-				<li>Möglichkeit alle Kanäle auszuwählen oder die Auswahl zu entfernen</li>
+				<li>Der Basis-Style ist nun auch in umgekehrter Gestaltung verfügbar</li>
+				<li>Der Bug, dass die Hintergrundfarbe bei Mouseover nur einstellbar war, wenn man eine Kontur aktivierte ist nun behoben.</li>
+				<li>Der DarkMode ist nun Standard-Design.</li>
 			</ul>
 			<hr>
 			<button onclick="popup()" class="button">Schließen</button>
@@ -250,7 +250,18 @@
 			font-size: 18px;
 		}
 		
+	
+		.basic-invert .media {
+			transition: 0.3s;
+		}
+
+		.basic-invert .media:hover {
+			background: #fff !important;
+			color: #323232 !important;
+		}
+
 		.basic > #whatsapp:hover,
+		.basic-invert > #whatsapp,
 		.basic-asside > #whatsapp:hover,
 		.basic-buble-asside > #whatsapp:hover{
 			color: #fff;
@@ -258,6 +269,7 @@
 		}
 		
 		.basic > #facebook:hover,
+		.basic-invert > #facebook,
 		.basic-asside > #facebook:hover,
 		.basic-buble-asside > #facebook:hover {
 			color: #fff;
@@ -265,6 +277,7 @@
 		}
 		
 		.basic > #instagram:hover,
+		.basic-invert > #instagram,
 		.basic-asside > #instagram:hover,
 		.basic-buble-asside > #instagram:hover  {
 			color: #fff;
@@ -272,6 +285,7 @@
 		}
 
 		.basic > #youtube:hover,
+		.basic-invert > #youtube,
 		.basic-asside > #youtube:hover,
 		.basic-buble-asside > #youtube:hover {
 			color: #fff;
@@ -279,6 +293,7 @@
 		}
 
 		.basic > #twitter:hover,
+		.basic-invert > #twitter,
 		.basic-asside > #twitter:hover,
 		.basic-buble-asside > #twitter:hover {
 			color: #fff;
@@ -286,6 +301,7 @@
 		}
 
 		.basic > #tiktok:hover,
+		.basic-invert > #tiktok,
 		.basic-asside > #tiktok:hover,
 		.basic-buble-asside > #tiktok:hover {
 			color: #fff;
@@ -293,6 +309,7 @@
 		}
 		
 		.basic > #xing:hover,
+		.basic-invert > #xing,
 		.basic-asside > #xing:hover,
 		.basic-buble-asside > #xing:hover {
 			color: #fff;
@@ -300,6 +317,7 @@
 		}
 		
 		.basic > #linkedin:hover,
+		.basic-invert > #linkedin,
 		.basic-asside > #linkedin:hover,
 		.basic-buble-asside > #linkedin:hover {
 			color: #fff;
@@ -307,6 +325,7 @@
 		}
 		
 		.basic > #linktree:hover,
+		.basic-invert > #linktree,
 		.basic-asside > #linktree:hover,
 		.basic-buble-asside > #linktree:hover {
 			color: #fff;
@@ -314,6 +333,7 @@
 		}
 		
 		.basic > #mail:hover,
+		.basic-invert > #mail,
 		.basic-asside > #mail:hover,
 		.basic-buble-asside > #mail:hover {
 			color: #fff;
@@ -321,6 +341,7 @@
 		}
 
 		.basic > #phone:hover,
+		.basic-invert > #phone,
 		.basic-asside > #phone:hover,
 		.basic-buble-asside > #phone:hover {
 			color: #fff;
@@ -328,6 +349,7 @@
 		}
 		
 		.basic > #customicon:hover,
+		.basic-invert > #customicon,
 		.basic-asside > #customicon:hover,
 		.basic-buble-asside > #customicon:hover{
 			color: #fff;
@@ -496,6 +518,7 @@
 			<p class="">Wählen Sie einen der vorgebenen Stile für das Social-Media-Widget.</p>
 			<select id="style">
 				<option value="basic">Basic</option>
+				<option value="basic-invert">Basic Umgekehrt</option>
 				<option value="round">Rund</option>
 				<option value="square">Quadrat</option>
 				<option value="minimal">Minimal</option>
@@ -528,6 +551,7 @@
 				</select>
 
 				<label for="hoverbg">Hintergrundfarbe bei Hover</label>
+				<p>Legt die Hintergrundfarbe der Iconcontainer fest, wenn sich der Mauszeiger über diese bewegt. Zugelassene Formate sind Hex, RGB-A, CSS-Farbworte, HSL.</p>
 				<input placeholder="#fff" type="text" name="hoverbg" id="hoverbg">
 
 				<label >Größe</label>

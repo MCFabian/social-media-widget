@@ -1,10 +1,11 @@
 function socialmedialist(style, fontcolor, backgroundcolor, alignment, iconsize){
     var socialmedialist = document.getElementById("socialmedialist");
     var style;
-    //var color;
     var backgroundcolor;
     var alignment;
-    //var iconsize;
+
+    var hoverbgcolor = document.getElementById("hoverbg").value;
+    var hoverbackgroundcss = ".hoverclass .media:hover{background-color: " +hoverbgcolor +" !important;" +"}";
 
     // give style class
     socialmedialist.removeAttribute('class');
@@ -19,16 +20,13 @@ function socialmedialist(style, fontcolor, backgroundcolor, alignment, iconsize)
 
     if(small.checked == true){
         document.getElementById("socialmedialist").classList.add("small");
-        //alert("small");
     }
 
     if(large.checked == true){
         document.getElementById("socialmedialist").classList.add("large");
-        //alert("large");
     }
 
     if(medium.checked == true){
-        //alert("I guess it's medium!");
         document.getElementById("socialmedialist").classList.remove("large", "small");
     }
 
@@ -37,7 +35,8 @@ function socialmedialist(style, fontcolor, backgroundcolor, alignment, iconsize)
     for(var i = 0; i < elements.length; i++){
         elements[i].style.backgroundColor = backgroundcolor;
         elements[i].style.color = fontcolor;
-        //elements[i].style.fontSize = iconsize +"px";
+        document.getElementById("hovestyle").innerHTML = hoverbackgroundcss;
+        document.getElementById("socialmedialist").classList.add("hoverclass");
     }
 
 }
@@ -316,6 +315,7 @@ document.getElementById('generate').addEventListener('click', function(){
     var ifontcolor = document.getElementById('color').value;
     var ibackgroundcolor = document.getElementById('background').value;
     var alignment = document.getElementById('alignment').value;
+    
 
     socialmedialist(style, ifontcolor, ibackgroundcolor, alignment);
 
@@ -352,16 +352,16 @@ function ownstyle(){
     var customborderwidth = document.getElementById("borderwidth").value;
     var custombordertype = document.getElementById("bordertype").value;
     var custombordercolor = document.getElementById("bordercolor").value;
-    var hoverbgcolor = document.getElementById("hoverbg").value;
-    var hoverbackgroundcss = ".hoverclass .media:hover{background-color: " +hoverbgcolor +"}";
+    //var hoverbgcolor = document.getElementById("hoverbg").value;
+    //var hoverbackgroundcss = ".hoverclass .media:hover{background-color: " +hoverbgcolor +"}";
 
     var elements = document.getElementsByClassName('media');
     for(var i = 0; i < elements.length; i++){
         elements[i].style.borderStyle = custombordertype;
         elements[i].style.borderColor = custombordercolor;
         elements[i].style.borderWidth = customborderwidth +"px";
-        document.getElementById("hovestyle").innerHTML = hoverbackgroundcss;
-        document.getElementById("socialmedialist").classList.add("hoverclass");
+        //document.getElementById("hovestyle").innerHTML = hoverbackgroundcss;
+        //document.getElementById("socialmedialist").classList.add("hoverclass");
 
     }
 
@@ -446,6 +446,8 @@ function popup() {
     }
 
 }
+
+
 
 
 
