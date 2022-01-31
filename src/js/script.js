@@ -8,12 +8,10 @@ function socialmedialist(style, fontcolor, backgroundcolor, alignment, iconsize)
 
     if(hoverbgcolor == ""){
         var hoverbackgroundcss = "";
-        alert("leer");
     }
 
     else{
         var hoverbackgroundcss = ".hoverclass .media:hover{background-color: " +hoverbgcolor +" !important;" +"}";
-        alert("nicht leer");
     }
 
 

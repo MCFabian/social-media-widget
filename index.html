@@ -21,9 +21,8 @@
 			<h2>Updates</h2>
 			<hr>
 			<ul>
-				<li>Der Basis-Style ist nun auch in umgekehrter Gestaltung verfügbar</li>
-				<li>Der Bug, dass die Hintergrundfarbe bei Mouseover nur einstellbar war, wenn man eine Kontur aktivierte ist nun behoben.</li>
-				<li>Der DarkMode ist nun Standard-Design.</li>
+				<li>Ein Bug mit der Hoverfarbe wurde behoben</li>
+				<li>Es gibt nun eine weitere Vergrößerungsstufe für die Social Icons</li>
 			</ul>
 			<hr>
 			<button onclick="popup()" class="button">Schließen</button>
@@ -191,6 +190,19 @@
 			font-size: 15px;
 		}
 
+		.basic-asside.larger > .media {
+			background: #fff;
+			color: #323232;
+			border-radius: 2px;
+			transition: .2s ease-in;
+			padding: 24px 22px 20px 22px;
+			margin: 0 !important;
+			z-index: 2;
+			font-size: 20px;
+			height: 24px;
+			width: 24px;
+		}
+
 		.basic-asside.small > .media {
 			background: #fff;
 			color: #323232;
@@ -248,6 +260,20 @@
 			padding: 22px;
 			z-index: 2;
 			font-size: 18px;
+		}
+
+		.basic-buble-asside.larger  > .media {
+			padding: 24px 22px 20px 22px;
+			height: 24px;
+			width: 24px;
+			font-size: 20px;
+			background: #fff;
+			color: #323232;
+			transition: .2s ease-in;
+			border-radius: 100%;
+			box-shadow: -9px -1px 15px -6px rgba(0,0,0,0.41);
+			margin: 5px 0;
+			z-index: 2;
 		}
 		
 	
@@ -462,7 +488,7 @@
 
 		.larger .media {
 			font-size: 20px;
-			padding: 14px 14px 10px 14px;
+			padding: 16px 14px 12px 14px;
 			width: 24px;
 			height: 24px;
 		}
