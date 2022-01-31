@@ -486,7 +486,7 @@ button:hover {
   }
   
   .resize label:hover {
-    background: #f0f0f0 !important;
+    background: var(--hintbackground) !important;
     color: var(--fontcolor)
   }
 

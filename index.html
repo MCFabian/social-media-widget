@@ -21,9 +21,8 @@
 			<h2>Updates</h2>
 			<hr>
 			<ul>
-				<li>Der Basis-Style ist nun auch in umgekehrter Gestaltung verfügbar</li>
-				<li>Der Bug, dass die Hintergrundfarbe bei Mouseover nur einstellbar war, wenn man eine Kontur aktivierte ist nun behoben.</li>
-				<li>Der DarkMode ist nun Standard-Design.</li>
+				<li>Ein Bug mit der Hoverfarbe wurde behoben</li>
+				<li>Es gibt nun eine weitere Vergrößerungsstufe für die Social Icons</li>
 			</ul>
 			<hr>
 			<button onclick="popup()" class="button">Schließen</button>
@@ -191,6 +190,19 @@
 			font-size: 15px;
 		}
 
+		.basic-asside.larger > .media {
+			background: #fff;
+			color: #323232;
+			border-radius: 2px;
+			transition: .2s ease-in;
+			padding: 24px 22px 20px 22px;
+			margin: 0 !important;
+			z-index: 2;
+			font-size: 20px;
+			height: 24px;
+			width: 24px;
+		}
+
 		.basic-asside.small > .media {
 			background: #fff;
 			color: #323232;
@@ -249,19 +261,43 @@
 			z-index: 2;
 			font-size: 18px;
 		}
+
+		.basic-buble-asside.larger  > .media {
+			padding: 24px 22px 20px 22px;
+			height: 24px;
+			width: 24px;
+			font-size: 20px;
+			background: #fff;
+			color: #323232;
+			transition: .2s ease-in;
+			border-radius: 100%;
+			box-shadow: -9px -1px 15px -6px rgba(0,0,0,0.41);
+			margin: 5px 0;
+			z-index: 2;
+		}
 		
 	
 		.basic-invert .media {
 			transition: 0.3s;
 		}
 
-		.basic-invert .media:hover {
-			background: #fff !important;
-			color: #323232 !important;
+		.basic-invert #whatsapp:hover,
+		.basic-invert #facebook:hover,
+		.basic-invert #instagram:hover,
+		.basic-invert #youtube:hover,
+		.basic-invert #twitter:hover,
+		.basic-invert #tiktok:hover,
+		.basic-invert #xing:hover,
+		.basic-invert #linkedin:hover,
+		.basic-invert #linktree:hover,
+		.basic-invert #mail:hover,
+		.basic-invert #phone:hover,
+		.basic-invert #customicon:hover {
+			background: #fff;
+			color: #323232;
 		}
 
 		.basic > #whatsapp:hover,
-		.basic-invert > #whatsapp,
 		.basic-asside > #whatsapp:hover,
 		.basic-buble-asside > #whatsapp:hover{
 			color: #fff;
@@ -269,7 +305,6 @@
 		}
 		
 		.basic > #facebook:hover,
-		.basic-invert > #facebook,
 		.basic-asside > #facebook:hover,
 		.basic-buble-asside > #facebook:hover {
 			color: #fff;
@@ -277,7 +312,6 @@
 		}
 		
 		.basic > #instagram:hover,
-		.basic-invert > #instagram,
 		.basic-asside > #instagram:hover,
 		.basic-buble-asside > #instagram:hover  {
 			color: #fff;
@@ -285,7 +319,6 @@
 		}
 
 		.basic > #youtube:hover,
-		.basic-invert > #youtube,
 		.basic-asside > #youtube:hover,
 		.basic-buble-asside > #youtube:hover {
 			color: #fff;
@@ -293,7 +326,6 @@
 		}
 
 		.basic > #twitter:hover,
-		.basic-invert > #twitter,
 		.basic-asside > #twitter:hover,
 		.basic-buble-asside > #twitter:hover {
 			color: #fff;
@@ -301,7 +333,6 @@
 		}
 
 		.basic > #tiktok:hover,
-		.basic-invert > #tiktok,
 		.basic-asside > #tiktok:hover,
 		.basic-buble-asside > #tiktok:hover {
 			color: #fff;
@@ -309,7 +340,6 @@
 		}
 		
 		.basic > #xing:hover,
-		.basic-invert > #xing,
 		.basic-asside > #xing:hover,
 		.basic-buble-asside > #xing:hover {
 			color: #fff;
@@ -317,7 +347,6 @@
 		}
 		
 		.basic > #linkedin:hover,
-		.basic-invert > #linkedin,
 		.basic-asside > #linkedin:hover,
 		.basic-buble-asside > #linkedin:hover {
 			color: #fff;
@@ -325,7 +354,6 @@
 		}
 		
 		.basic > #linktree:hover,
-		.basic-invert > #linktree,
 		.basic-asside > #linktree:hover,
 		.basic-buble-asside > #linktree:hover {
 			color: #fff;
@@ -333,7 +361,6 @@
 		}
 		
 		.basic > #mail:hover,
-		.basic-invert > #mail,
 		.basic-asside > #mail:hover,
 		.basic-buble-asside > #mail:hover {
 			color: #fff;
@@ -341,7 +368,6 @@
 		}
 
 		.basic > #phone:hover,
-		.basic-invert > #phone,
 		.basic-asside > #phone:hover,
 		.basic-buble-asside > #phone:hover {
 			color: #fff;
@@ -349,9 +375,71 @@
 		}
 		
 		.basic > #customicon:hover,
-		.basic-invert > #customicon,
 		.basic-asside > #customicon:hover,
 		.basic-buble-asside > #customicon:hover{
+			color: #fff;
+			background: #0273A6;
+		}
+
+		/*INVERT*/
+
+		.basic-invert > #whatsapp{
+			color: #fff;
+			background: #25D366;
+		}
+		
+		.basic-invert > #facebook{
+			color: #fff;
+			background: #1877f2;
+		}
+		
+		.basic-invert > #instagram{
+			color: #fff ;
+			background: #ec4354;
+		}
+
+		.basic-invert > #youtube{
+			color: #fff;
+			background: #ff0000;
+		}
+
+
+		.basic-invert > #twitter{
+			color: #fff;
+			background: #1d9bf0;
+		}
+
+		.basic-invert > #tiktok{
+			color: #fff;
+			background: #fe2c55;
+		}
+		
+		.basic-invert > #xing{
+			color: #fff;
+			background: #1A7576;
+		}
+
+		.basic-invert > #linkedin{
+			color: #fff;
+			background: #0073b1;
+		}
+		
+		.basic-invert > #linktree{
+			color: #fff;
+			background: #0273A6;
+		}
+		
+		.basic-invert > #mail{
+			color: #fff;
+			background: #0273A6;
+		}
+
+		.basic-invert > #phone {
+			color: #fff;
+			background: #0273A6;
+		}
+
+		.basic-invert > #customicon{
 			color: #fff;
 			background: #0273A6;
 		}
@@ -396,6 +484,13 @@
 			padding: 14px;
 			width: 18px;
 			height: 18px;
+		}
+
+		.larger .media {
+			font-size: 20px;
+			padding: 16px 14px 12px 14px;
+			width: 24px;
+			height: 24px;
 		}
 
 	</style>
@@ -560,6 +655,7 @@
 					<li><input value="small" name="resize" id="small" type="radio"><label for="small">Klein</label></li>
 					<li><input checked value="medium" name="resize" id="medium" type="radio"><label for="medium">Standard</label></li>
 					<li><input value="large" name="resize" id="large" type="radio"><label for="large">Groß</label></li>
+					<li><input value="larger" name="resize" id="larger" type="radio"><label for="larger">Größer</label></li>
 				</ul>
 			</div>
 			<hr>

@@ -5,7 +5,16 @@ function socialmedialist(style, fontcolor, backgroundcolor, alignment, iconsize)
     var alignment;
 
     var hoverbgcolor = document.getElementById("hoverbg").value;
-    var hoverbackgroundcss = ".hoverclass .media:hover{background-color: " +hoverbgcolor +" !important;" +"}";
+
+    if(hoverbgcolor == ""){
+        var hoverbackgroundcss = "";
+    }
+
+    else{
+        var hoverbackgroundcss = ".hoverclass .media:hover{background-color: " +hoverbgcolor +" !important;" +"}";
+    }
+
+
 
     // give style class
     socialmedialist.removeAttribute('class');
@@ -26,8 +35,12 @@ function socialmedialist(style, fontcolor, backgroundcolor, alignment, iconsize)
         document.getElementById("socialmedialist").classList.add("large");
     }
 
+    if(larger.checked == true){
+        document.getElementById("socialmedialist").classList.add("larger");
+    }
+
     if(medium.checked == true){
-        document.getElementById("socialmedialist").classList.remove("large", "small");
+        document.getElementById("socialmedialist").classList.remove("large", "small", "larger");
     }
 
     // give backgroundcolor
