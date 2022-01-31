@@ -14,7 +14,7 @@
 </head>
 
 <body >
-
+    <?php include("src/pages/list.php") ?>
 	<div id="popupcontainer" class="popupcontainer">
 		<div class="popup">
 
