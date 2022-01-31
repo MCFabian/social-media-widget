@@ -4,6 +4,7 @@
 
 <div id="listcontainer">
     <ul>
-        <li></li>
+        <li>Test</li>
+        <li>Test</li>
     </ul>
 </div>
