@@ -1,5 +1,9 @@
-<?php 
-
-echo"Hello World";
+<?php
 
 ?>
+
+<div id="listcontainer">
+    <ul>
+        <li></li>
+    </ul>
+</div>
