@@ -629,21 +629,28 @@
 				<hr>
 				<label for="">Eigenen Style festlegen</label>
 				<p class="">Sie können einen eigenen Style festlegen.</p>
-	
-				<label for="borderwidth">Konturstärke in PX</label>
-				<input min="0" type="number" name="borderwidth" id="borderwidth" placeholder="0px">
+				
+				<ul id="borderstyles">
+					<li>
+						<label for="borderwidth">Konturstärke in PX</label>
+						<input min="0" type="number" name="borderwidth" id="borderwidth" placeholder="0px">
+					</li>
+					<li>
+						<label for="bordercolor">Konturfarbe</label>
+						<input placeholder="#fff" type="text" name="bordercolor" id="bordercolor">
+					</li>
+					<li>
+						<label for="bordertype">Konturtype</label>
+						<select name="bordertype" id="bordertype">
+							<option value="none">Bitte wählen</option>
+							<option value="solid">solid</option>
+							<option value="dotted">dotted</option>
+							<option value="double">double</option>
+							<option value="dashed">dashed</option>
+						</select>
 
-				<label for="bordercolor">Konturfarbe</label>
-				<input placeholder="#fff" type="text" name="bordercolor" id="bordercolor">
-
-				<label for="bordertype">Konturtype</label>
-				<select name="bordertype" id="bordertype">
-					<option value="none">Bitte wählen</option>
-					<option value="solid">solid</option>
-					<option value="dotted">dotted</option>
-					<option value="double">double</option>
-					<option value="dashed">dashed</option>
-				</select>
+					</li>
+				</ul>
 
 				<label for="hoverbg">Hintergrundfarbe bei Hover</label>
 				<p>Legt die Hintergrundfarbe der Iconcontainer fest, wenn sich der Mauszeiger über diese bewegt. Zugelassene Formate sind Hex, RGB-A, CSS-Farbworte, HSL.</p>
