@@ -1,3 +1,21 @@
+function CreateSocialMediaElement (socialmedianame, socialmedialink, socialmediaclass, socialmediafontawesome){
+    //Create lower case id from name
+    var socialmediaid = socialmedianame.toLowerCase();
+
+    // Create DOM Element
+    var newSocialMediaElement = document.createElement("a");
+
+    newSocialMediaElement.setAttribute("id", socialmediaid);
+    newSocialMediaElement.setAttribute("href", socialmedialink);
+    newSocialMediaElement.setAttribute("title", socialmedianame);
+    newSocialMediaElement.setAttribute("target", "_blank");    
+    newSocialMediaElement.classList.add("media", socialmediafontawesome, socialmediaclass);
+
+    //newSocialMediaElement.appendChild(newSocialMediaElementContent);
+    var socialmedialist = document.getElementById("socialmedialist");
+    socialmedialist.appendChild(newSocialMediaElement);
+}
+
 function socialmedialist(style, fontcolor, backgroundcolor, alignment, iconsize){
     var socialmedialist = document.getElementById("socialmedialist");
     var style;
@@ -13,7 +31,6 @@ function socialmedialist(style, fontcolor, backgroundcolor, alignment, iconsize)
     else{
         var hoverbackgroundcss = ".hoverclass .media:hover{background-color: " +hoverbgcolor +" !important;" +"}";
     }
-
 
 
     // give style class
@@ -55,273 +72,154 @@ function socialmedialist(style, fontcolor, backgroundcolor, alignment, iconsize)
 }
 
 document.getElementById('generate').addEventListener('click', function(){
-    // Auswahl überprüfen
-    // Facebook
-    var facebook = document.getElementById("facebook");
-    var linkfacebook = document.getElementById("linkfacebook").value;
-    
-    if(linkfacebook.length == 0){
-        facebook.setAttribute('href', "https://de-de.facebook.com/");
+    //Auswahl überprüfen
+    //Facebook
+    if(document.getElementById('checkfacebook').checked == true){
+        var linkfacebook = document.getElementById("linkfacebook").value;
+
+        if(linkfacebook.length == 0){
+            var linktofacebook = "https://de-de.facebook.com/";
+        }
+
+        CreateSocialMediaElement ("Facebook", linkfacebook, "fa-facebook-f", "fab");
     }
+
+    //WhatsApp
+    if(document.getElementById('checkwhatsapp').checked == true){
+        var linkwhatsapp = document.getElementById("linkwhatsapp").value;
+        var linkwhatapp = " https://wa.me/" +linkwhatsapp;
+
+        if(linkwhatsapp.length == 0){
+            linkwhatapp = "https://whatsapp.com/";
+        }
+        
+         else {
+            linkwhatapp = " https://wa.me/" +linkwhatsapp;
+         }
+
+        CreateSocialMediaElement ("WhatsApp", linkwhatapp, "fa-whatsapp", "fab");
+    } 
     
-     else {
-        facebook.setAttribute('href', linkfacebook);
+    //Instagram
+    if(document.getElementById('checkinstagram').checked == true){
+        var linkinstagram = document.getElementById("linkinstagram").value;
+
+        if(linkinstagram.length == 0){
+            var linkinstagram = "https://instagram.com/";
+        }
+
+        CreateSocialMediaElement ("Instagram", linkinstagram, "fa-instagram", "fab");
     }
-                                                 
-    // whatsapp
-    var whatsapp = document.getElementById("whatsapp");
-    var linkwhatsapp = document.getElementById("linkwhatsapp").value;
-    var linkwhatapp = " https://wa.me/" +linkwhatsapp;
-                
-    
-    if(linkwhatsapp.length == 0){
-        whatsapp.setAttribute('href', "https://whatsapp.com/");
-    }
-    
-     else {
-        whatsapp.setAttribute('href', linkwhatapp);
-    }
-    
-    // instagram
-    var instagram = document.getElementById("instagram");
-    var linkinstagram = document.getElementById("linkinstagram").value;
-                
-    
-    if(linkinstagram.length == 0){
-        instagram.setAttribute('href', "https://instagram.com/");
-    }
-    
-     else {
-        instagram.setAttribute('href', linkinstagram);
-    }
-    
+
     //YouTube
-    var youtube = document.getElementById("youtube");
-    var linkyoutube = document.getElementById("linkyoutube").value;
-    
-    if(linkyoutube.length == 0){
-        youtube.setAttribute('href', "https://youtube.com/");
-    }
-    
-     else {
-        youtube.setAttribute('href', linkyoutube);
+    if(document.getElementById('checkyoutube').checked == true){
+        var linkyoutube = document.getElementById("linkyoutube").value;
+
+        if(linkyoutube.length == 0){
+            var linkyoutube = "https://youtube.com/";
+        }
+
+        CreateSocialMediaElement ("YouTube", linkyoutube, "fa-youtube", "fab");
     }
 
     //Twitter
-    var twitter = document.getElementById("twitter");
-    var linktwitter = document.getElementById("linktwitter").value;
-    
-    if(linktwitter.length == 0){
-        twitter.setAttribute('href', "https://twitter.com/");
-    }
-    
-     else {
-        twitter.setAttribute('href', linktwitter);
+    if(document.getElementById('checktwitter').checked == true){
+        var linktwitter = document.getElementById("linktwitter").value;
+
+        if(linktwitter.length == 0){
+            var linktwitter = "https://twitter.com/";
+        }
+
+        CreateSocialMediaElement ("Twitter", linktwitter, "fa-twitter", "fab");
     }
 
     //TikTok
-    var tiktok = document.getElementById("tiktok");
-    var linktiktok = document.getElementById("linktiktok").value;
-    
-    if(linktiktok.length == 0){
-        tiktok.setAttribute('href', "https://tiktok.com/");
-    }
-    
-     else {
-        tiktok.setAttribute('href', linktiktok);
-    }
-    
-    //xing
-    var xing = document.getElementById("xing");
-    var linkxing = document.getElementById("linkxing").value;
-                
-    
-    if(linkxing.length == 0){
-        xing.setAttribute('href', "https://xing.com/");
-    }
-    
-     else {
-        xing.setAttribute('href', linkxing);
-    }
-    
-    //linkedin
-    var linkedin = document.getElementById("linkedin");
-    var linklinkedin = document.getElementById("linklinkedin").value;
-                
-    
-    if(linklinkedin.length == 0){
-        linkedin.setAttribute('href', "https://linkedin.com/");
-    }
-    
-     else {
-        linkedin.setAttribute('href', linklinkedin);
-    }
-    
-    //linktree
-    var linktree = document.getElementById("linktree");
-    var linklinktree = document.getElementById("linklinktree").value;
-                
-    
-    if(linklinktree.length == 0){
-        linktree.setAttribute('href', "https://linktr.ee/");
-    }
-    
-     else {
-        linktree.setAttribute('href', linklinktree);
-    }
-    
-    //mail
-    var mail = document.getElementById("mail");
-    var linkmail = document.getElementById("linkmail").value;
-    linktomail = 'mailto:' +linkmail;
-                
-    
-    if(linkmail.length == 0){
-        mail.setAttribute('href', "https://www.google.de");
-    }
-    
-     else {
-        mail.setAttribute('href', linktomail);
-    }
-
-    //phone
-    var phone = document.getElementById("phone");
-    var linkphone = document.getElementById("linkphone").value;
-    var linktophone = 'tel:' +linkphone;
-                
-    
-    if(linkphone.length == 0){
-        phone.setAttribute('href', "https://www.google.de");
-    }
-    
-     else {
-        phone.setAttribute('href', linktophone);
-    }
-
-    //customicon
-    var customicon = document.getElementById("customicon");
-    var linkcustomicon = document.getElementById("linkcustomicon").value;
-    customiconclasstype = document.getElementById("customiconclasstype").value;
-    var customiconclass = document.getElementById("customiconclass").value;
-    
-    if(customiconclass.length == 0){
-        //alert("nichts");
-    }
-
-    else{
-        customicon.removeAttribute('class');
-        customicon.classList.add('media');
-        customicon.classList.add(customiconclasstype ,customiconclass);
-    }
-                
-    
-    if(linkcustomicon.length == 0){
-        customicon.setAttribute('href', "https://www.google.de");
-        customicon.setAttribute('title', '');
-    }
-    
-     else {
-        customicon.setAttribute('href', linkcustomicon);
-        customicon.setAttribute('title', linkcustomicon);
-    }
-    
-    
-    //check for visibility
-    if(document.getElementById('checkfacebook').checked == true){
-        facebook.style.display = 'block';
-    }
-
-    else {
-        facebook.style.display = 'none';
-    }
-
-    if(document.getElementById('checkwhatsapp').checked == true){
-        whatsapp.style.display = 'block';
-    }
-
-    else {
-        whatsapp.style.display = 'none';
-    }
-
-    if(document.getElementById('checkinstagram').checked == true){
-        instagram.style.display = 'block';
-    }
-
-    else {
-        instagram.style.display = 'none';
-    }
-    
-    if(document.getElementById('checkyoutube').checked == true){
-        youtube.style.display = 'block';
-    }
-
-    else {
-        youtube.style.display = 'none';
-    }
-
-    if(document.getElementById('checktwitter').checked == true){
-        twitter.style.display = 'block';
-    }
-
-    else {
-        twitter.style.display = 'none';
-    }
-
     if(document.getElementById('checktiktok').checked == true){
-        tiktok.style.display = 'block';
+        var linktiktok = document.getElementById("linktiktok").value;
+
+        if(linktiktok.length == 0){
+            var linktiktok = "https://www.tiktok.com/de-DE";
+        }
+
+        CreateSocialMediaElement ("TikTok", linktiktok, "fa-tiktok", "fab");
     }
 
-    else {
-        tiktok.style.display = 'none';
-    }
-    
+    //XING
     if(document.getElementById('checkxing').checked == true){
-        xing.style.display = 'block';
+        var linkxing = document.getElementById("linkxing").value;
+
+        if(linkxing.length == 0){
+            var linkxing = "https://xing.com/";
+        }
+
+        CreateSocialMediaElement ("XING", linkxing, "fa-xing", "fab");
     }
 
-    else {
-        xing.style.display = 'none';
-    }
-    
+    //LinkedIn
     if(document.getElementById('checklinkedin').checked == true){
-        linkedin.style.display = 'block';
+        var linklinkedin = document.getElementById("linklinkedin").value;
+
+        if(linklinkedin.length == 0){
+            var linklinkedin = "https://linkedin.com/";
+        }
+
+        CreateSocialMediaElement ("LinkedIn", linklinkedin, "fa-linkedin-in", "fab");
     }
 
-    else {
-        linkedin.style.display = 'none';
-    }
-    
+    //LinkTree
     if(document.getElementById('checklinktree').checked == true){
-        linktree.style.display = 'block';
+        var linklinktree = document.getElementById("linklinktree").value;
+
+        if(linklinktree.length == 0){
+            var linklinktree = "https://linktree.com/";
+        }
+
+        CreateSocialMediaElement ("LinkTree", linklinktree, "fa-link", "fas");
     }
 
-    else {
-        linktree.style.display = 'none';
-    }
-
+    //Mail
     if(document.getElementById('checkmail').checked == true){
-        mail.style.display = 'block';
+        var linkmail = document.getElementById("linkmail").value;
+
+        if(linkmail.length == 0){
+            var linkmail = "https://google.com/";
+        }
+
+        else {
+            linkmail = 'mailto:' +linkmail;
+        }
+
+        CreateSocialMediaElement ("E-Mail", linkmail, "fa-envelope", "far");
     }
 
-    else {
-        mail.style.display = 'none';
-    }
-
+    //Phone
     if(document.getElementById('checkphone').checked == true){
-        phone.style.display = 'block';
+        var linkphone = document.getElementById("linkphone").value;
+
+        if(linkphone.length == 0){
+            var linkphone = "https://google.com/";
+        }
+
+        else {
+            linkphone = 'tel:' +linkphone;
+        }
+
+        CreateSocialMediaElement ("Telefon", linkphone, "fa-phone", "fas");
     }
 
-    else {
-        phone.style.display = 'none';
-    }
-
+    //Customicon
     if(document.getElementById('checkcustomicon').checked == true){
-        customicon.style.display = 'block';
+        var linkcustomicon = document.getElementById("linkcustomicon").value;
+        var customiconclasstype = document.getElementById("customiconclasstype").value;
+        var customiconclass = document.getElementById("customiconclass").value;
+
+        if(linkcustomicon.length == 0){
+            var linkcustomicon = "https://google.com/";
+        }
+
+        CreateSocialMediaElement ("", linkcustomicon, customiconclass, customiconclasstype);
     }
 
-    else {
-        customicon.style.display = 'none';
-    }
 
     // style und farben eintragen
     var style = document.getElementById('style').value;
