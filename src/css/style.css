@@ -5,7 +5,7 @@
 --hintbackground: #f3f3f3;
 --fontcolor: #727272;
 --fontcolordarker:rgb(61, 70, 80); 
---accentcolor: #f47b6b;
+--accentcolor: #1c648f;
 --dividercolor: #d6d6d6;
 }
 
@@ -18,7 +18,7 @@
     --hintbackground: #1b1c22;
     --fontcolor: #ffffff60; 
     --fontcolordarker:#fff; 
-    --accentcolor: #f47b6b;
+    --accentcolor: #1c648f;
     --dividercolor: #ffffff40;
 }
     
