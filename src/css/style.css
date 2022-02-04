@@ -260,7 +260,7 @@ label {
     margin: 0;
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr; 
-    gap: 10x 10px; 
+    gap: 10px 10px; 
 }
 
 #export {
