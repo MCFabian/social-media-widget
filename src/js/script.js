@@ -72,6 +72,11 @@ function socialmedialist(style, fontcolor, backgroundcolor, alignment, iconsize)
 }
 
 document.getElementById('generate').addEventListener('click', function(){
+    //Reset socialmedia
+
+    document.getElementById("socialmedialist").innerHTML = "";
+
+
     //Auswahl überprüfen
     //Facebook
     if(document.getElementById('checkfacebook').checked == true){
