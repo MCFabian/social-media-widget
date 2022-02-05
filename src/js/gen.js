@@ -73,7 +73,7 @@ function socialmedialist(style, fontcolor, backgroundcolor, alignment, iconsize)
 
 document.getElementById('generate').addEventListener('click', function(){
     //Reset socialmedia
-
+    document.getElementById("export").value = "";
     document.getElementById("socialmedialist").innerHTML = "";
 
 
@@ -235,6 +235,7 @@ document.getElementById('generate').addEventListener('click', function(){
 
     socialmedialist(style, ifontcolor, ibackgroundcolor, alignment);
 
+
     if((!!document.getElementById("borderwidth").value == '') || (!!document.getElementById("bordertype").value == '') || (!!document.getElementById("bordercolor").value == '')) {
 
     }
@@ -247,9 +248,10 @@ document.getElementById('generate').addEventListener('click', function(){
 
     // Code ausgeben
     var socialmedialistdata = document.getElementById('socialmedialistdata').innerHTML;
-    var styledata = '<style>' +document.getElementById("styledata").innerHTML +'</style>';
+    //var styledata = '<style>' +document.getElementById("styledata").innerHTML +'</style>';
     var exportdata = document.getElementById('export');
-    exportdata.innerHTML = styledata +socialmedialistdata;
+    exportdata.innerHTML = socialmedialistdata;
+    exportClass(style);
 
     var checked = document.querySelectorAll('input[type=checkbox]:checked');
 
@@ -298,5 +300,24 @@ function checkforhint(){
             document.getElementById("hint").classList.remove("hint");
         }
     //})
+
+}
+
+function exportClass(classname){
+    var groundstyledata = document.getElementById("styledata").innerHTML;
+    var styleclass = document.getElementById(classname).innerHTML;
+
+    var styledata = "<style>" +groundstyledata +styleclass +"</style>";
+
+    alert(styledata);
+    
+    
+    var exportdata = document.getElementById("export");
+    //save HTML Data from export
+    var currentexportdata = exportdata.value;
+    //add STYLE-CLASS
+    var newexportdata = currentexportdata + styledata;
+    exportdata.value = newexportdata;
+
 
 }

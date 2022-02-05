@@ -31,36 +31,7 @@
 
 	<style id="hovestyle"></style>
 
-	<style id="styledata">
-		#socialmedialist {
-			display: flex;
-			justify-content: center;
-			text-align: center;
-		}
-		
-		.media {
-			padding: 10px;
-			font-size: 14px;
-			height: 12px;
-			width: 12px;
-			border-radius: 10px;
-			background: #fff;
-			color: rgb(34, 34, 34);
-			text-decoration: none;
-			text-align: center;
-			vertical-align: middle;
-		}
-
-		.media + .media {
-			margin-left: 5px;
-		}
-		
-		.transpartent > .media {
-			background: transparent !important;
-			color: #fff !important;
-			border: 1px solid #ffffff30 !important;
-		}
-		
+	<style id="round">
 		/*ROUND*/
 		.round >  .media {
 			border-radius: 100%;
@@ -72,7 +43,9 @@
 		.round > .media:hover {
 			border-radius: 10%;
 		}
-		
+	</style>
+
+	<style id="square">
 		/*SQUARE*/
 		.square > .media {
 			border-radius: 0;
@@ -85,7 +58,9 @@
 			padding-left: 15px;
 			padding-right: 15px;
 		}
-		
+	</style>
+
+	<style id="minimal">
 		/* MINIMAL */
 		.minimal > .media {
 			border: none;
@@ -101,7 +76,9 @@
 			border-bottom: 1px solid #fff;
 			transform:translate(0px,-4px);
 		}
+	</style>
 
+	<style id="darker">
 		/* DARKER */
 		.darker > .media {
 			border: none;
@@ -129,7 +106,9 @@
 		.darker > .media:hover::after {
 			background: rgba(0, 0, 0, 0.25);
 		}
+	</style>
 
+	<style id="move">
 		/* MOVE */
 		.move > .media {
 			position: relative;
@@ -153,6 +132,31 @@
 
 		.move > .media:hover::after {
 			width: 100%;
+		}
+	</style>
+
+	<style id="styledata">
+		#socialmedialist {
+			display: flex;
+			justify-content: center;
+			text-align: center;
+		}
+		
+		.media {
+			padding: 10px;
+			font-size: 14px;
+			height: 12px;
+			width: 12px;
+			border-radius: 10px;
+			background: #fff;
+			color: rgb(34, 34, 34);
+			text-decoration: none;
+			text-align: center;
+			vertical-align: middle;
+		}
+
+		.media + .media {
+			margin-left: 5px;
 		}
 		
 		/* BASIC */
