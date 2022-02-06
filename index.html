@@ -779,11 +779,11 @@
 
 				<label >Größe</label>
 				<p>Sie können Sie Größe der Social Media Icons in drei Stufen festlegen.</p>
-				<ul class="resize">
-					<li><input value="small" name="resize" id="small" type="radio"><label for="small">Klein</label></li>
-					<li><input checked value="medium" name="resize" id="medium" type="radio"><label for="medium">Standard</label></li>
-					<li><input value="large" name="resize" id="large" type="radio"><label for="large">Groß</label></li>
-					<li><input value="larger" name="resize" id="larger" type="radio"><label for="larger">Größer</label></li>
+				<ul id="resize" class="tab">
+					<li><input value="small" name="tab" id="small" type="radio"><label for="small">Klein</label></li>
+					<li><input checked value="medium" name="tab" id="medium" type="radio"><label for="medium">Standard</label></li>
+					<li><input value="large" name="tab" id="large" type="radio"><label for="large">Groß</label></li>
+					<li><input value="larger" name="tab" id="larger" type="radio"><label for="larger">Größer</label></li>
 				</ul>
 			</div>
 			<hr>
@@ -799,11 +799,12 @@
 			<hr>
 			<label for="alignment">Zentrierung</label>
 			<p class="">Wählen Sie eine Anordnung der Social-Media-Icons. Bei seitlicher Anordnung (nur SEO Kachel) ist die Funktion nicht verfügbar.</p>
-			<select id="alignment">
-				<option value="left">Links</option>
-				<option value="center">Mittig</option>
-				<option value="right">Rechts</option>
-			</select>
+
+			<ul class="tab" id="alignment">
+				<li><input checked value="left" name="alignment" id="left" type="radio"><label for="left">Links</label></li>
+				<li><input value="center" name="alignment" id="center" type="radio"><label for="center">Mittig</label></li>
+				<li><input value="right" name="alignment" id="right" type="radio"><label for="right">Rechts</label></li>
+			</ul>
 
 
 			<hr>

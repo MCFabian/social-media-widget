@@ -232,7 +232,23 @@ document.getElementById('generate').addEventListener('click', function(){
     var style = document.getElementById('style').value;
     var ifontcolor = document.getElementById('color').value;
     var ibackgroundcolor = document.getElementById('background').value;
-    var alignment = document.getElementById('alignment').value;
+
+    //alignment
+    var left = document.getElementById("left");
+    var center = document.getElementById("center");
+    var right = document.getElementById("right");
+
+    if(left.checked == true){
+        var alignment = "left";
+    }
+
+    if(center.checked == true){
+        var alignment = "center";
+    }
+
+    if(right.checked == true){
+        var alignment = "right";
+    }
     
 
     socialmedialist(style, ifontcolor, ibackgroundcolor, alignment);
