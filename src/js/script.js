@@ -1,5 +1,3 @@
-
-
 function notification(type, text){
     var notification = document.getElementById("notification");
     var notificationicon;
@@ -51,10 +49,6 @@ document.getElementById("morestyles").addEventListener("click", function(){
 
 })
 
-// check for hint
-
-
-
 function popup() {
     var popup = document.getElementById("popupcontainer");
 
@@ -67,10 +61,6 @@ function popup() {
     }
 
 }
-
-
-
-
 
 function setTheme(){
 
@@ -86,10 +76,6 @@ function setTheme(){
         body.classList.remove("dark");
     }
 }
-
-
-
-
 
 function selectall() {
     var ele = document.querySelectorAll('input[type=checkbox]');
@@ -115,6 +101,3 @@ function selectall() {
 
 
 }
-
-
-

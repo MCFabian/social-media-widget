@@ -223,7 +223,7 @@ document.getElementById('generate').addEventListener('click', function(){
         }
 
         else{
-            CreateSocialMediaElement ("T", linkcustomicon, customiconclass, customiconclasstype);
+            CreateSocialMediaElement ("", linkcustomicon, customiconclass, customiconclasstype);
         }
     }
 
