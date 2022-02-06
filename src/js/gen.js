@@ -218,11 +218,13 @@ document.getElementById('generate').addEventListener('click', function(){
         var customiconclasstype = document.getElementById("customiconclasstype").value;
         var customiconclass = document.getElementById("customiconclass").value;
 
-        if(linkcustomicon.length == 0){
-            var linkcustomicon = "https://google.com/";
+        if(customiconclass.length == 0){
+            notification("warning", "Es wurde keine Icon-Class angegeben. Es konnte kein Custom-Icon erzeugt werden.");
         }
 
-        CreateSocialMediaElement ("", linkcustomicon, customiconclass, customiconclasstype);
+        else{
+            CreateSocialMediaElement ("T", linkcustomicon, customiconclass, customiconclasstype);
+        }
     }
 
 
@@ -246,11 +248,7 @@ document.getElementById('generate').addEventListener('click', function(){
 
     checkforhint();
 
-    // Code ausgeben
-    var socialmedialistdata = document.getElementById('socialmedialistdata').innerHTML;
-    //var styledata = '<style>' +document.getElementById("styledata").innerHTML +'</style>';
-    var exportdata = document.getElementById('export');
-    exportdata.innerHTML = socialmedialistdata;
+
     exportClass(style);
 
     var checked = document.querySelectorAll('input[type=checkbox]:checked');
@@ -306,18 +304,13 @@ function checkforhint(){
 function exportClass(classname){
     var groundstyledata = document.getElementById("styledata").innerHTML;
     var styleclass = document.getElementById(classname).innerHTML;
-
+    var socialmedialistdata = document.getElementById('socialmedialistdata').innerHTML;
+    //create CSS Styling Data
     var styledata = "<style>" +groundstyledata +styleclass +"</style>";
-
-    alert(styledata);
-    
-    
     var exportdata = document.getElementById("export");
-    //save HTML Data from export
-    var currentexportdata = exportdata.value;
-    //add STYLE-CLASS
-    var newexportdata = currentexportdata + styledata;
+    
+    // Code ausgeben
+    var newexportdata = socialmedialistdata + styledata;
     exportdata.value = newexportdata;
-
 
 }

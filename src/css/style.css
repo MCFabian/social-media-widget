@@ -73,6 +73,14 @@ body {
     padding: 15px;
 }
 
+.warning {
+    background-color: #fff6e4;
+    color: #e98a4b;
+    border: 1px solid #ffe0b1;
+    animation: slidein 4s;
+    padding: 15px;
+}
+
 hr {
     background: var(--dividercolor);
     height: 1px;

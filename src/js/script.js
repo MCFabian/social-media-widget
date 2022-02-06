@@ -14,6 +14,11 @@ function notification(type, text){
         notificationicon = "<i class='fas fa-check'></i>";
     }
 
+    if(type == 'warning'){
+        notification.classList.add("warning")
+        notificationicon = "<i class='fas fa-exclamation'></i>";
+    }
+
     if(type == '') {
         notification.classList.add("hint");
         notificationicon = "<i class='far fa-smile-wink'></i>";
