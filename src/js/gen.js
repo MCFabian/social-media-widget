@@ -219,7 +219,8 @@ document.getElementById('generate').addEventListener('click', function(){
         var customiconclass = document.getElementById("customiconclass").value;
 
         if(customiconclass.length == 0){
-            notification("warning", "Es wurde keine Icon-Class angegeben. Es konnte kein Custom-Icon erzeugt werden.");
+            notification("error", "Es wurde keine Icon-Class angegeben. Es konnte kein Code erzeugt werden.");
+            return;
         }
 
         else{
