@@ -557,6 +557,36 @@ button:hover {
     margin: 0 5px;
     color: #fff;
     font-size: 1.0rem;
+}
 
+.listcontainer {
+    display: block;
+    position: fixed;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    background-color: var(--background);
+}
+
+.listcontainer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.listcontainer ul li {
+    list-style: none;
+    pad: 7px 10px;
+    background: var(--background);
+    cursor: pointer;
+}
+
+.listcontainer ul li + li {
+    border-top: 1px solid var(--dividercolor);
+}
+
+.listcontainer ul li:nth-child(even){
+    background-color: var(--hintbackground);
 }
 
