@@ -23,7 +23,9 @@
             else{
 
             echo"<li class='expandme'><strong>$id</strong> - Erstellt am: $creationdate
-                    <div class='expander'>$code</div>
+                    <div class='expander'>
+                    <strong>Vorschau</strong><br>
+                    $code</div>
                 </li>";
             }
 
