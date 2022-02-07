@@ -591,3 +591,23 @@ button:hover {
     background-color: var(--hintbackground);
 }
 
+#listcontainerhead {
+    display: flex;
+    flex-direction: row;
+}
+
+#listcontainerhead #closelistcontaienr {
+    margin-bottom: 0 0 auto auto;
+    width: 15px;
+    height: 15px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid var(--dividercolor);
+    border-radius: 3px;
+    transition: .3s;
+}
+
+#closelistcontaienr:hover {
+    background: var(--bodybackground);
+}
+
