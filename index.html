@@ -21,8 +21,9 @@
 			<h2>Updates</h2>
 			<hr>
 			<ul>
-				<li>Ein Bug mit der Hoverfarbe wurde behoben</li>
-				<li>Es gibt nun eine weitere Vergrößerungsstufe für die Social Icons</li>
+				<li>Die Codeausgabe wurde optimiert: Es werden nun nur die Social-Media Kanäle erzeugt und ausgegeben, welche auch ausgewählt sind. Gleiches gilt für den gewählten Style.</li>
+				<li>Man kann nun einen Borderradius festlegen, dieser ist an den weiteren Kontureinstellungn gebunden.</li>
+				<li>Kleine Optimierungen und Fehlerbehebungen.</li>
 			</ul>
 			<hr>
 			<button onclick="popup()" class="button">Schließen</button>
@@ -31,36 +32,164 @@
 
 	<style id="hovestyle"></style>
 
-	<style id="styledata">
-		#socialmedialist {
-			display: flex;
-			justify-content: center;
-			text-align: center;
-		}
-		
-		.media {
-			padding: 10px;
-			font-size: 14px;
-			height: 12px;
-			width: 12px;
-			border-radius: 10px;
+	<style id="basic">
+		/* BASIC */
+		.basic > .media {
 			background: #fff;
-			color: rgb(34, 34, 34);
-			text-decoration: none;
-			text-align: center;
-			vertical-align: middle;
+			color: #323232;
+			border-radius: 2px;
+			transition: .2s ease-in;
 		}
 
-		.media + .media {
-			margin-left: 5px;
-		}
-		
-		.transpartent > .media {
-			background: transparent !important;
+		.basic > #whatsapp:hover{
 			color: #fff !important;
-			border: 1px solid #ffffff30 !important;
+			background: #25D366 !important;
 		}
 		
+		.basic > #facebook:hover{
+			color: #fff !important;
+			background: #1877f2 !important;
+		}
+		
+		.basic > #instagram:hover{
+			color: #fff !important;
+			background: #ec4354 !important;
+		}
+
+		.basic > #youtube:hover{
+			color: #fff !important;
+			background: #ff0000 !important;
+		}
+
+		.basic > #twitter:hover{
+			color: #fff !important;
+			background: #1d9bf0 !important;
+		}
+
+		.basic > #tiktok:hover{
+			color: #fff !important;
+			background: #fe2c55 !important;
+		}
+		
+		.basic > #xing:hover{
+			color: #fff !important;
+			background: #1A7576 !important;
+		}
+		
+		.basic > #linkedin:hover{
+			color: #fff !important;
+			background: #0073b1 !important;
+		}
+		
+		.basic > #linktree:hover{
+			color: #fff !important;
+			background: #0273A6 !important;
+		}
+		
+		.basic > #mail:hover{
+			color: #fff !important;
+			background: #0273A6 !important;
+		}
+
+		.basic > #telefon:hover{
+			color: #fff !important;
+			background: #0273A6 !important;
+		}
+		
+		.basic > #customicon:hover{
+			color: #fff !important;
+			background: #0273A6 !important;
+		}
+
+	</style>
+
+	<style id="basic-invert">
+		.basic-invert > .media {
+			border-radius: 2px;
+			transition: .2s ease-in;
+		}
+
+		.basic-invert #whatsapp:hover,
+		.basic-invert #facebook:hover,
+		.basic-invert #instagram:hover,
+		.basic-invert #youtube:hover,
+		.basic-invert #twitter:hover,
+		.basic-invert #tiktok:hover,
+		.basic-invert #xing:hover,
+		.basic-invert #linkedin:hover,
+		.basic-invert #linktree:hover,
+		.basic-invert #mail:hover,
+		.basic-invert #telefon:hover,
+		.basic-invert #customicon:hover {
+			background: #fff;
+			color: #323232;
+		}
+
+		/*INVERT*/
+
+		.basic-invert > #whatsapp{
+			color: #fff;
+			background: #25D366;
+		}
+		
+		.basic-invert > #facebook{
+			color: #fff;
+			background: #1877f2;
+		}
+		
+		.basic-invert > #instagram{
+			color: #fff ;
+			background: #ec4354;
+		}
+
+		.basic-invert > #youtube{
+			color: #fff;
+			background: #ff0000;
+		}
+
+
+		.basic-invert > #twitter{
+			color: #fff;
+			background: #1d9bf0;
+		}
+
+		.basic-invert > #tiktok{
+			color: #fff;
+			background: #fe2c55;
+		}
+		
+		.basic-invert > #xing{
+			color: #fff;
+			background: #1A7576;
+		}
+
+		.basic-invert > #linkedin{
+			color: #fff;
+			background: #0073b1;
+		}
+		
+		.basic-invert > #linktree{
+			color: #fff;
+			background: #0273A6;
+		}
+		
+		.basic-invert > #mail{
+			color: #fff;
+			background: #0273A6;
+		}
+
+		.basic-invert > #telefon {
+			color: #fff;
+			background: #0273A6;
+		}
+
+		.basic-invert > #customicon{
+			color: #fff;
+			background: #0273A6;
+		}
+	</style>
+
+	<style id="round">
 		/*ROUND*/
 		.round >  .media {
 			border-radius: 100%;
@@ -72,7 +201,9 @@
 		.round > .media:hover {
 			border-radius: 10%;
 		}
-		
+	</style>
+
+	<style id="square">
 		/*SQUARE*/
 		.square > .media {
 			border-radius: 0;
@@ -85,7 +216,9 @@
 			padding-left: 15px;
 			padding-right: 15px;
 		}
-		
+	</style>
+
+	<style id="minimal">
 		/* MINIMAL */
 		.minimal > .media {
 			border: none;
@@ -101,7 +234,9 @@
 			border-bottom: 1px solid #fff;
 			transform:translate(0px,-4px);
 		}
+	</style>
 
+	<style id="darker">
 		/* DARKER */
 		.darker > .media {
 			border: none;
@@ -129,7 +264,9 @@
 		.darker > .media:hover::after {
 			background: rgba(0, 0, 0, 0.25);
 		}
+	</style>
 
+	<style id="move">
 		/* MOVE */
 		.move > .media {
 			position: relative;
@@ -154,17 +291,25 @@
 		.move > .media:hover::after {
 			width: 100%;
 		}
+	</style>
+
+	<style id="basic-asside">
 		
-		/* BASIC */
-		.basic > .media {
-			background: #fff;
-			color: #323232;
-			border-radius: 2px;
-			transition: .2s ease-in;
+		/* SEO ONE */
+		.basic-asside {
+			position: fixed;
+			display: flex;
+			flex-direction: column;
+			right: 0;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+			padding: 0 !important;
+			box-shadow: -9px -1px 15px -6px rgba(0,0,0,0.41);
 		}
 
-		#socialmedialist.basic-asside,
-		#socialmedialist.basic-buble-asside {
+		#socialmedialist.basic-asside {
 			z-index: 99;
 		}
 
@@ -216,6 +361,74 @@
 
 		.basic-asside > .media + .media {
 			border-top: 1px solid #ddd;	
+		}
+
+		
+		.basic-asside > #whatsapp:hover{
+			color: #fff !important;
+			background: #25D366 !important;
+		}
+		
+		.basic-asside > #facebook:hover{
+			color: #fff !important;
+			background: #1877f2 !important;
+		}
+		
+		.basic-asside > #instagram:hover{
+			color: #fff !important;
+			background: #ec4354 !important;
+		}
+
+		.basic-asside > #youtube:hover{
+			color: #fff !important;
+			background: #ff0000 !important;
+		}
+
+		.basic-asside > #twitter:hover{
+			color: #fff !important;
+			background: #1d9bf0 !important;
+		}
+
+		.basic-asside > #tiktok:hover{
+			color: #fff !important;
+			background: #fe2c55 !important;
+		}
+		
+		.basic-asside > #xing:hover{
+			color: #fff !important;
+			background: #1A7576 !important;
+		}
+		
+		.basic-asside > #linkedin:hover{
+			color: #fff !important;
+			background: #0073b1 !important;
+		}
+		
+		.basic-asside > #linktree:hover{
+			color: #fff !important;
+			background: #0273A6 !important;
+		}
+		
+		.basic-asside > #mail:hover{
+			color: #fff !important;
+			background: #0273A6 !important;
+		}
+
+		.basic-asside > #telefon:hover{
+			color: #fff !important;
+			background: #0273A6 !important;
+		}
+		
+		.basic-asside > #customicon:hover{
+			color: #fff !important;
+			background: #0273A6 !important;
+		}
+
+	</style>
+
+	<style id="basic-buble-asside">
+		#socialmedialist.basic-buble-asside {
+			z-index: 99;
 		}
 
 		.basic-buble-asside > .media {
@@ -275,187 +488,70 @@
 			margin: 5px 0;
 			z-index: 2;
 		}
+
+		.basic-buble-asside > .media + .media {
+			border-top: 1px solid #ddd;	
+		}
+
 		
-	
-		.basic-invert .media {
-			transition: 0.3s;
-		}
-
-		.basic-invert #whatsapp:hover,
-		.basic-invert #facebook:hover,
-		.basic-invert #instagram:hover,
-		.basic-invert #youtube:hover,
-		.basic-invert #twitter:hover,
-		.basic-invert #tiktok:hover,
-		.basic-invert #xing:hover,
-		.basic-invert #linkedin:hover,
-		.basic-invert #linktree:hover,
-		.basic-invert #mail:hover,
-		.basic-invert #phone:hover,
-		.basic-invert #customicon:hover {
-			background: #fff;
-			color: #323232;
-		}
-
-		.basic > #whatsapp:hover,
-		.basic-asside > #whatsapp:hover,
 		.basic-buble-asside > #whatsapp:hover{
 			color: #fff !important;
 			background: #25D366 !important;
 		}
 		
-		.basic > #facebook:hover,
-		.basic-asside > #facebook:hover,
-		.basic-buble-asside > #facebook:hover {
+		.basic-buble-asside > #facebook:hover{
 			color: #fff !important;
 			background: #1877f2 !important;
 		}
 		
-		.basic > #instagram:hover,
-		.basic-asside > #instagram:hover,
-		.basic-buble-asside > #instagram:hover  {
+		.basic-buble-asside > #instagram:hover{
 			color: #fff !important;
 			background: #ec4354 !important;
 		}
 
-		.basic > #youtube:hover,
-		.basic-asside > #youtube:hover,
-		.basic-buble-asside > #youtube:hover {
+		.basic-buble-asside > #youtube:hover{
 			color: #fff !important;
 			background: #ff0000 !important;
 		}
 
-		.basic > #twitter:hover,
-		.basic-asside > #twitter:hover,
-		.basic-buble-asside > #twitter:hover {
+		.basic-buble-asside > #twitter:hover{
 			color: #fff !important;
 			background: #1d9bf0 !important;
 		}
 
-		.basic > #tiktok:hover,
-		.basic-asside > #tiktok:hover,
-		.basic-buble-asside > #tiktok:hover {
+		.basic-buble-asside > #tiktok:hover{
 			color: #fff !important;
 			background: #fe2c55 !important;
 		}
 		
-		.basic > #xing:hover,
-		.basic-asside > #xing:hover,
-		.basic-buble-asside > #xing:hover {
+		.basic-buble-asside > #xing:hover{
 			color: #fff !important;
 			background: #1A7576 !important;
 		}
 		
-		.basic > #linkedin:hover,
-		.basic-asside > #linkedin:hover,
-		.basic-buble-asside > #linkedin:hover {
+		.basic-buble-asside > #linkedin:hover{
 			color: #fff !important;
 			background: #0073b1 !important;
 		}
 		
-		.basic > #linktree:hover,
-		.basic-asside > #linktree:hover,
-		.basic-buble-asside > #linktree:hover {
+		.basic-buble-asside > #linktree:hover{
 			color: #fff !important;
 			background: #0273A6 !important;
 		}
 		
-		.basic > #mail:hover,
-		.basic-asside > #mail:hover,
-		.basic-buble-asside > #mail:hover {
+		.basic-buble-asside > #mail:hover{
 			color: #fff !important;
 			background: #0273A6 !important;
 		}
 
-		.basic > #phone:hover,
-		.basic-asside > #phone:hover,
-		.basic-buble-asside > #phone:hover {
+		.basic-buble-asside > #telefon:hover{
 			color: #fff !important;
 			background: #0273A6 !important;
 		}
 		
-		.basic > #customicon:hover,
-		.basic-asside > #customicon:hover,
 		.basic-buble-asside > #customicon:hover{
 			color: #fff !important;
 			background: #0273A6 !important;
-		}
-
-		/*INVERT*/
-
-		.basic-invert > #whatsapp{
-			color: #fff;
-			background: #25D366;
-		}
-		
-		.basic-invert > #facebook{
-			color: #fff;
-			background: #1877f2;
-		}
-		
-		.basic-invert > #instagram{
-			color: #fff ;
-			background: #ec4354;
-		}
-
-		.basic-invert > #youtube{
-			color: #fff;
-			background: #ff0000;
-		}
-
-
-		.basic-invert > #twitter{
-			color: #fff;
-			background: #1d9bf0;
-		}
-
-		.basic-invert > #tiktok{
-			color: #fff;
-			background: #fe2c55;
-		}
-		
-		.basic-invert > #xing{
-			color: #fff;
-			background: #1A7576;
-		}
-
-		.basic-invert > #linkedin{
-			color: #fff;
-			background: #0073b1;
-		}
-		
-		.basic-invert > #linktree{
-			color: #fff;
-			background: #0273A6;
-		}
-		
-		.basic-invert > #mail{
-			color: #fff;
-			background: #0273A6;
-		}
-
-		.basic-invert > #phone {
-			color: #fff;
-			background: #0273A6;
-		}
-
-		.basic-invert > #customicon{
-			color: #fff;
-			background: #0273A6;
-		}
-
-		/* SEO ONE */
-		.basic-asside {
-			position: fixed;
-			display: flex;
-			flex-direction: column;
-			right: 0;
-			top: 50%;
-			-webkit-transform: translateY(-50%);
-			-ms-transform: translateY(-50%);
-			transform: translateY(-50%);
-			padding: 0 !important;
-			box-shadow: -9px -1px 15px -6px rgba(0,0,0,0.41);
 		}
 
 		/* SEO TWO */
@@ -471,6 +567,32 @@
 			padding: 0 !important;
 		}
 
+	</style>
+
+	<style id="styledata">
+		#socialmedialist {
+			display: flex;
+			justify-content: center;
+			text-align: center;
+		}
+		
+		.media {
+			padding: 10px;
+			font-size: 14px;
+			height: 12px;
+			width: 12px;
+			border-radius: 10px;
+			background: #fff;
+			color: rgb(34, 34, 34);
+			text-decoration: none;
+			text-align: center;
+			vertical-align: middle;
+		}
+
+		.media + .media {
+			margin-left: 5px;
+		}
+	
 		/*Size*/
 		.small .media {
 			font-size: 10px;
@@ -648,41 +770,50 @@
 							<option value="double">double</option>
 							<option value="dashed">dashed</option>
 						</select>
+					</li>
 
+					<li>
+						<label for="borderradius">Konturradius</label>
+						<input min="0" type="number" name="borderradius" id="borderradius" placeholder="0px">
 					</li>
 				</ul>
-
+				<hr>
 				<label for="hoverbg">Hintergrundfarbe bei Hover</label>
 				<p>Legt die Hintergrundfarbe der Iconcontainer fest, wenn sich der Mauszeiger über diese bewegt. Zugelassene Formate sind Hex, RGB-A, CSS-Farbworte, HSL.</p>
 				<input placeholder="#fff" type="text" name="hoverbg" id="hoverbg">
-
+				<hr>
 				<label >Größe</label>
 				<p>Sie können Sie Größe der Social Media Icons in drei Stufen festlegen.</p>
-				<ul class="resize">
-					<li><input value="small" name="resize" id="small" type="radio"><label for="small">Klein</label></li>
-					<li><input checked value="medium" name="resize" id="medium" type="radio"><label for="medium">Standard</label></li>
-					<li><input value="large" name="resize" id="large" type="radio"><label for="large">Groß</label></li>
-					<li><input value="larger" name="resize" id="larger" type="radio"><label for="larger">Größer</label></li>
+				<ul id="resize" class="tab">
+					<li><input value="small" name="tab" id="small" type="radio"><label for="small"><i class="fas fa-angle-down"></i>Klein</label></li>
+					<li><input checked value="medium" name="tab" id="medium" type="radio"><label for="medium"><i class="fas fa-circle"></i>Standard</label></li>
+					<li><input value="large" name="tab" id="large" type="radio"><label for="large"><i class="fas fa-angle-up"></i>Groß</label></li>
+					<li><input value="larger" name="tab" id="larger" type="radio"><label for="larger"><i class="fas fa-angle-double-up"></i>Größer</label></li>
 				</ul>
 			</div>
 			<hr>
-	
-			<label for="color">Farbe festlegen</label>
-			<p class="">Legen Sie eine Farbe für die Icons fest, wird keine Farbe festgelegt, so greifen die Standard-Farben. Zugelassene Formate sind Hex, RGB-A, CSS-Farbworte, HSL.</p>
-			<input placeholder="#fff" type="text" id="color">
-			<hr>
-	
-			<label for="background">Hintergrundfarbe festlegen</label>
-			<p class="">Legen Sie eine Hintergrundfarbe für die Iconcontainer fest, wird keine Farbe festgelegt, so greifen die Standard-Farben. Zugelassene Formate sind Hex, RGB-A, CSS-Farbworte, HSL.</p>
-			<input placeholder="#fff" type="text" id="background">
+
+			<ul id="customcolors">
+				<li>
+					<label for="color">Iconfarbe</label>
+					<p class="">Zugelassene Formate sind Hex, RGB-A, CSS-Farbworte, HSL.</p>
+					<input placeholder="#fff" type="text" id="color">
+				</li>
+				<li>
+					<label for="background">Hintergrundfarbe</label>
+					<p class="">Zugelassene Formate sind Hex, RGB-A, CSS-Farbworte, HSL.</p>
+					<input placeholder="#fff" type="text" id="background">
+				</li>
+			</ul>
 			<hr>
 			<label for="alignment">Zentrierung</label>
 			<p class="">Wählen Sie eine Anordnung der Social-Media-Icons. Bei seitlicher Anordnung (nur SEO Kachel) ist die Funktion nicht verfügbar.</p>
-			<select id="alignment">
-				<option value="left">Links</option>
-				<option value="center">Mittig</option>
-				<option value="right">Rechts</option>
-			</select>
+
+			<ul class="tab" id="alignment">
+				<li><input checked value="left" name="alignment" id="left" type="radio"><label for="left"><i class="fas fa-align-left"></i>Links</label></li>
+				<li><input value="center" name="alignment" id="center" type="radio"><label for="center"><i class="fas fa-align-center"></i>Mittig</label></li>
+				<li><input value="right" name="alignment" id="right" type="radio"><label for="right"><i class="fas fa-align-right"></i>Rechts</label></li>
+			</ul>
 
 
 			<hr>
@@ -693,18 +824,7 @@
 			<div id="socialmedialistdata">
 				<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 				<div id="socialmedialist" class="basic">
-					<a title="Facebook" target="_blank" href="#" id="facebook" class="media fab fa-facebook-f"></a>
-					<a title="WhatsApp" target="_blank" href="#" id="whatsapp" class="media fab fa-whatsapp"></a>
-					<a title="Instagram" target="_blank" href="#" id="instagram" class="media fab fa-instagram"></a>
-					<a title="YouTube" target="_blank" href="#" id="youtube" class="media fab fa-youtube"></a>
-					<a title="Twitter" target="_blank" href="#" id="twitter" class="media fab fa-twitter"></a>
-					<a title="TikTok" target="_blank" href="#" id="tiktok" class="media fab fa-tiktok"></a>
-					<a title="Xing" target="_blank" href="#" id="xing" class="media fab fa-xing"></a>
-					<a title="LinkedIn" target="_blank" href="#" id="linkedin" class="media fab fa-linkedin-in"></a>
-					<a title="LinkTree" target="_blank" href="#" id="linktree" class="media fas fa-link"></a>
-					<a title="E-Mail" target="_blank" href="#" id="mail" class="media far fa-envelope"></a>
-					<a title="Telefon" target="_blank" href="#" id="phone" class="media fas fa-phone"></a>
-					<a title="" target="_blank" href="#" id="customicon" class="media"></a>
+
 				</div>
 			</div>
 			<div id="hint"></div>
@@ -714,13 +834,13 @@
 
 		</div>
 	</div>
-	<div id="bugreport">
-		<a target="_blank" href="https://github.com/MCFabian/social-media-widget/issues/new" class="button"><i class="fas fa-bug"></i>Bug melden via GitHub</a>
-		<a onclick="popup()" id="update" class="button"><i class="fas fa-certificate"></i>What's new?</a>
-		<button onclick="setTheme()">Dark/Light Mode</button>
+	<div class="fab-group">
+		<a target="_blank" href="https://github.com/MCFabian/social-media-widget/issues/new" class="fab" title="Bug melden via GitHu"><i class="fas fa-bug"></i>Fehler melden</a>
+		<a onclick="popup()" id="update" class="fab" title="What's new?"><i class="fas fa-certificate" ></i>Updates</a>
+		<a title="Dark/Light Mode" class="fab" onclick="setTheme()"><i class="fas fa-adjust"></i></a>
 	</div>
 
 	<script src="src/js/script.js"></script>
-	
+	<script src="src/js/gen.js"></script>
 </body>
 </html>
