@@ -2,7 +2,7 @@
 
 ?>
 
-<div id="listcontainer">
+<div class="listcontainer">
     <ul>
         <li>Test</li>
         <li>Test</li>
