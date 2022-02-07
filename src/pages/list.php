@@ -1,7 +1,5 @@
 <?php include("connection.php") ?>
 
-<?php echo"Test"; ?>
-
 <?php
     function listfiles(){
         global $connection;
@@ -33,6 +31,7 @@
             else{
 
             echo"
+            <table>
                 <tr>
                     <td class='icon'>attach_file</td>
                     <td>$gotofile</td>
@@ -44,6 +43,7 @@
                         <a href='/pointer/documents/uploaded/$fileentry' download class='icon right setting-interaction'>file_download</a>
                     </td>
                 </tr>	
+                </table>
             ";
             }
 
