@@ -267,7 +267,17 @@ label {
     padding: 15px 0;
     margin: 0;
     display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr ; 
+    gap: 10px 10px; 
+}
+
+#customcolors {
+    list-style: none;
+    padding: 15px 0;
+    margin: 0;
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
     gap: 10px 10px; 
 }
 
@@ -470,6 +480,10 @@ button:hover {
     display: inline-block;
     margin: 0;
     font-size: .8rem;
+  }
+
+  .tab li label i {
+    margin-right: 5px;
   }
   
   .tab li + li label {

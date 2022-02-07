@@ -769,7 +769,11 @@
 							<option value="double">double</option>
 							<option value="dashed">dashed</option>
 						</select>
+					</li>
 
+					<li>
+						<label for="borderradius">Konturradius</label>
+						<input min="0" type="number" name="borderradius" id="borderradius" placeholder="0px">
 					</li>
 				</ul>
 
@@ -780,30 +784,34 @@
 				<label >Größe</label>
 				<p>Sie können Sie Größe der Social Media Icons in drei Stufen festlegen.</p>
 				<ul id="resize" class="tab">
-					<li><input value="small" name="tab" id="small" type="radio"><label for="small">Klein</label></li>
-					<li><input checked value="medium" name="tab" id="medium" type="radio"><label for="medium">Standard</label></li>
-					<li><input value="large" name="tab" id="large" type="radio"><label for="large">Groß</label></li>
-					<li><input value="larger" name="tab" id="larger" type="radio"><label for="larger">Größer</label></li>
+					<li><input value="small" name="tab" id="small" type="radio"><label for="small"><i class="fas fa-angle-down"></i>Klein</label></li>
+					<li><input checked value="medium" name="tab" id="medium" type="radio"><label for="medium"><i class="fas fa-circle"></i>Standard</label></li>
+					<li><input value="large" name="tab" id="large" type="radio"><label for="large"><i class="fas fa-angle-up"></i>Groß</label></li>
+					<li><input value="larger" name="tab" id="larger" type="radio"><label for="larger"><i class="fas fa-angle-double-up"></i>Größer</label></li>
 				</ul>
 			</div>
 			<hr>
-	
-			<label for="color">Farbe festlegen</label>
-			<p class="">Legen Sie eine Farbe für die Icons fest, wird keine Farbe festgelegt, so greifen die Standard-Farben. Zugelassene Formate sind Hex, RGB-A, CSS-Farbworte, HSL.</p>
-			<input placeholder="#fff" type="text" id="color">
-			<hr>
-	
-			<label for="background">Hintergrundfarbe festlegen</label>
-			<p class="">Legen Sie eine Hintergrundfarbe für die Iconcontainer fest, wird keine Farbe festgelegt, so greifen die Standard-Farben. Zugelassene Formate sind Hex, RGB-A, CSS-Farbworte, HSL.</p>
-			<input placeholder="#fff" type="text" id="background">
+
+			<ul id="customcolors">
+				<li>
+					<label for="color">Iconfarbe</label>
+					<p class="">Zugelassene Formate sind Hex, RGB-A, CSS-Farbworte, HSL.</p>
+					<input placeholder="#fff" type="text" id="color">
+				</li>
+				<li>
+					<label for="background">Hintergrundfarbe</label>
+					<p class="">Zugelassene Formate sind Hex, RGB-A, CSS-Farbworte, HSL.</p>
+					<input placeholder="#fff" type="text" id="background">
+				</li>
+			</ul>
 			<hr>
 			<label for="alignment">Zentrierung</label>
 			<p class="">Wählen Sie eine Anordnung der Social-Media-Icons. Bei seitlicher Anordnung (nur SEO Kachel) ist die Funktion nicht verfügbar.</p>
 
 			<ul class="tab" id="alignment">
-				<li><input checked value="left" name="alignment" id="left" type="radio"><label for="left">Links</label></li>
-				<li><input value="center" name="alignment" id="center" type="radio"><label for="center">Mittig</label></li>
-				<li><input value="right" name="alignment" id="right" type="radio"><label for="right">Rechts</label></li>
+				<li><input checked value="left" name="alignment" id="left" type="radio"><label for="left"><i class="fas fa-align-left"></i>Links</label></li>
+				<li><input value="center" name="alignment" id="center" type="radio"><label for="center"><i class="fas fa-align-center"></i>Mittig</label></li>
+				<li><input value="right" name="alignment" id="right" type="radio"><label for="right"><i class="fas fa-align-right"></i>Rechts</label></li>
 			</ul>
 
 

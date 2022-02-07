@@ -285,6 +285,8 @@ function ownstyle(){
     var customborderwidth = document.getElementById("borderwidth").value;
     var custombordertype = document.getElementById("bordertype").value;
     var custombordercolor = document.getElementById("bordercolor").value;
+    var customborderradius = document.getElementById("borderradius").value;
+    alert(customborderradius);
     //var hoverbgcolor = document.getElementById("hoverbg").value;
     //var hoverbackgroundcss = ".hoverclass .media:hover{background-color: " +hoverbgcolor +"}";
 
@@ -293,6 +295,7 @@ function ownstyle(){
         elements[i].style.borderStyle = custombordertype;
         elements[i].style.borderColor = custombordercolor;
         elements[i].style.borderWidth = customborderwidth +"px";
+        elements[i].style.borderRadius = customborderradius +"px !important";
         //document.getElementById("hovestyle").innerHTML = hoverbackgroundcss;
         //document.getElementById("socialmedialist").classList.add("hoverclass");
 
