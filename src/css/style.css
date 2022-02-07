@@ -567,6 +567,7 @@ button:hover {
     width: 50%;
     top: 0;
     background-color: var(--background);
+    z-index: 99;
 }
 
 .listcontainer ul {
@@ -577,7 +578,7 @@ button:hover {
 
 .listcontainer ul li {
     list-style: none;
-    padding: 7px 10px;
+    padding: 10px;
     background: var(--background);
     cursor: pointer;
 }
