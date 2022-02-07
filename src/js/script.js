@@ -101,3 +101,19 @@ function selectall() {
 
 
 }
+
+
+function opencodelib(){
+    //var openbtn = document.getElementById("load-code");
+    //var closebtn = document.getElementById("closelistcontainer");
+    var codelibwindow = document.getElementById("codelib");
+
+    if(codelibwindow.classList.contains("active")){
+        codelibwindow.classList.remove("active");
+    }
+
+    else {
+        codelibwindow.classList.toggle("active");  
+    }
+
+}

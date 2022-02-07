@@ -6,6 +6,7 @@
 --fontcolor: #727272;
 --fontcolordarker:rgb(61, 70, 80); 
 --accentcolor: #f47b6b;
+--accentcolor2: #175aad;
 --dividercolor: #d6d6d6;
 }
 
@@ -19,6 +20,7 @@
     --fontcolor: #ffffff60; 
     --fontcolordarker:#fff; 
     --accentcolor: #f47b6b;
+    --accentcolor2: #175aad;
     --dividercolor: #ffffff40;
 }
     
@@ -559,14 +561,26 @@ button:hover {
     font-size: 1.0rem;
 }
 
+#codelib {
+    transition: .4s;
+    pointer-events: none;
+    left: -100%;
+}
+
+#codelib.active {
+
+    pointer-events: all;
+    left: 0;
+}
+
 .listcontainer {
-    display: block;
     position: fixed;
     left: 0;
     height: 100%;
     width: 50%;
     top: 0;
     background-color: var(--background);
+    box-shadow: 4px 1px 15px -6px rgb(0 0 0 / 41%);
     z-index: 99;
 }
 
@@ -578,7 +592,7 @@ button:hover {
 
 .listcontainer ul li {
     list-style: none;
-    padding: 10px;
+    padding: 15px;
     background: var(--background);
     cursor: pointer;
 }
@@ -594,20 +608,38 @@ button:hover {
 #listcontainerhead {
     display: flex;
     flex-direction: row;
+    padding: 15px;
+    border-bottom: 2px solid var(--dividercolor);
 }
 
 #listcontainerhead #closelistcontainer {
-    margin-bottom: 0 0 auto auto;
+    margin: 0 0 auto auto;
     width: 15px;
     height: 15px;
-    padding: 10px;
+    padding: 8px 10px 10px 10px;
     text-align: center;
     border: 1px solid var(--dividercolor);
     border-radius: 3px;
     transition: .3s;
+    cursor: pointer;
 }
 
 #closelistcontainer:hover {
     background: var(--bodybackground);
+}
+
+#load-code {
+    background: var(--accentcolor2);
+}
+
+#savecode {
+    margin: 10px 0;
+    padding: 10px;
+    text-align: center;
+    font-style: 1rem;
+}
+
+#savecode i {
+    margin-right: 5px;
 }
 
