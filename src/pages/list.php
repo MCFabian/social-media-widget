@@ -5,7 +5,7 @@
         global $connection;
 
         //SQL-Zugriff auf Datensaetze
-        $query = $connection->prepare("SELECT id, code, creationdate FROM socialcodes");
+        $query = $connection->prepare("SELECT id, code, creationdate FROM socialcodesm ORDER BY DESC");
         $query->execute();
         $query->setFetchMode(PDO::FETCH_ASSOC);
 
