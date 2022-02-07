@@ -6,3 +6,5 @@
     $database = "mainstage"; 
     $connection = new PDO("mysql:host=$servername; dbname=$database; charset=utf8", $username, $password);
 ?>
+
+<?php echo"Test2"; ?>
