@@ -1,4 +1,7 @@
 <?php include("connection.php") ?>
+
+<?php echo"Test"; ?>
+
 <?php
     function listfiles(){
         global $connection;
