@@ -5,7 +5,7 @@
         global $connection;
 
         //SQL-Zugriff auf Datensaetze
-        $query = $connection->prepare("SELECT id, code, creationdate FROM socialcodes ORDER BY DESC");
+        $query = $connection->prepare("SELECT id, code, creationdate FROM socialcodes");
         $query->execute();
         $query->setFetchMode(PDO::FETCH_ASSOC);
 
@@ -40,8 +40,6 @@
     </div>
 
     <ul>
-        <li>Test</li>
-        <li>Test</li>
         <?php listcodes(); ?>
     </ul>
 </div>
