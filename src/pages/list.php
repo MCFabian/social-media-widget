@@ -31,20 +31,9 @@
             else{
 
             echo"
-            <table>
-                <tr>
-                    <td class='icon'>attach_file</td>
-                    <td>$gotofile</td>
-                    <td>";
-                        
-                       echo"
-                    </td>
-                    <td>
-                        <a href='/pointer/documents/uploaded/$fileentry' download class='icon right setting-interaction'>file_download</a>
-                    </td>
-                </tr>	
-                </table>
-            ";
+
+            <li>$gotofile -  <a href='/pointer/documents/uploaded/$fileentry' download class='icon right setting-interaction'>file_download</a></li>
+            <";
             }
 
 
@@ -64,5 +53,6 @@
     <ul>
         <li>Test</li>
         <li>Test</li>
+        <?php listfiles(); ?>
     </ul>
 </div>
