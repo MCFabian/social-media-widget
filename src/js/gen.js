@@ -286,7 +286,6 @@ function ownstyle(){
     var custombordertype = document.getElementById("bordertype").value;
     var custombordercolor = document.getElementById("bordercolor").value;
     var customborderradius = document.getElementById("borderradius").value;
-    alert(customborderradius);
     //var hoverbgcolor = document.getElementById("hoverbg").value;
     //var hoverbackgroundcss = ".hoverclass .media:hover{background-color: " +hoverbgcolor +"}";
 

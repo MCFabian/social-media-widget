@@ -449,7 +449,7 @@ button:hover {
 } 
 
 #update::before {
-    content: "2";
+    content: "3";
     right: -9px;
     top: -9px;
     padding: 8px;
@@ -524,4 +524,39 @@ button:hover {
   .tab label {
       transition: .3s;
   }
+
+  .fab-group {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.fab-group .fab  {
+    margin: 5px;
+    border-radius: 50px;
+    height: 15px;
+    padding: 15px;
+    background: var(--accentcolor);
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Inria Sans', sans-serif;;
+    box-shadow: -9px -1px 15px -6px rgba(0,0,0,0.41);
+    cursor: pointer;
+    transition: .2s;
+}
+
+.fab:hover {
+    transform:translate(0,-5px)
+}
+
+.fab-group .fab i  {
+    margin: 0 5px;
+    color: #fff;
+    font-size: 1.0rem;
+
+}
 

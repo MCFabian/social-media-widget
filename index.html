@@ -1,5 +1,5 @@
 <!doctype html>
-<html id="themehere" class="light">
+<html id="themehere" class="dark">
 <head>
 	<meta charset="utf-8">
 	<title>Social Media Generator</title>
@@ -22,6 +22,7 @@
 			<hr>
 			<ul>
 				<li>Die Codeausgabe wurde optimiert: Es werden nun nur die Social-Media Kanäle erzeugt und ausgegeben, welche auch ausgewählt sind. Gleiches gilt für den gewählten Style.</li>
+				<li>Man kann nun einen Borderradius festlegen, dieser ist an den weiteren Kontureinstellungn gebunden.</li>
 				<li>Kleine Optimierungen und Fehlerbehebungen.</li>
 			</ul>
 			<hr>
@@ -833,10 +834,10 @@
 
 		</div>
 	</div>
-	<div id="bugreport">
-		<a target="_blank" href="https://github.com/MCFabian/social-media-widget/issues/new" class="button"><i class="fas fa-bug"></i>Bug melden via GitHub</a>
-		<a onclick="popup()" id="update" class="button"><i class="fas fa-certificate"></i>What's new?</a>
-		<button onclick="setTheme()">Dark/Light Mode</button>
+	<div class="fab-group">
+		<a target="_blank" href="https://github.com/MCFabian/social-media-widget/issues/new" class="fab" title="Bug melden via GitHu"><i class="fas fa-bug"></i>Fehler melden</a>
+		<a onclick="popup()" id="update" class="fab" title="What's new?"><i class="fas fa-certificate" ></i>Updates</a>
+		<a title="Dark/Light Mode" class="fab" onclick="setTheme()"><i class="fas fa-adjust"></i></a>
 	</div>
 
 	<script src="src/js/script.js"></script>
