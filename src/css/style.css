@@ -549,7 +549,7 @@ button:hover {
     transition: .2s;
 }
 
-.fab:hover {
+.fab-group .fab:hover {
     transform:translate(0,-5px)
 }
 
