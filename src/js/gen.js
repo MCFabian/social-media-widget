@@ -295,8 +295,6 @@ function ownstyle(){
         elements[i].style.borderColor = custombordercolor;
         elements[i].style.borderWidth = customborderwidth +"px";
         elements[i].style.borderRadius = customborderradius +"px !important";
-        //document.getElementById("hovestyle").innerHTML = hoverbackgroundcss;
-        //document.getElementById("socialmedialist").classList.add("hoverclass");
 
     }
 
@@ -323,9 +321,11 @@ function checkforhint(){
 function exportClass(classname){
     var groundstyledata = document.getElementById("styledata").innerHTML;
     var styleclass = document.getElementById(classname).innerHTML;
+    var hoverlass = document.getElementById('hovestyle').innerHTML;
     var socialmedialistdata = document.getElementById('socialmedialistdata').innerHTML;
+    
     //create CSS Styling Data
-    var styledata = "<style>" +groundstyledata +styleclass +"</style>";
+    var styledata = "<style>" +groundstyledata +styleclass +hoverclass +"</style>";
     var exportdata = document.getElementById("export");
     
     // Code ausgeben
