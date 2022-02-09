@@ -321,7 +321,7 @@ function checkforhint(){
 function exportClass(classname){
     var groundstyledata = document.getElementById("styledata").innerHTML;
     var styleclass = document.getElementById(classname).innerHTML;
-    var hoverlass = document.getElementById('hovestyle').innerHTML;
+    var hoverclass = document.getElementById('hovestyle').innerHTML;
     var socialmedialistdata = document.getElementById('socialmedialistdata').innerHTML;
     
     //create CSS Styling Data
