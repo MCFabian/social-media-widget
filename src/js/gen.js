@@ -14,6 +14,9 @@ function CreateSocialMediaElement (socialmedianame, socialmedialink, socialmedia
     //newSocialMediaElement.appendChild(newSocialMediaElementContent);
     var socialmedialist = document.getElementById("socialmedialist");
     socialmedialist.appendChild(newSocialMediaElement);
+
+    //LOG
+    console.log("Element created! " +socialmedianame +" linked at " +socialmedialink);
 }
 
 function socialmedialist(style, fontcolor, backgroundcolor, alignment, iconsize){
@@ -83,7 +86,7 @@ document.getElementById('generate').addEventListener('click', function(){
         var linkfacebook = document.getElementById("linkfacebook").value;
 
         if(linkfacebook.length == 0){
-            var linktofacebook = "https://de-de.facebook.com/";
+            var linkfacebook = "https://de-de.facebook.com/";
         }
 
         CreateSocialMediaElement ("Facebook", linkfacebook, "fa-facebook-f", "fab");
