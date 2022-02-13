@@ -27,7 +27,10 @@
                     
                     <strong>$id</strong> - Erstellt am: $creationdate
 
-                    <span class='styleingtag'>$style</span>
+                    <div>
+                        <span class='tag styleingtag'>$style</span>
+                        <span class='tag'>Test</span>
+                    </div>
 
                     <div class='expander'>
                     <strong>Vorschau</strong><br>

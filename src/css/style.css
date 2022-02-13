@@ -656,10 +656,19 @@ button:hover {
     text-align: center;
 }
 
-.styleingtag {
+.tag {
+    border-radius: 5px;
+    font-size: .7rem;
+    margin: 5px;
     padding: 4px 8px;
+    border: 1px solid var(--dividercolor);
+    background-color: var(--hintbackground);
+    color: var(--fontcolor);
+}
+
+.styleingtag {
     color: #fff;
     background-color: var(--accentcolor);
-    border-radius: 5px;
+
 }
 
