@@ -28,8 +28,8 @@
                     <strong>$id</strong> - Erstellt am: $creationdate
 
                     <div>
-                        <span class='tag styleingtag'><i class='fa-solid fa-palette'></i> $style</span>
-                        <span class='tag'><i class='fa-solid fa-check'></i> Test</span>
+                        <span class='tag styleingtag'><i class='fa fa-palette'></i> $style</span>
+                        <span class='tag'><i class='fa fa-check'></i> Test</span>
                     </div>
 
                     <div class='expander'>
