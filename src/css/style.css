@@ -657,14 +657,19 @@ button:hover {
 }
 
 .tag {
-    border-radius: 100%;
+    border-radius: 50px;
     font-size: .5rem;
-    margin: 5px;
     padding: 4px 8px;
     border: 1px solid var(--dividercolor);
     background-color: var(--hintbackground);
     color: var(--fontcolor);
     text-transform: uppercase;
+    display: inline-block;
+    margin: 5px 0 5px 0;
+}
+
+.tag +.tag {
+    margin-left: 5px;
 }
 
 .styleingtag {
