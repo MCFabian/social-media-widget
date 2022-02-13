@@ -27,7 +27,7 @@
                     
                     Erstellungs-ID: <strong>$id</strong><br>
                     <small>erstellt am: $creationdate</small>
-
+                    <hr>
                     <div>
                         <span class='tag styleingtag'><i class='fa fa-palette'></i> $style</span>
                         <span class='tag'><i class='fa fa-check'></i> Test</span>
