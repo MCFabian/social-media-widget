@@ -14,6 +14,9 @@ function CreateSocialMediaElement (socialmedianame, socialmedialink, socialmedia
     //newSocialMediaElement.appendChild(newSocialMediaElementContent);
     var socialmedialist = document.getElementById("socialmedialist");
     socialmedialist.appendChild(newSocialMediaElement);
+
+    //LOG
+    console.log("Element created! " +socialmedianame +" linked at " +socialmedialink);
 }
 
 function socialmedialist(style, fontcolor, backgroundcolor, alignment, iconsize){
@@ -83,7 +86,7 @@ document.getElementById('generate').addEventListener('click', function(){
         var linkfacebook = document.getElementById("linkfacebook").value;
 
         if(linkfacebook.length == 0){
-            var linktofacebook = "https://de-de.facebook.com/";
+            var linkfacebook = "https://de-de.facebook.com/";
         }
 
         CreateSocialMediaElement ("Facebook", linkfacebook, "fa-facebook-f", "fab");
@@ -295,8 +298,6 @@ function ownstyle(){
         elements[i].style.borderColor = custombordercolor;
         elements[i].style.borderWidth = customborderwidth +"px";
         elements[i].style.borderRadius = customborderradius +"px !important";
-        //document.getElementById("hovestyle").innerHTML = hoverbackgroundcss;
-        //document.getElementById("socialmedialist").classList.add("hoverclass");
 
     }
 
@@ -323,9 +324,11 @@ function checkforhint(){
 function exportClass(classname){
     var groundstyledata = document.getElementById("styledata").innerHTML;
     var styleclass = document.getElementById(classname).innerHTML;
+    var hoverclass = document.getElementById('hovestyle').innerHTML;
     var socialmedialistdata = document.getElementById('socialmedialistdata').innerHTML;
+    
     //create CSS Styling Data
-    var styledata = "<style>" +groundstyledata +styleclass +"</style>";
+    var styledata = "<style>" +groundstyledata +styleclass +hoverclass +"</style>";
     var exportdata = document.getElementById("export");
     
     // Code ausgeben
