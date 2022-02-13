@@ -650,3 +650,16 @@ button:hover {
     margin-right: 5px;
 }
 
+.socialmedialist {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.styleingtag {
+    padding: 4px 8px;
+    color: #fff;
+    background-color: var(--accentcolor);
+    border-radius: 5px;
+}
+
