@@ -5,7 +5,7 @@
         global $connection;
 
         //SQL-Zugriff auf Datensaetze
-        $query = $connection->prepare("SELECT id, code, creationdate, style FROM socialcodes ORDER BY creationdate DESC");
+        $query = $connection->prepare("SELECT id, code, DATE_FORMAT(creationdate, '%d.%m.%Y') creationdate, style FROM socialcodes ORDER BY creationdate DESC");
         $query->execute();
         $query->setFetchMode(PDO::FETCH_ASSOC);
 
@@ -25,7 +25,8 @@
 
             echo"<li class='expandme'>
                     
-                    <strong>$id</strong> - Erstellt am: $creationdate
+                    Erstellungs-ID: <strong>$id</strong><br>
+                    erstellt am: $creationdate
 
                     <div>
                         <span class='tag styleingtag'><i class='fa fa-palette'></i> $style</span>
