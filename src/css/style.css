@@ -662,7 +662,7 @@ button:hover {
     padding: 4px 8px;
     border: 1px solid var(--dividercolor);
     background-color: var(--hintbackground);
-    color: var(--fontcolor);
+    color: #fff;
     text-transform: uppercase;
     display: inline-block;
     margin: 5px 0 5px 0;
