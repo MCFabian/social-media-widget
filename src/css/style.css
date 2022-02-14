@@ -642,13 +642,8 @@ button:hover {
 }
 
 #savecode {
-    margin: 10px 0;
-    padding: 10px;
-    text-align: center;
-    font-size: 1rem;
-    color: var(--fontcolordarker);
-    background: var(--hintbackground);
-    border: 1px solid var(--dividercolor);
+    color: #fff;
+    background: var(--green);
 }
 
 #savecode i {

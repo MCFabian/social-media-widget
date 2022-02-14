@@ -836,6 +836,7 @@
 		</div>
 	</div>
 	<div class="fab-group">
+		<a class="fab"><i class="fas fa-save"></i>Code speichern</a>
 		<a class="fab"><i class="fas fa-ellipsis-v"></i>Mehr
 			<ul>
 				<li><a onclick="popup()" id="update" class="" title="What's new?"><i class="fas fa-certificate" ></i>Updates</a></li>
