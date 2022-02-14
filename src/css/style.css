@@ -643,7 +643,7 @@ button:hover {
     margin: 10px 0;
     padding: 10px;
     text-align: center;
-    font-style: 1rem;
+    font-size: 1rem;
 }
 
 #savecode i {
