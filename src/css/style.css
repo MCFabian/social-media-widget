@@ -658,7 +658,7 @@ button:hover {
 
 .tag {
     border-radius: 50px;
-    font-size: .5rem;
+    font-size: .65rem;
     padding: 4px 8px;
     border: 1px solid var(--dividercolor);
     background-color: var(--hintbackground);
