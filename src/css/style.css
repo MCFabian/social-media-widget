@@ -7,6 +7,7 @@
 --fontcolordarker:rgb(61, 70, 80); 
 --accentcolor: #f47b6b;
 --accentcolor2: #175aad;
+--green: #17ad45;
 --dividercolor: #d6d6d6;
 }
 
@@ -21,6 +22,7 @@
     --fontcolordarker:#fff; 
     --accentcolor: #f47b6b;
     --accentcolor2: #175aad;
+    --green: #17ad45;
     --dividercolor: #ffffff40;
 }
     
@@ -644,6 +646,9 @@ button:hover {
     padding: 10px;
     text-align: center;
     font-size: 1rem;
+    color: var(--fontcolordarker);
+    background: var(--hintbackground);
+    border: 1px solid var(--dividercolor);
 }
 
 #savecode i {

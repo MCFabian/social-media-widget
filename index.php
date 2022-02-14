@@ -818,7 +818,7 @@
 
 			<hr>
 			<button class="button" id="generate">Übernehmen</button>
-            <a href="#" class="link" id="savecode"><i class="fas fa-save"></i> Code speichern</a>
+            <a href="#" id="savecode"><i class="fas fa-save"></i> Code speichern</a>
 		</div>
 		<div class="box">
 			<h2>Vorschau</h2>
@@ -836,6 +836,7 @@
 		</div>
 	</div>
 	<div class="fab-group">
+		<a class="fab"><i class="fas fa-ellipsis-v"></i></a>
         <a onclick="opencodelib();" id="load-code" class="fab"><i class="fas fa-folder-open"></i>Code laden</a>
 		<a target="_blank" href="https://github.com/MCFabian/social-media-widget/issues/new" class="fab" title="Bug melden via GitHu"><i class="fas fa-bug"></i>Fehler melden</a>
 		<a onclick="popup()" id="update" class="fab" title="What's new?"><i class="fas fa-certificate" ></i>Updates</a>
