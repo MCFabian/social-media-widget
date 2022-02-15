@@ -118,21 +118,6 @@ function opencodelib(){
 
 }
 
-document.addEventListener("click", function(){
-    if(document.getElementById("moremenu").classList.contains("active")){
-        moremenu();
-    }
-
-    else{}
-})
-
-document.addEventListener("click", function(){
-    if(document.getElementById("codelib").classList.contains("active")){
-        opencodelib();
-    }
-
-    else{}
-})
 
 function openmoremenu(){
     var moremenu = document.getElementById("moremenu");
