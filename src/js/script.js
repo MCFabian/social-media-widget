@@ -117,3 +117,16 @@ function opencodelib(){
     }
 
 }
+
+function openmoremenu(){
+    var moremenu = document.getElementById("moremenu");
+
+    if(moremenu.classList.contains("active")){
+        moremenu.classList.remove("active");
+    }
+
+    else {
+        moremenu.classList.toggle("active");  
+    }
+
+}

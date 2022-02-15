@@ -694,6 +694,13 @@ button:hover {
     border-radius: 3px;
     position: absolute;
     right: 0;
+    bottom: 30px;
+    transition:  .3s;
+}
+
+#moremenu.active {
+    opacity: 1;
+    pointer-events: all;
     bottom: 50px;
 }
 
@@ -701,6 +708,7 @@ button:hover {
     padding: 15px;
     transition: .3s;
     text-decoration: none;
+    cursor: pointer;
 }
 
 #moremenu li i {
