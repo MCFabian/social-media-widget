@@ -696,6 +696,7 @@ button:hover {
     right: 0;
     bottom: 30px;
     transition:  .3s;
+    opacity: 0;
 }
 
 #moremenu.active {
