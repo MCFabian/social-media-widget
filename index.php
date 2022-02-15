@@ -617,7 +617,7 @@
 
 	</style>
 	<div id="notification"></div>
-	<form id="savecode" method="POST" action="#">
+	<form id="savecode" method="POST" action="/src/pages/senddata.php">
 		<div class="wrapper">
 			<div class="box">
 				<h2>Kanäle auswählen</h2>
@@ -852,10 +852,11 @@
 
 <?php
 	include("src/pages/connection.php");
+
 	if($_SERVER['REQUEST_METHOD'] == 'POST') {
 		if(isset($_POST['savecode'])) {
-			$code = $_POST['export']; //EXPORT CODE TEXTAREA
-			$style = $_POST['style']; //STYLE FROM FORM
+			$code = $_POST['export']; 
+			$style = $_POST['style']; 
 
 			global $connection;
 

@@ -1,5 +1,5 @@
 <?php
-
+    include("src/pages/connection.php");
 	if($_SERVER['REQUEST_METHOD'] == 'POST') {
 		if(isset($_POST['savecode'])) {
 			$code = $_POST['export']; //EXPORT CODE TEXTAREA
