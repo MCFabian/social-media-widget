@@ -26,7 +26,7 @@
 				<li>Kleine Optimierungen und Fehlerbehebungen.</li>
 			</ul>
 			<hr>
-			<button onclick="popup()" class="button">Schließen</button>
+			<div onclick="popup()" class="button">Schließen</div>
 		</div>
 	</div>
 
@@ -836,7 +836,7 @@
 			</div>
 		</div>
 		<div class="fab-group">
-			<div id="savecode" class="fab"><i class="fas fa-save"></i>Code speichern</div>
+			<button type="submit" id="savecode" class="fab"><i class="fas fa-save"></i>Code speichern</button>
 			<div onclick="opencodelib();" id="load-code" class="fab"><i class="fas fa-folder-open"></i>Code laden</div>
 			<a title="Dark/Light Mode" class="fab" onclick="setTheme()"><i class="fas fa-adjust"></i></a>
 			<div onclick="openmoremenu()" id="morebtn" class="fab"><i class="fas fa-ellipsis-v"></i>Mehr</div>
