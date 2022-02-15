@@ -818,7 +818,6 @@
 
 			<hr>
 			<button class="button" id="generate">Übernehmen</button>
-            <a href="#" "><i class="fas fa-save"></i> Code speichern</a>
 		</div>
 		<div class="box">
 			<h2>Vorschau</h2>
