@@ -697,6 +697,7 @@ button:hover {
     bottom: 30px;
     transition:  .3s;
     opacity: 0;
+    box-shadow: -9px -1px 15px -6px rgba(0,0,0,0.41);
 }
 
 #moremenu.active {
@@ -713,6 +714,7 @@ button:hover {
 
 #moremenu li a {
     text-decoration: none;
+    color: var(--fontcolordarker);
 }
 
 #moremenu li i {
