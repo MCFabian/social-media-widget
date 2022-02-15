@@ -700,6 +700,11 @@ button:hover {
 #moremenu li {
     padding: 15px;
     transition: .3s;
+    text-decoration: none;
+}
+
+#moremenu li i {
+    margin-right: 5px;
 }
 
 #moremenu li:hover {
