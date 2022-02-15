@@ -818,7 +818,7 @@
 
 
 				<hr>
-				<button class="button" id="generate">Übernehmen</button>
+				<div class="button" id="generate">Übernehmen</div>
 			</div>
 			<div class="box">
 				<h2>Vorschau</h2>
