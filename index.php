@@ -837,13 +837,12 @@
 	</div>
 	<div class="fab-group">
 		<a id="savecode" class="fab"><i class="fas fa-save"></i>Code speichern</a>
-		<a class="fab"><i class="fas fa-ellipsis-v"></i>Mehr
-			<ul id="moremenu">
+		<a class="fab"><i class="fas fa-ellipsis-v"></i>Mehr</a>
+		<ul id="moremenu">
 				<li><a onclick="popup()" id="update" class="" title="What's new?"><i class="fas fa-certificate" ></i>Updates</a></li>
 				<li><a target="_blank" href="https://github.com/MCFabian/social-media-widget/issues/new" class="" title="Bug melden via GitHu"><i class="fas fa-bug"></i>Fehler melden</a></li>
 				<li><a onclick="popup()" id="update" class="" title="What's new?"><i class="fas fa-certificate" ></i>Updates</a></li>
-			</ul>
-		</a>
+		</ul>
         
 		
 		
