@@ -864,11 +864,19 @@
 			//SQL-Zugriff auf Datensaetze
 			$query = $connection->prepare("INSERT INTO socialcodes(style, code) VALUES(:style, :code)");
 			if($query->execute(array(':style'=> $style, ':code'=> $code))){
-				echo"Eingefügt";
+				echo"
+					<script>
+						notifaction('success', 'Die Social-Media Auswahl wurde erfolgreich gespeichert.');
+					</script>
+				";
 			}
 
 			else{
-				echo"Es wurde nichts eingefügt";
+				echo"
+					<script>
+						notifaction('error', 'Die Social-Media Auswahl wurde nicht gespeichert.');
+					</script>
+				";
 			}
 		
 		}
