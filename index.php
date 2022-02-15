@@ -836,7 +836,7 @@
 			</div>
 		</div>
 		<div class="fab-group">
-			<button type="submit" id="savecode" class="fab"><i class="fas fa-save"></i>Code speichern</button>
+			<button name="savecode" form="savecode" id="savecode" class="fab"><i class="fas fa-save"></i>Code speichern</button>
 			<div onclick="opencodelib();" id="load-code" class="fab"><i class="fas fa-folder-open"></i>Code laden</div>
 			<a title="Dark/Light Mode" class="fab" onclick="setTheme()"><i class="fas fa-adjust"></i></a>
 			<div onclick="openmoremenu()" id="morebtn" class="fab"><i class="fas fa-ellipsis-v"></i>Mehr</div>
@@ -849,27 +849,28 @@
 	<script src="src/js/script.js"></script>
 	<script src="src/js/gen.js"></script>
 </body>
-<?php include("src/pages/connection.php") ?>
+
 <?php
+	include("src/pages/connection.php");
+	if($_SERVER['REQUEST_METHOD'] == 'POST') {
+		if(isset($_POST['savecode'])) {
+			$code = $_POST['export']; //EXPORT CODE TEXTAREA
+			$style = $_POST['style']; //STYLE FROM FORM
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (isset($_POST['savecode'])) {
-        $code = $_POST['export']; //EXPORT CODE TEXTAREA
-        $style = $_POST['style']; //STYLE FROM FORM
+			global $connection;
 
-        global $connection;
+			//SQL-Zugriff auf Datensaetze
+			$query = $connection->prepare("INSERT INTO socialcodes(style, code) VALUES(:style, :code)");
+			if($query->execute(array(':style'=> $style, ':code'=> $code))){
+				echo"Eingefügt";
+			}
 
-         //SQL-Zugriff auf Datensaetze
-         $query = $connection->prepare("INSERT INTO socialcodes(style, code) VALUES(:style, :code)");
-         if ($query->execute(array(':style'=> $style, ':code'=> $code))){
-            echo"Eingefügt";
-         }
-
-         else {
-             echo"Es wurde nichts eingefügt";
-         }
-    }
-}
+			else{
+				echo"Es wurde nichts eingefügt";
+			}
+		
+		}
+	}
 
 ?>
 
