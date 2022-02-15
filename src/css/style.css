@@ -682,3 +682,21 @@ button:hover {
 
 }
 
+#moremenu {
+    display: block;
+    list-style: none;
+    background: var(--background);
+    color: var(--fontcolordarker);
+    padding: 10px;
+    border-radius: 3px;
+}
+
+#moremenu li {
+    padding: 15px;
+    transition: .3s;
+}
+
+#moremenu li:hover {
+    background: var(--hintbackground);
+}
+
