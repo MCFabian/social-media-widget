@@ -617,7 +617,7 @@
 
 	</style>
 	<div id="notification"></div>
-	<form id="savecode" method="POST" action="/src/pages/senddata.php">
+	<form id="savecode" method="POST" action="">
 		<div class="wrapper">
 			<div class="box">
 				<h2>Kanäle auswählen</h2>
@@ -734,7 +734,7 @@
 				<h2>Design auswählen</h2>
 				<label for="style">Style festlegen</label>
 				<p class="">Wählen Sie einen der vorgebenen Stile für das Social-Media-Widget.</p>
-				<select id="style">
+				<select name="style" id="style">
 					<option value="basic">Basic</option>
 					<option value="basic-invert">Basic Umgekehrt</option>
 					<option value="round">Rund</option>
@@ -831,7 +831,7 @@
 				<div id="hint"></div>
 				<hr>
 				<label for="export">Exportcode</label>
-				<textarea id="export"></textarea>
+				<textarea name="export" id="export"></textarea>
 
 			</div>
 		</div>
@@ -855,6 +855,7 @@
 
 	if($_SERVER['REQUEST_METHOD'] == 'POST') {
 		if(isset($_POST['savecode'])) {
+			//DATA VARS
 			$code = $_POST['export']; 
 			$style = $_POST['style']; 
 
