@@ -835,7 +835,8 @@
 		</div>
 	</div>
 	<div class="fab-group">
-		<a id="savecode" class="fab"><i class="fas fa-save"></i>Code speichern</a>
+		<div id="savecode" class="fab"><i class="fas fa-save"></i>Code speichern</div>
+		<div onclick="opencodelib();" id="load-code" class="fab"><i class="fas fa-folder-open"></i>Code laden</div>
 		<a title="Dark/Light Mode" class="fab" onclick="setTheme()"><i class="fas fa-adjust"></i></a>
 		<div onclick="openmoremenu()" id="morebtn" class="fab"><i class="fas fa-ellipsis-v"></i>Mehr</div>
 		<ul id="moremenu">
