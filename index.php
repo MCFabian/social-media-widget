@@ -882,7 +882,7 @@
 			$style = $_POST['style']; 
 
 
-			echo "$check_facebook $check_instagram $check_youtube $check_twitter $check_tiktok $check_xing $check_linkedin $check_linktree";
+			echo "$value_facebook $value_instagram $value_youtube $value_twitter $value_tiktok $value_xing $value_linkedin $value_linktree";
 
 			global $connection;
 

@@ -295,10 +295,11 @@ label {
 
 button {
     border: none;
+    box-sizing: border-box;
 
 /* 
     position: relative;
-    box-sizing: border-box;
+
     outline: currentcolor none 0px;
     border: 0px none;
     margin: 0px;
