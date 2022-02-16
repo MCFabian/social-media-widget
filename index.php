@@ -878,11 +878,21 @@
 			$iconcolor = $_POST['color'];
 			$backgroundcolor = $_POST['background'];
 
+			$borderwidth = $_POST['borderwidth'];
+			$bordercolor = $_POST['bordercolor'];
+			$bordertype = $_POST['bordertype'];
+			$borderradius = $_POST['borderradius'];
+			
+			$backgroundhover = $_POST['hoverbg'];
+
+			$size = $_POST['tab'];
+			$alignemt = $_POST['alignment'];
+
 			$code = $_POST['export']; 
 			$style = $_POST['style']; 
 
 
-			echo "$value_facebook $value_instagram $value_youtube $value_twitter $value_tiktok $value_xing $value_linkedin $value_linktree";
+			echo "$size $alignment";
 
 			global $connection;
 

@@ -657,6 +657,7 @@ button#savecode i {
     display: flex;
     justify-content: center;
     text-align: center;
+    overflow: scroll;
 }
 
 .tag {
