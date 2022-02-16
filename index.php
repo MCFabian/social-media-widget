@@ -892,7 +892,7 @@
 			$style = $_POST['style']; 
 
 
-			echo "$size $alignment";
+			echo "$size $alignemt";
 
 			global $connection;
 
