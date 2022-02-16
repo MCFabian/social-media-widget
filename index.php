@@ -856,8 +856,14 @@
 	if($_SERVER['REQUEST_METHOD'] == 'POST') {
 		if(isset($_POST['savecode'])) {
 			//DATA VARS
+			$check_facebook = $_POST['checkfacebook'];
+			$check_instagram = $_POST['checkinstagram'];
+
 			$code = $_POST['export']; 
 			$style = $_POST['style']; 
+
+			echo "$check_facebook";
+			echo "$check_instagram";
 
 			global $connection;
 
@@ -865,17 +871,13 @@
 			$query = $connection->prepare("INSERT INTO socialcodes(style, code) VALUES(:style, :code)");
 			if($query->execute(array(':style'=> $style, ':code'=> $code))){
 				echo"
-					<script>
-						notifaction('success', 'Die Social-Media Auswahl wurde erfolgreich gespeichert.');
-					</script>
+					Erfolg
 				";
 			}
 
 			else{
 				echo"
-					<script>
-						notifaction('error', 'Die Social-Media Auswahl wurde nicht gespeichert.');
-					</script>
+					Fehler
 				";
 			}
 		
