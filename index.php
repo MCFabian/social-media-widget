@@ -798,12 +798,12 @@
 					<li>
 						<label for="color">Iconfarbe</label>
 						<p class="">Zugelassene Formate sind Hex, RGB-A, CSS-Farbworte, HSL.</p>
-						<input placeholder="#fff" type="text" id="color">
+						<input name="color" placeholder="#fff" type="text" id="color">
 					</li>
 					<li>
 						<label for="background">Hintergrundfarbe</label>
 						<p class="">Zugelassene Formate sind Hex, RGB-A, CSS-Farbworte, HSL.</p>
-						<input placeholder="#fff" type="text" id="background">
+						<input name="background" placeholder="#fff" type="text" id="background">
 					</li>
 				</ul>
 				<hr>
@@ -858,12 +858,31 @@
 			//DATA VARS
 			$check_facebook = $_POST['checkfacebook'];
 			$check_instagram = $_POST['checkinstagram'];
+			$check_youtube = $_POST['checkyoutube'];
+			$check_twitter = $_POST['checktwitter'];
+			$check_tiktok = $_POST['checktiktok'];
+			$check_xing = $_POST['checkxing'];
+			$check_linkedin = $_POST['checklinkedin'];
+			$check_linktree = $_POST['checklinktree'];
+
+			$value_facebook = $_POST['linkfacebook'];
+			$value_instagram = $_POST['linkinstagram'];
+			$value_youtube = $_POST['linkyoutube'];
+			$value_twitter = $_POST['linktwitter'];
+			$value_tiktok = $_POST['linktiktok'];
+			$value_xing = $_POST['linkxing'];
+			$value_linkedin = $_POST['linklinkedin'];
+			$value_linktree = $_POST['linklinktree'];
+
+
+			$iconcolor = $_POST['color'];
+			$backgroundcolor = $_POST['background'];
 
 			$code = $_POST['export']; 
 			$style = $_POST['style']; 
 
-			echo "$check_facebook";
-			echo "$check_instagram";
+
+			echo "$check_facebook $check_instagram $check_youtube $check_twitter $check_tiktok $check_xing $check_linkedin $check_linktree";
 
 			global $connection;
 
