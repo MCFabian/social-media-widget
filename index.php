@@ -894,7 +894,7 @@
 
 			$myc = rand(0, 10500);
 
-			echo"$timestamp";
+			echo"$myc";
 
 			global $connection;
 
