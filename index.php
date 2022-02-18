@@ -891,6 +891,8 @@
 			$code = $_POST['export']; 
 			$style = $_POST['style']; 
 
+			echo" $iconcolor $backgroundcolor $borderwidth $borderradius $bordercolor $bordertype $backgroundhover $size $alignemt $code $style":
+
 			global $connection;
 
 			//SQL-Zugriff auf Datensaetze
