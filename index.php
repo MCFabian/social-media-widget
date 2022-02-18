@@ -891,12 +891,12 @@
 			$code = $_POST['export']; 
 			$style = $_POST['style']; 
 
-			echo"$value_facebook";
+
 
 			global $connection;
 
 			//SQL-Zugriff auf Datensaetze
-			$query = $connection->prepare("INSERT INTO socialcodes(style, check_facebook, value_facebook, code) VALUES(:style, :check_facebook, :code)");
+			$query = $connection->prepare("INSERT INTO socialcodes(style, check_facebook, value_facebook, code) VALUES(:style, :check_facebook, :value_facebook, :code)");
 			if($query->execute(array(':style'=> $style, ':check_facebook' => $check_facebook, ':value_facebook' => $value_facebook, ':code'=> $code))){
 				echo"
 					Erfolg
