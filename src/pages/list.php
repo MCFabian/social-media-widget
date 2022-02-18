@@ -27,12 +27,34 @@
                     
                     Erstellungs-ID: <strong>$id</strong><br>
                     <small>erstellt am: $creationdate</small>
-                    <hr>
                     <div>
-                        <span class='tag styleingtag'><i class='fa fa-palette'></i> $style</span>
-                        
+                        <span class='tag styleingtag'><i class='fa fa-palette'></i> $style</span>s
                     </div>
                 </li>";
+            }
+
+
+        }
+    }
+
+    function getID($timestampt){
+        global $connection;
+
+        //SQL-Zugriff auf Datensaetze
+        $query = $connection->prepare("SELECT id AS creationid FROM socialcodes WHERE creationdate = $timestampt");
+        $query->execute();
+        $query->setFetchMode(PDO::FETCH_ASSOC);
+
+        while ($row = $query->fetch()){
+            $creationid						    = $row['id'];
+
+            if($creationid < 0){
+                echo "leer";
+            }
+
+            else{
+
+            echo"Deine gespeicherte ID lautet: $creationid";
             }
 
 
