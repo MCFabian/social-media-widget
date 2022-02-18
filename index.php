@@ -892,7 +892,7 @@
 			$code = $_POST['export']; 
 			$style = $_POST['style']; 
 
-			$timestamp = rand(5, 105);
+			$myc = rand(0, 10500);
 
 			echo"$timestamp";
 
@@ -900,12 +900,12 @@
 
 			//SQL-Zugriff auf Datensaetze
 			$query = $connection->prepare("INSERT INTO socialcodes(style, check_facebook, check_instagram, check_youtube, check_twitter, check_tiktok, check_xing, check_linkedin, check_linktree, value_facebook, value_instagram, value_youtube, value_twitter, value_tiktok, value_xing, value_linkedin, value_linktree, iconcolor, backgroundcolor, borderwidth, bordercolor, bordertype, borderradius, backgroundhover, size, alignemt, code, creationdate) VALUES(:style, :check_facebook, :check_instagram, :check_youtube, :check_twitter, :check_tiktok, :check_xing, :check_linkedin, :check_linktree, :value_facebook, :value_instagram, :value_youtube, :value_twitter, :value_tiktok, :value_xing, :value_linkedin, :value_linktree, :iconcolor, :backgroundcolor, :borderwidth, :bordercolor, :bordertype, :borderradius, :backgroundhover, :size, :alignemt, :code, :creationdate)");
-			if($query->execute(array(':style'=> $style, ':check_facebook' => $check_facebook, ':check_instagram' => $check_instagram, ':check_youtube' => $check_youtube, ':check_twitter' => $check_twitter, ':check_tiktok' => $check_tiktok, ':check_xing' => $check_xing, ':check_linkedin' => $check_linkedin, ':check_linktree' => $check_linktree, ':value_facebook' => $value_facebook, ':value_instagram' => $value_instagram, ':value_youtube' => $value_youtube, ':value_twitter' => $value_twitter, ':value_tiktok' => $value_tiktok, ':value_xing' => $value_xing, ':value_linkedin' => $value_linkedin, ':value_linktree' => $value_linktree, ':iconcolor' => $iconcolor, ':backgroundcolor' => $backgroundcolor, ':borderwidth' => $borderwidth, ':bordercolor' => $bordercolor, ':bordertype' => $bordertype, ':borderradius' => $borderradius, ':backgroundhover' => $backgroundhover, ':size' => $size, ':alignemt' => $alignemt, ':code'=> $code, ':creationdate' => $timestamp))){
+			if($query->execute(array(':style'=> $style, ':check_facebook' => $check_facebook, ':check_instagram' => $check_instagram, ':check_youtube' => $check_youtube, ':check_twitter' => $check_twitter, ':check_tiktok' => $check_tiktok, ':check_xing' => $check_xing, ':check_linkedin' => $check_linkedin, ':check_linktree' => $check_linktree, ':value_facebook' => $value_facebook, ':value_instagram' => $value_instagram, ':value_youtube' => $value_youtube, ':value_twitter' => $value_twitter, ':value_tiktok' => $value_tiktok, ':value_xing' => $value_xing, ':value_linkedin' => $value_linkedin, ':value_linktree' => $value_linktree, ':iconcolor' => $iconcolor, ':backgroundcolor' => $backgroundcolor, ':borderwidth' => $borderwidth, ':bordercolor' => $bordercolor, ':bordertype' => $bordertype, ':borderradius' => $borderradius, ':backgroundhover' => $backgroundhover, ':size' => $size, ':alignemt' => $alignemt, ':code'=> $code, ':creationdate' => $myc))){
 				clearReloadForm();
 				echo"<script src='src/js/script.js'></script>";
 				echo"<script>notification('success', 'Der Code wurde erfolgreich gespeichert!');</script>";
 
-				getID($timestamp);
+				getID($myc);
 
 			}
 
