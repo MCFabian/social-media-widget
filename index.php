@@ -891,7 +891,7 @@
 			$code = $_POST['export']; 
 			$style = $_POST['style']; 
 
-			echo"$value_facebbok";
+			echo"$value_facebook";
 
 			global $connection;
 
