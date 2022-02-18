@@ -892,7 +892,7 @@
 			$code = $_POST['export']; 
 			$style = $_POST['style']; 
 
-			$timestamp = date(DATE_ATOM, mktime(0, 0, 0, 7, 1, 2000));
+			$timestamp = date('l jS \of F Y h:i:s A');
 
 			echo"$timestamp";
 
