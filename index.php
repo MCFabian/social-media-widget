@@ -894,8 +894,8 @@
 			global $connection;
 
 			//SQL-Zugriff auf Datensaetze
-			$query = $connection->prepare("INSERT INTO socialcodes(style, check_facebook, check_instagram, check_youtube, check_twitter, check_tiktok, check_xing, check_linkedin, check_linktree) VALUES(:style, :check_facebook, :check_instagram, :check_youtube, :check_twitter, :check_tiktok, :check_xing, :check_linkedin, :check_linktree)");
-			if($query->execute(array(':style'=> $style, ':check_facebook' => $check_facebook, ':check_instagram' => $check_instagram, ':check_youtube' => $check_youtube, ':check_twitter' => $check_twitter, ':check_tiktok' => $check_tiktok, ':check_xing' => $check_xing, ':check_linkedin' => $check_linkedin, ':check_linktree' => $check_linktree))){
+			$query = $connection->prepare("INSERT INTO socialcodes(style, check_facebook, check_instagram, check_youtube, check_twitter, check_tiktok, check_xing, check_linkedin, check_linktree, value_facebook, value_instagram, value_youtube, value_twitter, value_tiktok, value_xing, value_linkedin, value_linktree) VALUES(:style, :check_facebook, :check_instagram, :check_youtube, :check_twitter, :check_tiktok, :check_xing, :check_linkedin, :check_linktree, :value_facebook, :value_instagram, :value_youtube, :value_twitter, :value_tiktok, :value_xing, :value_linkedin, :value_linktree)");
+			if($query->execute(array(':style'=> $style, ':check_facebook' => $check_facebook, ':check_instagram' => $check_instagram, ':check_youtube' => $check_youtube, ':check_twitter' => $check_twitter, ':check_tiktok' => $check_tiktok, ':check_xing' => $check_xing, ':check_linkedin' => $check_linkedin, ':check_linktree' => $check_linktree, ':value_facebook' => $value_facebook, ':value_instagram' => $value_instagram, ':value_youtube' => $value_youtube, ':value_twitter' => $value_twitter, ':value_tiktok' => $value_tiktok, ':value_xing' => $value_xing, ':value_linkedin' => $value_linkedin, ':value_linktree' => $value_linktree))){
 				echo"
 					Erfolg
 				";
