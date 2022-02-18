@@ -202,6 +202,7 @@ input[type=text], input[type=email], input[type=number], select {
 input[type=checkbox] {
     margin-right: 5px;
     cursor: pointer;
+    accent-color: var(--accentcolor);
 }
 
 input:focus, input:hover {
@@ -724,6 +725,7 @@ button#savecode i {
 
 #moremenu li i {
     margin-right: 5px;
+    color: var(--accentcolor);
 }
 
 #moremenu li:hover {
