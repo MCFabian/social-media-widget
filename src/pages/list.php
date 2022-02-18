@@ -37,11 +37,11 @@
         }
     }
 
-    function getID($timestampt){
+    function getID($timestamp){
         global $connection;
 
         //SQL-Zugriff auf Datensaetze
-        $query = $connection->prepare("SELECT id AS creationid FROM socialcodes WHERE creationdate = $timestampt");
+        $query = $connection->prepare("SELECT id AS creationid FROM socialcodes WHERE creationdate = $timestamp");
         $query->execute();
         $query->setFetchMode(PDO::FETCH_ASSOC);
 
