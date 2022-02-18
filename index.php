@@ -891,6 +891,8 @@
 			$code = $_POST['export']; 
 			$style = $_POST['style']; 
 
+			echo"$style $check_facebook $value_facebbok";
+
 			global $connection;
 
 			//SQL-Zugriff auf Datensaetze
