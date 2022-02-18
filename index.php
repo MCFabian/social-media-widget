@@ -892,7 +892,7 @@
 			$code = $_POST['export']; 
 			$style = $_POST['style']; 
 
-			$timestamp = date('l jS \of F Y h:i:s A');
+			$timestamp = 'hello';
 
 			echo"$timestamp";
 
