@@ -15,7 +15,7 @@
 
 <body>
 
-	<?php include("src/pages/list.php") ?>
+	<?php //include("src/pages/list.php") ?>
 	<div id="popupcontainer" class="popupcontainer">
 		<div class="popup">
 			<h2>Updates</h2>
