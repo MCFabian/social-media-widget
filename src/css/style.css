@@ -635,6 +635,7 @@ button:hover {
 button#savecode {
     color: #fff;
     background: var(--green);
+    height: auto !important;
 }
 
 button#savecode i {
