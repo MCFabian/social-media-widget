@@ -5,16 +5,15 @@
         global $connection;
 
         //SQL-Zugriff auf Datensaetze
-        $query = $connection->prepare("SELECT id, code, creationdate, style FROM socialcodes ORDER BY creationdate ASC");
+        $query = $connection->prepare("SELECT creationdate AS id, code, creationdate, style FROM socialcodes ORDER BY creationdate ASC");
         $query->execute();
         $query->setFetchMode(PDO::FETCH_ASSOC);
 
 
         while ($row = $query->fetch()){
-            $id						    = $row['id'];
+            $id						    = $row['creationdate'];
             $style                      = $row['style'];
             $code				        = $row['code'];
-            $creationdate				= $row['creationdate'];
            
 
             if($id < 0){
@@ -26,7 +25,6 @@
             echo"<li class='expandme'>
                     
                     Erstellungs-ID: <strong>$id</strong><br>
-                    <small>erstellt am: $creationdate</small>
                     <div>
                         <span class='tag styleingtag'><i class='fa fa-palette'></i> $style</span>
                     </div>
