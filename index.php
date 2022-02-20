@@ -911,7 +911,7 @@
 			else{
 				clearReloadForm();
 				echo"<script src='src/js/script.js'></script>";
-				echo"<script>notification('success', 'Der Code konnte gespeichert werden!');</script>";
+				echo"<script>notification('error', 'Der Code konnte nicht gespeichert werden!');</script>";
 				
 			}
 		
