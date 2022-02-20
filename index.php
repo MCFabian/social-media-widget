@@ -851,10 +851,11 @@
 </body>
 
 <?php
- 	include("src/pages/connection.php");
+	include("src/pages/connection.php");
+	include("src/pages/functions.php");
 
- 	if($_SERVER['REQUEST_METHOD'] == 'POST') {
- 		if(isset($_POST['savecode'])) {
+	if($_SERVER['REQUEST_METHOD'] == 'POST') {
+		if(isset($_POST['savecode'])) {
 			//DATA VARS
 			$check_facebook = $_POST['checkfacebook'];
 			$check_instagram = $_POST['checkinstagram'];
@@ -864,6 +865,7 @@
 			$check_xing = $_POST['checkxing'];
 			$check_linkedin = $_POST['checklinkedin'];
 			$check_linktree = $_POST['checklinktree'];
+
 			$value_facebook = $_POST['linkfacebook'];
 			$value_instagram = $_POST['linkinstagram'];
 			$value_youtube = $_POST['linkyoutube'];
@@ -872,35 +874,52 @@
 			$value_xing = $_POST['linkxing'];
 			$value_linkedin = $_POST['linklinkedin'];
 			$value_linktree = $_POST['linklinktree'];
+
+
 			$iconcolor = $_POST['color'];
 			$backgroundcolor = $_POST['background'];
+
 			$borderwidth = $_POST['borderwidth'];
 			$bordercolor = $_POST['bordercolor'];
 			$bordertype = $_POST['bordertype'];
 			$borderradius = $_POST['borderradius'];
 			
 			$backgroundhover = $_POST['hoverbg'];
+
 			$size = $_POST['tab'];
 			$alignemt = $_POST['alignment'];
+
 			$code = $_POST['export']; 
 			$style = $_POST['style']; 
 
+			$myc = rand(0, 10500);
+
+			echo"$myc";
+
 			global $connection;
- 			//SQL-Zugriff auf Datensaetze
-			 $query = $connection->prepare("INSERT INTO socialcodes(style, check_facebook, check_instagram, check_youtube, check_twitter, check_tiktok, check_xing, check_linkedin, check_linktree, value_facebook, value_instagram, value_youtube, value_twitter, value_tiktok, value_xing, value_linkedin, value_linktree) VALUES(:style, :check_facebook, :check_instagram, :check_youtube, :check_twitter, :check_tiktok, :check_xing, :check_linkedin, :check_linktree, :value_facebook, :value_instagram, :value_youtube, :value_twitter, :value_tiktok, :value_xing, :value_linkedin, :value_linktree)");
- 			if($query->execute(array(':style'=> $style, ':check_facebook' => $check_facebook, ':check_instagram' => $check_instagram, ':check_youtube' => $check_youtube, ':check_twitter' => $check_twitter, ':check_tiktok' => $check_tiktok, ':check_xing' => $check_xing, ':check_linkedin' => $check_linkedin, ':check_linktree' => $check_linktree, ':value_facebook' => $value_facebook, ':value_instagram' => $value_instagram, ':value_youtube' => $value_youtube, ':value_twitter' => $value_twitter, ':value_tiktok' => $value_tiktok, ':value_xing' => $value_xing, ':value_linkedin' => $value_linkedin, ':value_linktree' => $value_linktree))){
- 				echo"
- 					Erfolg
- 				";
- 			}
 
- 			else{
- 				echo"
- 					Fehler
- 				";
- 			}
+			//SQL-Zugriff auf Datensaetze
+			$query = $connection->prepare("INSERT INTO socialcodes(style, check_facebook, check_instagram, check_youtube, check_twitter, check_tiktok, check_xing, check_linkedin, check_linktree, value_facebook, value_instagram, value_youtube, value_twitter, value_tiktok, value_xing, value_linkedin, value_linktree, iconcolor, backgroundcolor, borderwidth, bordercolor, bordertype, borderradius, backgroundhover, size, alignemt, code, creationdate) VALUES(:style, :check_facebook, :check_instagram, :check_youtube, :check_twitter, :check_tiktok, :check_xing, :check_linkedin, :check_linktree, :value_facebook, :value_instagram, :value_youtube, :value_twitter, :value_tiktok, :value_xing, :value_linkedin, :value_linktree, :iconcolor, :backgroundcolor, :borderwidth, :bordercolor, :bordertype, :borderradius, :backgroundhover, :size, :alignemt, :code, :creationdate)");
+			if($query->execute(array(':style'=> $style, ':check_facebook' => $check_facebook, ':check_instagram' => $check_instagram, ':check_youtube' => $check_youtube, ':check_twitter' => $check_twitter, ':check_tiktok' => $check_tiktok, ':check_xing' => $check_xing, ':check_linkedin' => $check_linkedin, ':check_linktree' => $check_linktree, ':value_facebook' => $value_facebook, ':value_instagram' => $value_instagram, ':value_youtube' => $value_youtube, ':value_twitter' => $value_twitter, ':value_tiktok' => $value_tiktok, ':value_xing' => $value_xing, ':value_linkedin' => $value_linkedin, ':value_linktree' => $value_linktree, ':iconcolor' => $iconcolor, ':backgroundcolor' => $backgroundcolor, ':borderwidth' => $borderwidth, ':bordercolor' => $bordercolor, ':bordertype' => $bordertype, ':borderradius' => $borderradius, ':backgroundhover' => $backgroundhover, ':size' => $size, ':alignemt' => $alignemt, ':code'=> $code, ':creationdate' => $myc))){
+				clearReloadForm();
+				echo"<script src='src/js/script.js'></script>";
+				echo"<script>notification('success', 'Der Code wurde erfolgreich gespeichert!');</script>";
 
- 		}
+				//getID($myc);
+
+			}
+
+			else{
+				echo"Fehler";
+				clearReloadForm();
+				echo"<script src='src/js/script.js'></script>";
+				echo"<script>notification('success', 'Der Code konnte gespeichert werden!');</script>";
+				
+			}
+		
+		}
 	}
+
 ?>
+
 </html>
