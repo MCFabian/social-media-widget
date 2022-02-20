@@ -894,7 +894,6 @@
 
 			$myc = rand(0, 10500);
 
-			echo"$myc";
 
 			global $connection;
 
@@ -910,7 +909,6 @@
 			}
 
 			else{
-				echo"Fehler";
 				clearReloadForm();
 				echo"<script src='src/js/script.js'></script>";
 				echo"<script>notification('success', 'Der Code konnte gespeichert werden!');</script>";
