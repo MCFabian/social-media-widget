@@ -858,7 +858,9 @@
 		if(isset($_POST['savecode'])) {
 			//DATA VARS
 			$check_facebook = $_POST['checkfacebook'];
-
+			if(empty($check_facebook)){
+				$check_facebook = off;
+			}
 			$check_instagram = $_POST['checkinstagram'];
 			$check_youtube = $_POST['checkyoutube'];
 			$check_twitter = $_POST['checktwitter'];
