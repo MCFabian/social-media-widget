@@ -852,7 +852,6 @@
 
 <?php
  	include("src/pages/connection.php");
- 	include("src/pages/functions.php");
 
  	if($_SERVER['REQUEST_METHOD'] == 'POST') {
  		if(isset($_POST['savecode'])) {
@@ -889,15 +888,15 @@
  			//SQL-Zugriff auf Datensaetze
  			$query = $connection->prepare("INSERT INTO socialcodes(style, check_facebook, check_instagram, check_youtube, check_twitter, check_tiktok, check_xing, check_linkedin, check_linktree, value_facebook, value_instagram, value_youtube, value_twitter, value_tiktok, value_xing, value_linkedin, value_linktree, iconcolor, backgroundcolor, borderwidth, bordercolor, bordertype, borderradius, backgroundhover, size, alignemt, code) VALUES(:style, :check_facebook, :check_instagram, :check_youtube, :check_twitter, :check_tiktok, :check_xing, :check_linkedin, :check_linktree, :value_facebook, :value_instagram, :value_youtube, :value_twitter, :value_tiktok, :value_xing, :value_linkedin, :value_linktree, :iconcolor, :backgroundcolor, :borderwidth, :bordercolor, :bordertype, :borderradius, :backgroundhover, :size, :alignemt, :code)");
  			if($query->execute(array(':style'=> $style, ':check_facebook' => $check_facebook, ':check_instagram' => $check_instagram, ':check_youtube' => $check_youtube, ':check_twitter' => $check_twitter, ':check_tiktok' => $check_tiktok, ':check_xing' => $check_xing, ':check_linkedin' => $check_linkedin, ':check_linktree' => $check_linktree, ':value_facebook' => $value_facebook, ':value_instagram' => $value_instagram, ':value_youtube' => $value_youtube, ':value_twitter' => $value_twitter, ':value_tiktok' => $value_tiktok, ':value_xing' => $value_xing, ':value_linkedin' => $value_linkedin, ':value_linktree' => $value_linktree, ':iconcolor' => $iconcolor, ':backgroundcolor' => $backgroundcolor, ':borderwidth' => $borderwidth, ':bordercolor' => $bordercolor, ':bordertype' => $bordertype, ':borderradius' => $borderradius, ':backgroundhover' => $backgroundhover, ':size' => $size, ':alignemt' => $alignemt, ':code'=> $code))){
- 				clearReloadForm();
- 				echo"<script src='src/js/script.js'></script>";
- 				echo"<script>notification('success', 'Der Code wurde erfolgreich gespeichert!');</script>";
+ 				echo"
+ 					Erfolg
+ 				";
  			}
 
  			else{
- 				clearReloadForm();
- 				echo"<script src='src/js/script.js'></script>";
- 				echo"<script>notification('success', 'Der Code konnte gespeichert werden!');</script>";
+ 				echo"
+ 					Fehler
+ 				";
  			}
 
  		}
