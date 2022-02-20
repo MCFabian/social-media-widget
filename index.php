@@ -905,7 +905,7 @@
 				echo"<script src='src/js/script.js'></script>";
 				echo"<script>notification('success', 'Der Code wurde erfolgreich gespeichert!');</script>";
 
-				//getID($myc);
+				getID($myc);
 
 			}
 
