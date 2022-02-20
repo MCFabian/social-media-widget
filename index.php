@@ -858,6 +858,7 @@
 		if(isset($_POST['savecode'])) {
 			//DATA VARS
 			$check_facebook = $_POST['checkfacebook'];
+
 			$check_instagram = $_POST['checkinstagram'];
 			$check_youtube = $_POST['checkyoutube'];
 			$check_twitter = $_POST['checktwitter'];
@@ -894,6 +895,7 @@
 
 			$myc = rand(0, 10500);
 
+			echo"$check_facebook";
 
 			global $connection;
 
