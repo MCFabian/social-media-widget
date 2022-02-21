@@ -26,6 +26,6 @@
         var input = document.getElementById("initial");
         var init = document.getElementById("initialpreview");
 
-        init.innerHTML = input.ariaValueMax;
+        init.innerHTML = input.value;
     }
 </script>
