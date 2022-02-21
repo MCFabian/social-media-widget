@@ -6,13 +6,13 @@
     <label for="initial">Initialen</label>
     <input max="2" min="2" type="text">
 
-    <div class="warning">
-        <i class='fas fa-exclamation'></i> Bitte beachten Sie, dass <strong>E-Mail, Telefon und WhatsApp, als auch das Custom-Icon nicht gespeichert werden.‚</strong>
+    <div class="warning hint">
+        <i class='fas fa-exclamation'></i> Bitte beachten Sie, dass E-Mail, Telefon und WhatsApp, als auch das Custom-Icon nicht gespeichert werden.
     </div>
 
     <hr>
 
     <button class="button" id="savecode" name="savecode" form="savecode"><i class="fas fa-save"></i>Speichen</button>
-    <div onclick="popup()" class="button">Schließen</div>
+    <span onclick="popup()" class="button">Schließen</span>
 
 </div>
