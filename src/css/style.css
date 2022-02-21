@@ -746,3 +746,16 @@ button.save i {
     flex-direction: row;
 }
 
+.row > div {
+    margin: auto;
+    margin-top: 0;
+}
+
+.row > div:first-child {
+    margin-left: 0;
+}
+
+.row > div:last-child {
+    margin-right: 0;
+}
+
