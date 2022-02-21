@@ -26,15 +26,16 @@
             echo"<li class='expandme'>
                     
                     Erstellungs-ID: <strong>$finderid</strong><br>
+                    Inhalte des Codes:
+                    <div>
+                        <span class='tag styleingtag'><i class='fa fa-palette'></i> $style</span>
+                    </div>
+
+                    <span class='link'>Vorschau</span>
 
                     <span class='chip'>
                         <span class='creator'>$creator</span> <small>erstellt am: $creationdate</small> von 
                     </span>
-
-                   
-                    <div>
-                        <span class='tag styleingtag'><i class='fa fa-palette'></i> $style</span>
-                    </div>
                 </li>";
             }
 
