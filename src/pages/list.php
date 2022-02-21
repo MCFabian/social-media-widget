@@ -5,7 +5,7 @@
         global $connection;
 
         //SQL-Zugriff auf Datensaetze
-        $query = $connection->prepare("SELECT finderid, code, DATE_FORMAT(creationdate, '%d.%m.%Y') AS creationdate, style FROM socialcodes ORDER BY creationdate ASC");
+        $query = $connection->prepare("SELECT finderid, code, DATE_FORMAT(creationdate, '%d.%m.%Y') AS creationdate, style, creator FROM socialcodes ORDER BY creationdate ASC");
         $query->execute();
         $query->setFetchMode(PDO::FETCH_ASSOC);
 
@@ -15,7 +15,7 @@
             $style                      = $row['style'];
             $code				        = $row['code'];
             $creationdate			    = $row['creationdate'];
-           
+            $creator			        = $row['creator'];
 
             if($id < 0){
                 echo "leer";
@@ -26,7 +26,7 @@
             echo"<li class='expandme'>
                     
                     Erstellungs-ID: <strong>$finderid</strong><br>
-                    <small>erstellt am: $creationdate</small>
+                    <small>erstellt am: $creationdate</small> von <span class='creator'>$creator</span>
                     <div>
                         <span class='tag styleingtag'><i class='fa fa-palette'></i> $style</span>
                     </div>
