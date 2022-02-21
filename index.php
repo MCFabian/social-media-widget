@@ -826,7 +826,7 @@
 			</div>
 		</div>
 		<div class="fab-group">
-			<button nclick="popup()" class="fab save"><i class="fas fa-save"></i>Code speichern</button>
+			<div onclick="popup()" class="fab save"><i class="fas fa-save"></i>Code speichern</div>
 			<div onclick="opencodelib();" id="load-code" class="fab"><i class="fas fa-folder-open"></i>Code laden</div>
 			<a title="Dark/Light Mode" class="fab" onclick="setTheme()"><i class="fas fa-adjust"></i></a>
 			<div onclick="openmoremenu()" id="morebtn" class="fab"><i class="fas fa-ellipsis-v"></i>Mehr</div>
