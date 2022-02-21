@@ -12,7 +12,7 @@
 
     <hr>
 
-    <button class='button' id="savecode" name="savecode" form="savecode">Speichen</button>
+    <button class="button" id="savecode" name="savecode" form="savecode"><i class="fas fa-save"></i>Speichen</button>
     <div onclick="popup()" class="button">Schließen</div>
 
 </div>

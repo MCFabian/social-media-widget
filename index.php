@@ -16,9 +16,7 @@
 <body>
 
 	<?php include("src/pages/list.php") ?>
-	<div id="popupcontainer" class="popupcontainer">
-		<?php include("src/pages/saveentry.php"); ?>
-	</div>
+
 
 	<style id="hovestyle"></style>
 
@@ -834,6 +832,11 @@
 				<li><a target="_blank" href="https://github.com/MCFabian/social-media-widget/issues/new" title="Bug melden via GitHu"><i class="fas fa-bug"></i>Fehler melden</a></li>
 			</ul>
 		</div>
+
+		<div id="popupcontainer" class="popupcontainer">
+			<?php include("src/pages/saveentry.php"); ?>
+		</div>
+
 	</form>
 	<script src="src/js/script.js"></script>
 	<script src="src/js/gen.js"></script>
