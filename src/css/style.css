@@ -740,10 +740,6 @@ button.save i {
     line-height: 1.5;
 }
 
-#initial {
-    width: 90%;
-}
-
 .row {
     display: flex;
     align-content: flex-start;
@@ -758,6 +754,7 @@ button.save i {
 .row > div:first-child {
     margin-left: 0;
     margin-top: auto;
+    width: 90%;
 }
 
 .row > div:last-child {
