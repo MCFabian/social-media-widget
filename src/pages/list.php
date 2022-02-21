@@ -37,30 +37,6 @@
         }
     }
 
-    function getID($mys){
-        global $connection;
-
-        //SQL-Zugriff auf Datensaetze
-        $query = $connection->prepare("SELECT id AS creationid FROM socialcodes WHERE creationdate = $mys");
-        $query->execute();
-        $query->setFetchMode(PDO::FETCH_ASSOC);
-
-        while ($row = $query->fetch()){
-            $creationid						    = $row['id'];
-
-            if($creationid < 0){
-                echo "leer";
-            }
-
-            else{
-
-            echo"Deine gespeicherte ID lautet: $creationid";
-            }
-
-
-        }
-    }
-
 ?>
 <div id="codelib" class="listcontainer">
     <div id="listcontainerhead">
@@ -72,6 +48,12 @@
     </div>
 
     <ul>
-        <?php listcodes(); ?>
+        <?php
+        
+        setInterval(listcodes(){
+                echo "hi!\n";
+        }, 1000);
+
+         ?>
     </ul>
 </div>
