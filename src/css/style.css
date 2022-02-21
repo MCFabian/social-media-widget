@@ -636,6 +636,7 @@ button:hover {
 }
 
 button#savecode,
+#saveme,
 button.save {
     color: #fff;
     background: var(--green);
@@ -643,6 +644,7 @@ button.save {
 }
 
 button#savecode i,
+#saveme,
 button.save i {
     margin-right: 5px;
 }

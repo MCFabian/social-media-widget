@@ -9,7 +9,7 @@
 
         <div>
             <label for="initial">Initialen</label>
-            <input onkeyup="writeinitals()" id="initial" name="initial" placeholder="MM" minlength="2" maxlength="2" type="text">
+            <input required onkeyup="writeinitals()" id="initial" name="initial" placeholder="MM" minlength="2" maxlength="2" type="text">
         </div>
     </div>
 
