@@ -17,7 +17,7 @@
 
 	<?php include("src/pages/list.php") ?>
 	<div id="popupcontainer" class="popupcontainer">
-		<?php include('/src/pages/saveentry.php') ?>
+		<?php include("src/pages/saveentry.php"); ?>
 	</div>
 
 	<style id="hovestyle"></style>
