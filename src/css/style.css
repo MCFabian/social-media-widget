@@ -740,3 +740,9 @@ button.save i {
     line-height: 1.5;
 }
 
+.row {
+    display: flex;
+    align-content: flex-start;
+    flex-direction: row;
+}
+
