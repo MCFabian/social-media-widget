@@ -26,7 +26,12 @@
             echo"<li class='expandme'>
                     
                     Erstellungs-ID: <strong>$finderid</strong><br>
-                    <small>erstellt am: $creationdate</small> von <span class='creator'>$creator</span>
+
+                    <div class='chip'>
+                        <span class='creator'>$creator</span> <small>erstellt am: $creationdate</small> von 
+                    </div>
+
+                   
                     <div>
                         <span class='tag styleingtag'><i class='fa fa-palette'></i> $style</span>
                     </div>

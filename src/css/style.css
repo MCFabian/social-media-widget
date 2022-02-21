@@ -756,6 +756,7 @@ button.save i {
     text-transform: uppercase;
     line-height: 1.2;
     font-size: .8rem;
+    margin-right: 5px;
 }
 
 .row {
@@ -777,5 +778,11 @@ button.save i {
 .row > div:last-child {
     margin-right: 0;
     width: 90%;
+}
+
+.chip {
+    border: 1px solid var(--dividercolor);
+    padding: 10px;
+    border-radius: 5px;
 }
 
