@@ -32,6 +32,8 @@ function notification(type, text){
     
 }
 
+
+
 //More styles
 document.getElementById("morestyles").addEventListener("click", function(){
         var morestylestoggle = document.getElementById("morestyles");
