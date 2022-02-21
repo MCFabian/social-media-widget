@@ -6,10 +6,9 @@
 
     <div id="initialpreview">MM</div>
 
-    <label for="initial">Initialen
-        <p>Es sind nur zwei Zeichen gültig.</p>
-        <input onkeyup="writeinitals()" id="initial" name="initial" placeholder="MM" minlength="2" maxlength="2" type="text">
-    </label>
+    <label for="initial">Initialen</label>
+    <p>Es sind nur zwei Zeichen gültig.</p>
+    <input onkeyup="writeinitals()" id="initial" name="initial" placeholder="MM" minlength="2" maxlength="2" type="text">
 
 
     <div class="hint">
