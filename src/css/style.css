@@ -736,5 +736,6 @@ button.save i {
     background: linear-gradient(160deg, rgba(255,255,255,1) 0%, rgba(193,193,193,1) 100%);
     color: var(--accentcolor);
     text-align: center;
+    text-transform: uppercase;
 }
 
