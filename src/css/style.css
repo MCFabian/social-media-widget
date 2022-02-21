@@ -635,13 +635,15 @@ button:hover {
     background: var(--accentcolor2);
 }
 
-button#savecode {
+button#savecode,
+button.save {
     color: #fff;
     background: var(--green);
     height: auto !important;
 }
 
-button#savecode i {
+button#savecode i,
+button.save i {
     margin-right: 5px;
 }
 

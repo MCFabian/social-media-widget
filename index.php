@@ -17,17 +17,7 @@
 
 	<?php include("src/pages/list.php") ?>
 	<div id="popupcontainer" class="popupcontainer">
-		<div class="popup">
-			<h2>Updates</h2>
-			<hr>
-			<ul>
-				<li>Die Codeausgabe wurde optimiert: Es werden nun nur die Social-Media Kanäle erzeugt und ausgegeben, welche auch ausgewählt sind. Gleiches gilt für den gewählten Style.</li>
-				<li>Man kann nun einen Borderradius festlegen, dieser ist an den weiteren Kontureinstellungn gebunden.</li>
-				<li>Kleine Optimierungen und Fehlerbehebungen.</li>
-			</ul>
-			<hr>
-			<div onclick="popup()" class="button">Schließen</div>
-		</div>
+		<?php include('/src/pages/saveentry.php') ?>
 	</div>
 
 	<style id="hovestyle"></style>
@@ -836,13 +826,12 @@
 			</div>
 		</div>
 		<div class="fab-group">
-			<button name="savecode" form="savecode" id="savecode" class="fab"><i class="fas fa-save"></i>Code speichern</button>
+			<button nclick="popup()" class="fab save"><i class="fas fa-save"></i>Code speichern</button>
 			<div onclick="opencodelib();" id="load-code" class="fab"><i class="fas fa-folder-open"></i>Code laden</div>
 			<a title="Dark/Light Mode" class="fab" onclick="setTheme()"><i class="fas fa-adjust"></i></a>
 			<div onclick="openmoremenu()" id="morebtn" class="fab"><i class="fas fa-ellipsis-v"></i>Mehr</div>
 			<ul id="moremenu">
-					<li><a onclick="popup()" id="" class="" title="What's new?"><i class="fas fa-certificate" ></i>Updates</a></li>
-					<li><a target="_blank" href="https://github.com/MCFabian/social-media-widget/issues/new" title="Bug melden via GitHu"><i class="fas fa-bug"></i>Fehler melden</a></li>
+				<li><a target="_blank" href="https://github.com/MCFabian/social-media-widget/issues/new" title="Bug melden via GitHu"><i class="fas fa-bug"></i>Fehler melden</a></li>
 			</ul>
 		</div>
 	</form>
