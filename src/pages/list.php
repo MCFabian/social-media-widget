@@ -48,12 +48,6 @@
     </div>
 
     <ul>
-        <?php
-        
-        setInterval(listcodes(){
-                echo "hi!\n";
-        }, 1000);
-
-         ?>
+        <?php listcodes(); ?>
     </ul>
 </div>
