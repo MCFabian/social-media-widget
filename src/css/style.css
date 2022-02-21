@@ -729,11 +729,12 @@ button.save i {
 #initialpreview {
     height: 25px;
     width: 25px;
-    padding: 10px;
+    padding: 8px 10px 10px 10px;
     border-radius: 100%;
     border: 1px solid var(--dividercolor);
     background: rgb(255,255,255);
     background: linear-gradient(160deg, rgba(255,255,255,1) 0%, rgba(193,193,193,1) 100%);
     color: var(--accentcolor);
+    text-align: center;
 }
 
