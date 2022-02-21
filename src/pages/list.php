@@ -27,9 +27,9 @@
                     
                     Erstellungs-ID: <strong>$finderid</strong><br>
 
-                    <div class='chip'>
+                    <span class='chip'>
                         <span class='creator'>$creator</span> <small>erstellt am: $creationdate</small> von 
-                    </div>
+                    </span>
 
                    
                     <div>

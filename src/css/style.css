@@ -782,7 +782,7 @@ button.save i {
 
 .chip {
     border: 1px solid var(--dividercolor);
-    padding: 10px;
+    padding: 25px;
     border-radius: 5px;
 }
 
