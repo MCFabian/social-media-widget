@@ -4,14 +4,12 @@
 
     <hr>
 
-    <div class="row">
-        <div id="initialpreview">MM</div>
+    <div id="initialpreview">MM</div>
 
-        <label for="initial">Initialen
-            <p>Es sind nur zwei Zeichen gültig.</p>
-            <input onkeyup="writeinitals()" id="initial" name="initial" placeholder="MM" minlength="2" maxlength="2" type="text">
-        </label>
-    </div>
+    <label for="initial">Initialen
+        <p>Es sind nur zwei Zeichen gültig.</p>
+        <input onkeyup="writeinitals()" id="initial" name="initial" placeholder="MM" minlength="2" maxlength="2" type="text">
+    </label>
 
 
     <div class="hint">
