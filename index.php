@@ -890,6 +890,10 @@
 			
 			$creator = $_POST['initial'];
 
+			str_ireplace("id='socialmedialist', 'id='', $code");
+
+			echo"$code";
+
 			echo"$creator";
 
 			$myc = rand(0, 10500);
