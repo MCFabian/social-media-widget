@@ -843,6 +843,15 @@ input[type=checkbox].toogle + label::after {
     transition: .3s;
 }
 
+.previewbutton {
+    text-align: center;
+    color: var(--accentcolor);
+}
+
+.previewbutton i {
+    margin-right: 5px;
+}
+
 
 
 

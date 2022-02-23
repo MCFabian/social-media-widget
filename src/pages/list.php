@@ -30,9 +30,9 @@
                         <span class='tag styleingtag'><i class='fa fa-palette'></i> $style</span>
                     </div>
 
-                    <span class='link expandme'>Vorschau
+                    <div class='previewbutton expandme'><i class='fa-solid fa-eye'></i>Vorschau
                         <div class='expander'>$code</div>
-                    </span>
+                    </div>
 
                     <span class=''>
                         <span class='creator'>$creator</span> <small>erstellt am: $creationdate</small> von 
