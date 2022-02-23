@@ -614,89 +614,69 @@
 				<hr>
 				<ul id="medias">
 					<li>
+
+						<input class="checkboxes toogle" type="checkbox" name="checkfacebook" id="checkfacebook">
 						<label for="checkfacebook">
-							<input class="checkboxes" type="checkbox" name="checkfacebook" id="checkfacebook">
+							
 							Facebook
 						</label>
 						<input placeholder="Link eingeben" type="text" name="linkfacebook" id="linkfacebook">
 					</li>
 
 					<li>
-						<label for="checkinstagram">
-							<input class="checkboxes" type="checkbox" name="checkinstagram" id="checkinstagram">
-							Instagram
-						</label>
+						<input class="checkboxes toogle" type="checkbox" name="checkinstagram" id="checkinstagram">
+						<label for="checkinstagram">Instagram</label>
 						<input placeholder="Link eingeben" type="text" name="linkinstagram" id="linkinstagram">
 					</li>
 					<li>
-						<label for="checkyoutube">
-							<input class="checkboxes" type="checkbox" name="checkyoutube" id="checkyoutube">
-							YouTube
-						</label>
+						<input class="checkboxes toogle" type="checkbox" name="checkyoutube" id="checkyoutube">
+						<label for="checkyoutube">YouTube</label>
 						<input placeholder="Link eingeben" type="text" name="linkyoutube" id="linkyoutube">
 					</li>
 					<li>
-						<label for="checktwitter">
-							<input class="checkboxes" type="checkbox" name="checktwitter" id="checktwitter">
-							Twitter
-						</label>
+						<input class="checkboxes toogle" type="checkbox" name="checktwitter" id="checktwitter">
+						<label for="checktwitter">Twitter</label>
 						<input placeholder="Link eingeben" type="text" name="linktwitter" id="linktwitter">
 					</li>
 					<li>
-						<label for="checktiktok">
-							<input class="checkboxes" type="checkbox" name="checktiktok" id="checktiktok">
-							TikTok
-						</label>
+						<input class="checkboxes toogle" type="checkbox" name="checktiktok" id="checktiktok">
+						<label for="checktiktok">TikTok</label>
 						<input placeholder="Link eingeben" type="text" name="linktiktok" id="linktiktok">
 					</li>
 					<li>
-						<label for="checkxing">
-							<input class="checkboxes" type="checkbox" name="checkxing" id="checkxing">
-							Xing
-						</label>
+						<input class="checkboxes toogle" type="checkbox" name="checkxing" id="checkxing">
+						<label for="checkxing">Xing</label>
 						<input placeholder="Link eingeben" type="text" name="linkxing" id="linkxing">
 					</li>
 					<li>
-						<label for="checklinkedin">
-							<input class="checkboxes" type="checkbox" name="checklinkedin" id="checklinkedin">
-							LinkedIn
-						</label>
+						<input class="checkboxes toogle" type="checkbox" name="checklinkedin" id="checklinkedin">
+						<label for="checklinkedin">LinkedIn</label>
 						<input placeholder="Link eingeben" type="text" name="linklinkedin" id="linklinkedin">
 					</li>
 					<li>
-						<label for="checklinktree">
-							<input class="checkboxes" type="checkbox" name="checklinktree" id="checklinktree">
-							LinkTree
-						</label>
+						<input class="checkboxes toogle" type="checkbox" name="checklinktree" id="checklinktree">
+						<label for="checklinktree">LinkTree</label>
 						<input placeholder="Link eingeben" type="text" name="linklinktree" id="linklinktree">
 					</li>
 					<li>
-						<label for="checkmail">
-							<input class="checkboxes" type="checkbox" name="checkmail" id="checkmail">
-							E-Mail
-						</label>
+						<input class="checkboxes toogle" type="checkbox" name="checkmail" id="checkmail">
+						<label for="checkmail">E-Mail</label>
 						<input placeholder="E-Mail eingeben" type="email" name="linkmail" id="linkmail">
 					</li>
 					<li>
-						<label for="checkphone">
-							<input class="checkboxes" type="checkbox" name="checkphone" id="checkphone">
-							Telefon
-						</label>
+						<input class="checkboxes toogle" type="checkbox" name="checkphone" id="checkphone">
+						<label for="checkphone">Telefon</label>
 						<input placeholder="Telefonnr. eingeben" type="text" name="linkphone" id="linkphone">
 					</li>
 					<li>
-						<label for="checkwhatsapp">
-							<input class="checkboxes" type="checkbox" name="checkwhatsapp" id="checkwhatsapp">
-							WhatsApp
-						</label>
+						<input class="checkboxes toogle" type="checkbox" name="checkwhatsapp" id="checkwhatsapp">
+						<label for="checkwhatsapp">WhatsApp</label>
 						<p>Bitte die Landesvorwahl <strong>"0" durch +49</strong> für Deutschland ersetzen.</p>
 						<input placeholder="Nummer eingeben" type="text" name="linkwhatsapp" id="linkwhatsapp">
 					</li>
 					<li>
-						<label for="checkcustom">
-							<input class="checkboxes" type="checkbox" name="checkcustomicon" id="checkcustomicon">
-							Eigenes Icon mit Link
-						</label>
+						<input class="checkboxes toogle" type="checkbox" name="checkcustomicon" id="checkcustomicon">
+						<label for="checkcustomicon">Eigenes Icon mit Link</label>
 						<div class="expandme"><p>Bitte die Icon-Klasse von <a target="_blank" href="https://fontawesome.com/" class="link expandme">Font-Awsome einfügen.</a></p>
 							<div class="expander">
 								<img src="src/img/font.png" alt="Font-Awsome">

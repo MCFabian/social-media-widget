@@ -9,6 +9,7 @@
 --accentcolor2: #175aad;
 --green: #17ad45;
 --dividercolor: #d6d6d6;
+--deactivated: #a5a5a5;
 }
 
 
@@ -24,6 +25,7 @@
     --accentcolor2: #175aad;
     --green: #17ad45;
     --dividercolor: #ffffff40;
+    --deactivated: #a5a5a5;
 }
     
 
@@ -786,6 +788,61 @@ button.save i {
     border-radius: 25px;
     display: inline-block;
     margin: 5px 0;
-    
 }
+
+input[type=checkbox].toogle {
+    opacity: 0;
+    position: absolute;
+}
+
+input[type=checkbox].toogle + label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    cursor: pointer;
+}
+
+
+input[type=checkbox]:checked.toogle + label {
+    position: relative;
+}
+
+input[type=checkbox].toogle + label::before {
+    height: .2em;
+    width: 1.3em;
+    display: flex;
+    content: "";
+    border-radius: 2px;
+    background: var(--dividercolor);
+    margin-right: 10px;
+}
+
+input[type=checkbox]:checked.toogle + label::after {
+    height: .8em;
+    width: .8em;
+    display: flex;
+    content: "";
+    background: grey;
+    border-radius: 50%;
+    position: absolute;
+    left: .5em;
+    background: var(--accentcolor);
+}
+
+input[type=checkbox].toogle + label::after {
+    height: .8em;
+    width: .8em;
+    content: "";
+    background: grey;
+    border-radius: 50%;
+    position: absolute;
+    background: var(--deactivated);
+    border-radius: 50%;
+    left: 0;
+    transition: .3s;
+}
+
+
+
 
