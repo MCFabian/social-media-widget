@@ -890,7 +890,7 @@
 			
 			$creator = $_POST['initial'];
 
-			str_ireplace("id='socialmedialist', 'id='', $code");
+			$code = str_ireplace("id='socialmedialist', 'id='', $code");
 
 			echo"$code";
 
