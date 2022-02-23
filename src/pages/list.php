@@ -30,13 +30,15 @@
                         <span class='tag styleingtag'><i class='fa fa-palette'></i> $style</span>
                     </div>
 
-                    <div class='previewbutton expandme'><i class='fa-solid fa-eye'></i>Vorschau
-                        <div class='expander'>$code</div>
-                    </div>
-
                     <span class=''>
                         <span class='creator'>$creator</span> <small>erstellt am: $creationdate</small> von 
                     </span>
+
+                    <hr>
+                    <div class='previewbutton expandme'><i class='fas fa-eye'></i>Vorschau
+                        <div class='expander'>$code</div>
+                    </div>
+
                 </li>";
             }
 
