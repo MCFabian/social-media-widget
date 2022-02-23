@@ -1,3 +1,20 @@
+//More styles
+document.getElementById("morestyles").addEventListener("click", function(){
+    var morestylestoggle = document.getElementById("morestyles");
+    var morestylescontainer = document.getElementById("setown");
+    
+    morestylescontainer.classList.toggle("show");
+
+    if(morestylescontainer.classList.contains("show")){
+        morestylestoggle.innerHTML = "<i class='fas fa-minus'></i>Erweitertes Styling verbergen";
+    }
+    
+    if(!morestylescontainer.classList.contains("show")) {
+        morestylestoggle.innerHTML = "<i class='fas fa-plus'></i>Erweitertes Styling";
+    }
+
+})
+
 function notification(type, text){
     var notification = document.getElementById("notification");
     var notificationicon;
@@ -31,25 +48,6 @@ function notification(type, text){
 
     
 }
-
-
-
-//More styles
-document.getElementById("morestyles").addEventListener("click", function(){
-        var morestylestoggle = document.getElementById("morestyles");
-        var morestylescontainer = document.getElementById("setown");
-        
-        morestylescontainer.classList.toggle("show");
-
-        if(morestylescontainer.classList.contains("show")){
-            morestylestoggle.innerHTML = "<i class='fas fa-minus'></i>Erweitertes Styling verbergen";
-        }
-        
-        if(!morestylescontainer.classList.contains("show")) {
-            morestylestoggle.innerHTML = "<i class='fas fa-plus'></i>Erweitertes Styling";
-        }
-
-})
 
 function popup() {
     var popup = document.getElementById("popupcontainer");
