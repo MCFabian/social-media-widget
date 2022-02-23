@@ -792,7 +792,7 @@
 				<h2>Vorschau</h2>
 				<div id="socialmedialistdata">
 					<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-					<div id="socialmedialist" class="basic">
+					<div id='socialmedialist' class="basic">
 
 					</div>
 				</div>
