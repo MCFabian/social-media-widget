@@ -889,14 +889,15 @@
 			$style = $_POST['style'];
 			
 			$creator = $_POST['initial'];
+			$myc = rand(0, 10500);
 
-			$newcode = str_ireplace("id='socialmedialist'", "id=''", $code);
+			$newcode = str_ireplace("socialmedialist", $myc, $code);
 
 			echo"$code";
 
 			echo"$creator";
 
-			$myc = rand(0, 10500);
+
 
 			global $connection;
 
