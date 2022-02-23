@@ -893,7 +893,7 @@
 
 			$newcode = str_ireplace("socialmedialist", $myc, $code);
 
-			echo"$code";
+			echo"$newcode";
 
 			echo"$creator";
 
