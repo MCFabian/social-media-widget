@@ -873,7 +873,7 @@
 
 			$value_email = $_POST['linkmail'];
 			if(!empty($value_email)){
-				$genemailvalue = "mailto:" +$value_email;
+				$genemailvalue = "mailto:".$value_email;
 				$value_email = 'email';
 			}
 
