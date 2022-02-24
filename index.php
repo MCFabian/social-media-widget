@@ -871,6 +871,38 @@
 			$value_linkedin = $_POST['linklinkedin'];
 			$value_linktree = $_POST['linklinktree'];
 
+			$value_email = $_POST['linkmail'];
+			if(!empty($value_email)){
+				$value_email = 'email';
+			}
+
+			$value_phone = $_POST['linkphone'];
+			if(!empty($value_phone)){
+				$value_phone = 'phone';
+			}
+
+			$value_whatsapp = $_POST['linkwhatsapp'];
+			if(!empty($value_whatsapp)){
+				$value_whatsapp = 'whatsapp';
+			}
+
+			$value_email = $_POST['linkmail'];
+			if(empty($value_email)){
+				$value_email = 'email';
+			}
+
+			$value_phone = $_POST['linkphone'];
+			if(empty($value_phone)){
+				$value_phone = 'phone';
+			}
+
+			$value_whatsapp = $_POST['linkwhatsapp'];
+			if(empty($value_whatsapp)){
+				$value_whatsapp = 'whatsapp';
+			}
+
+			echo "$value_email $value_phone $value_whatsapp";
+
 
 			$iconcolor = $_POST['color'];
 			$backgroundcolor = $_POST['background'];
