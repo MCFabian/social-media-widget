@@ -831,35 +831,35 @@
 			//DATA VARS
 			$check_facebook = $_POST['checkfacebook'];
 			if(empty($check_facebook)){
-				$check_facebook = off;
+				$check_facebook = 'off';
 			}
 			$check_instagram = $_POST['checkinstagram'];
 			if(empty($check_instagram)){
-				$check_instagram = off;
+				$check_instagram = 'off';
 			}
 			$check_youtube = $_POST['checkyoutube'];
 			if(empty($check_youtube)){
-				$check_youtube = off;
+				$check_youtube = 'off';
 			}
 			$check_twitter = $_POST['checktwitter'];
 			if(empty($check_twitter)){
-				$check_twitter = off;
+				$check_twitter = 'off';
 			}
 			$check_tiktok = $_POST['checktiktok'];
 			if(empty($check_tiktok)){
-				$check_tiktok = off;
+				$check_tiktok = 'off';
 			}
 			$check_xing = $_POST['checkxing'];
 			if(empty($check_xing)){
-				$check_xing = off;
+				$check_xing = 'off';
 			}
 			$check_linkedin = $_POST['checklinkedin'];
 			if(empty($check_linkedin)){
-				$check_linkedin = off;
+				$check_linkedin = 'off';
 			}
 			$check_linktree = $_POST['checklinktree'];
 			if(empty($check_linktree)){
-				$check_linktree = off;
+				$check_linktree = 'off';
 			}
 
 			$value_facebook = $_POST['linkfacebook'];
@@ -901,8 +901,6 @@
 				clearReloadForm();
 				echo"<script src='src/js/script.js'></script>";
 				echo"<script>notification('success', 'Der Code wurde erfolgreich gespeichert! Deine gespeicherte ID lautet: $myc');</script>";
-
-				//getID($myc);
 
 			}
 

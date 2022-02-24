@@ -5,12 +5,13 @@
         global $connection;
 
         //SQL-Zugriff auf Datensaetze
-        $query = $connection->prepare("SELECT finderid, code, DATE_FORMAT(creationdate, '%d.%m.%Y') AS creationdate, style, creator FROM socialcodes ORDER BY creationdate ASC");
+        $query = $connection->prepare("SELECT id, finderid, code, DATE_FORMAT(creationdate, '%d.%m.%Y') AS creationdate, style, creator FROM socialcodes ORDER BY creationdate ASC");
         $query->execute();
         $query->setFetchMode(PDO::FETCH_ASSOC);
 
 
         while ($row = $query->fetch()){
+            $id				            = $row['id']; //DATABASE AUTOKEY (PRIMARY)
             $finderid				    = $row['finderid'];
             $style                      = $row['style'];
             $code				        = $row['code'];
@@ -23,7 +24,7 @@
 
             else{
 
-            echo"<li class='expandme'>
+            echo"<li>
                     
                     Erstellungs-ID: <strong>$finderid</strong>
                     <div>
