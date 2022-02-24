@@ -918,15 +918,10 @@
 			$style = $_POST['style'];
 			
 			$creator = $_POST['initial'];
-			$myc = rand(0, 10500);
-
-
-			echo "$value_whatsapp";
-			echo "$genwhatsappvalue";
+			$myc = rand(10000, 99999);
 
 			//replace id of preview window with creation ID
 			$newcode = str_ireplace("socialmedialist", $myc, $code);
-
 			//replace email in code
 			$newcode = str_ireplace("href=\"$genemailvalue\"","href=\"$value_email\"", $newcode);
 			//replace phone in code
