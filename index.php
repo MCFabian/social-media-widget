@@ -885,7 +885,7 @@
 
 			$value_whatsapp = $_POST['linkwhatsapp'];
 			if(!empty($value_whatsapp)){
-				$genwhatsappvalue = "https://wa.me/:".$value_whatsapp;
+				$genwhatsappvalue = "https://wa.me/".$value_whatsapp;
 				$value_whatsapp = '#';
 			}
 
