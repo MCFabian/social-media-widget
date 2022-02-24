@@ -102,7 +102,7 @@ document.getElementById('generate').addEventListener('click', function(){
         }
         
          else {
-            linkwhatapp = " https://wa.me/" +linkwhatsapp;
+            linkwhatapp = "https://wa.me/" +linkwhatsapp;
          }
 
         CreateSocialMediaElement ("WhatsApp", linkwhatapp, "fa-whatsapp", "fab");
