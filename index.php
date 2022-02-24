@@ -924,7 +924,7 @@
 			$newcode = str_ireplace("socialmedialist", $myc, $code);
 
 			//replace email in code
-			$newcode = str_ireplace("href='genemailvalue'",$value_email, $newcode);
+			$newcode = str_ireplace("href='$genemailvalue'",$value_email, $newcode);
 
 			global $connection;
 
