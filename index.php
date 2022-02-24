@@ -873,6 +873,7 @@
 
 			$value_email = $_POST['linkmail'];
 			if(!empty($value_email)){
+				$genemailvalue = $value_email;
 				$value_email = 'email';
 			}
 
@@ -898,7 +899,7 @@
 				$value_whatsapp = 'whatsapp';
 			}
 
-			echo "$value_email $value_phone $value_whatsapp";
+			echo "$value_email $genemailvalue $value_phone $value_whatsapp";
 
 
 			$iconcolor = $_POST['color'];
@@ -921,6 +922,9 @@
 			$myc = rand(0, 10500);
 
 			$newcode = str_ireplace("socialmedialist", $myc, $code);
+
+			//replace email in code
+			$newcode = str_ireplace("href='genemailvalue'",$value_email, $newcode)
 
 			global $connection;
 
