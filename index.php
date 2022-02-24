@@ -901,9 +901,6 @@
 				$value_whatsapp = '#';
 			}
 
-			echo "$value_email $genemailvalue $value_phone $value_whatsapp";
-
-
 			$iconcolor = $_POST['color'];
 			$backgroundcolor = $_POST['background'];
 
@@ -923,6 +920,11 @@
 			$creator = $_POST['initial'];
 			$myc = rand(0, 10500);
 
+
+			echo "$value_whatsapp";
+			echo "$genwhatsappvalue";
+
+			//replace id of preview window with creation ID
 			$newcode = str_ireplace("socialmedialist", $myc, $code);
 
 			//replace email in code
