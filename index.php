@@ -874,29 +874,31 @@
 			$value_email = $_POST['linkmail'];
 			if(!empty($value_email)){
 				$genemailvalue = "mailto:".$value_email;
-				$value_email = 'email';
+				$value_email = '#';
 			}
 
 			$value_phone = $_POST['linkphone'];
 			if(!empty($value_phone)){
-				$value_phone = 'phone';
+				$genphonevalue = "tel:".$value_phone;
+				$value_phone = '#';
 			}
 
 			$value_whatsapp = $_POST['linkwhatsapp'];
 			if(!empty($value_whatsapp)){
-				$value_whatsapp = 'whatsapp';
+				$genwhatsappvalue = "https://wa.me/:".$value_whatsapp;
+				$value_whatsapp = '#';
 			}
 
 			if(empty($value_email)){
-				$value_email = 'email';
+				$value_email = '#';
 			}
 
 			if(empty($value_phone)){
-				$value_phone = 'phone';
+				$value_phone = '#';
 			}
 
 			if(empty($value_whatsapp)){
-				$value_whatsapp = 'whatsapp';
+				$value_whatsapp = '#';
 			}
 
 			echo "$value_email $genemailvalue $value_phone $value_whatsapp";
@@ -925,6 +927,10 @@
 
 			//replace email in code
 			$newcode = str_ireplace("href=\"$genemailvalue\"","href=\"$value_email\"", $newcode);
+			//replace phone in code
+			$newcode = str_ireplace("href=\"$genphonevalue\"","href=\"$value_phone\"", $newcode);
+			//replace whatsapp in code
+			$newcode = str_ireplace("href=\"$genwhatsappvalue\"","href=\"$value_whatsapp\"", $newcode);
 
 			global $connection;
 
