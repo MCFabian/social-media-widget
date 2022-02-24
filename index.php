@@ -886,17 +886,14 @@
 				$value_whatsapp = 'whatsapp';
 			}
 
-			$value_email = $_POST['linkmail'];
 			if(empty($value_email)){
 				$value_email = 'email';
 			}
 
-			$value_phone = $_POST['linkphone'];
 			if(empty($value_phone)){
 				$value_phone = 'phone';
 			}
 
-			$value_whatsapp = $_POST['linkwhatsapp'];
 			if(empty($value_whatsapp)){
 				$value_whatsapp = 'whatsapp';
 			}
