@@ -95,7 +95,7 @@ document.getElementById('generate').addEventListener('click', function(){
     //WhatsApp
     if(document.getElementById('checkwhatsapp').checked == true){
         var linkwhatsapp = document.getElementById("linkwhatsapp").value;
-        var linkwhatapp = " https://wa.me/" +linkwhatsapp;
+        var linkwhatapp = "https://wa.me/" +linkwhatsapp;
 
         if(linkwhatsapp.length == 0){
             linkwhatapp = "https://whatsapp.com/";
