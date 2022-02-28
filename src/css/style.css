@@ -7,7 +7,7 @@
 --fontcolordarker:rgb(61, 70, 80); 
 --accentcolor: #f47b6b;
 --accentcolor2: #175aad;
---green: #17ad45;
+--green: #51b15d;
 --dividercolor: #d6d6d6;
 --deactivated: #a5a5a5;
 }
@@ -23,7 +23,7 @@
     --fontcolordarker:#fff; 
     --accentcolor: #f47b6b;
     --accentcolor2: #175aad;
-    --green: #17ad45;
+    --green: #51b15d;
     --dividercolor: #ffffff40;
     --deactivated: #a5a5a5;
 }
@@ -826,7 +826,7 @@ input[type=checkbox]:checked.toogle + label::after {
     border-radius: 50%;
     position: absolute;
     left: .5em;
-    background: var(--accentcolor);
+    background: var(--green);
 }
 
 input[type=checkbox].toogle + label::after {
