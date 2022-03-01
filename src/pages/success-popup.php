@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/src/css/style.css">
+<link rel="stylesheet" href="/css/style.css">
 
 <?php
     include("pagehead.php");
