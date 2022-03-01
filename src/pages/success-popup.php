@@ -1,6 +1,10 @@
+<link rel="stylesheet" href="/src/css/style.css">
+
 <?php
     include("pagehead.php");
 ?>
+
+
 
 <body>
     <div id="popupcontainer" class="popupcontainer">
@@ -9,7 +13,7 @@
             <div id="success-icon"><i class="fa-solid fa-check"></i></div>
             <?php echo"<p>Der Code wurde erfolgreich gespeichert! Deine gespeicherte ID lautet: <strong>$myc</strong></p> ";?>
             <hr>
-            <a class="button" href="/">Startseite</a>
+            <a class="buttons" href="/">Startseite</a>
         </div>
     </div>
 </body>
