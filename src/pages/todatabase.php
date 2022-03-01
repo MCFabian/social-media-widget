@@ -2,8 +2,8 @@
 	include("src/pages/connection.php");
 	include("src/pages/functions.php");
 
-	if($_SERVER['REQUEST_METHOD'] == 'POST') {
-		if(isset($_POST['savecode'])) {
+	//if($_SERVER['REQUEST_METHOD'] == 'POST') {
+		//if(isset($_POST['savecode'])) {
 			//DATA VARS
 			$check_facebook = $_POST['checkfacebook'];
 			if(empty($check_facebook)){
@@ -123,7 +123,7 @@
 				echo"Fehler";
 			}
 		
-		}
-	}
+		//}
+	//}
 
 ?>
