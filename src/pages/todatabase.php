@@ -1,6 +1,6 @@
 <?php
-	include("src/pages/connection.php");
-	include("src/pages/functions.php");
+	include("connection.php");
+	include("functions.php");
 
 	//if($_SERVER['REQUEST_METHOD'] == 'POST') {
 		//if(isset($_POST['savecode'])) {
