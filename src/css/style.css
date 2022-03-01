@@ -851,6 +851,14 @@ input[type=checkbox].toogle + label::after {
     margin-right: 5px;
 }
 
+#success-icon {
+    color: var(--green);
+    font-size: 3rem;
+    padding: 15px;
+    margin: 5px auto;
+    text-align: center;
+}
+
 
 
 
