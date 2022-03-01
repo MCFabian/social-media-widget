@@ -181,6 +181,7 @@ hr {
     background-color: var(--accentcolor);
     transition: .3s;
     text-align: center;
+    display: inline-block;
 }
 
 .button > i {
