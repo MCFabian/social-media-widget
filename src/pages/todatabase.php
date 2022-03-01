@@ -114,6 +114,8 @@
 				echo"<script src='src/js/script.js'></script>";
 				echo"<script>notification('success', 'Der Code wurde erfolgreich gespeichert! Deine gespeicherte ID lautet: $myc');</script>";
                 echo"Erfolg";
+
+                include("success-popup.php");
 			}
 
 			else{
