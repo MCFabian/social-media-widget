@@ -11,5 +11,5 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 	<link type="image/x-icon"rel="shortcut icon" href="<?php echo"$_SERVER['DOCUMENT_ROOT'].'/src/img/gen.png'";?>">
-
+	<?php echo"$_SERVER[DOCUMENT_ROOT]"; ?>
 </head>
