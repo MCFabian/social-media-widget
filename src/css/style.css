@@ -254,6 +254,7 @@ p {
     font-size: 1rem;
     color: var(--fontcolor);
     margin: 5px 0;
+    padding: 15px 0;
 }
 
 .larger-text > strong {
@@ -778,7 +779,7 @@ button.save i {
     flex-direction: row;
 }
 
-.big.icon {
+.big-icon {
     text-align: center;
     color: var(--green);
     font-size: 4rem;
@@ -794,6 +795,8 @@ button.save i {
     align-content: center;
     align-items: center;
     margin: auto;
+    text-align: center;
+    width: auto !important;
 }
 
 .row > div {
