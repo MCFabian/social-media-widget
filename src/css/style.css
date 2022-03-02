@@ -767,6 +767,11 @@ button.save i {
     flex-direction: row;
 }
 
+.center-box {
+    align-content: center;
+    align-items: center;
+}
+
 .row > div {
     margin: auto;
     margin-top: 0;
