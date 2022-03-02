@@ -9,7 +9,7 @@
 <body>
     <div class="full-height flex">
         <div class="popup center-box">
-            <div id="sucess-icon" class="big-icon">
+            <div id="sucecss-icon" class="big-icon">
                 <i class='fas fa-check big-icon'></i>
             </div>
             <h2 class="center">Code gespeichert!</h2>
