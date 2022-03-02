@@ -249,6 +249,17 @@ p {
     margin: 5px 0;
 }
 
+.larger-text {
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--fontcolor);
+    margin: 5px 0;
+}
+
+.larger-text > strong {
+    color: var(--fontcolordarker);
+}
+
 a.link {
     text-decoration: dotted;
     color: var(--accentcolor);
@@ -767,9 +778,22 @@ button.save i {
     flex-direction: row;
 }
 
+.big.icon {
+    text-align: center;
+    color: var(--green);
+    font-size: 4rem;
+    margin: auto;
+    padding: 25px;
+}
+
+.full-height {
+    height: 100%;
+}
+
 .center-box {
     align-content: center;
     align-items: center;
+    margin: auto;
 }
 
 .row > div {
@@ -865,6 +889,11 @@ input[type=checkbox].toogle + label::after {
     text-align: center;
 }
 
-
+.btn-group .center {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
 
 

@@ -7,12 +7,17 @@
 
 
 <body>
-    <div class="row center-box">
-        <div class="popup">
-            <h2>Code erfolgreich gepseichert!</h2>
-            <?php echo"<p class='hint'><i class='fas fa-check'></i> Der Code wurde erfolgreich gespeichert! Deine gespeicherte ID lautet: <strong>$myc</strong></p> ";?>
+    <div class="row center-box full-height">
+        <div class="popup center-box">
+            <div class="big-icon">
+                <i class='fas fa-check big-icon'></i>
+            </div>
+            <h2 class="center">Code erfolgreich gepseichert!</h2>
             <hr>
-            <a class="button" href="/">Neuen Code erstellen</a>
+            <?php echo"<p class='larger-text'>Der Code wurde erfolgreich gespeichert! Deine gespeicherte ID lautet: <strong>$myc</strong></p> ";?>
+            <div class="btn-group center">
+                <a class="button" href="/">Neuen Code erstellen</a>
+            </div>
         </div>
     </div>
 </body>
