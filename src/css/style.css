@@ -261,6 +261,12 @@ p {
     color: var(--fontcolordarker);
 }
 
+.larger-text > strong.chip {
+    border-radius: 5px;
+    font-size: 1.8rem;
+    letter-spacing: 1.1;
+}
+
 a.link {
     text-decoration: dotted;
     color: var(--accentcolor);
@@ -784,11 +790,13 @@ button.save i {
     color: var(--green);
     font-size: 4rem;
     margin: auto;
-    padding: 25px;
+    padding: 15px;
 }
 
-.full-height {
+.full-height.flex {
     height: 100%;
+    width: 100%;
+    display: flex;
 }
 
 .center-box {
@@ -797,6 +805,11 @@ button.save i {
     margin: auto;
     text-align: center;
     width: auto !important;
+}
+
+.center-box.popup {
+    width: 35%;
+    margin: auto;
 }
 
 .row > div {
