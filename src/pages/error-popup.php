@@ -14,7 +14,9 @@
             </div>
             <h2 class="center">Es gab Fehler :/</h2>
             <hr>
+            <p class="large-text">
             Leider ging was schief, keine Ahnung was, aber irgendwas hast du oder ich kaputt gemacht. Probiers einfach nochmal. Oder versuche mal deinen PC neuzustarten, vielleicht hilft auch das.
+            </p>
             <div class="btn-group center">
                 <a class="button" href="/"><i class="fas fa-plus"></i>Neuen Code erstellen</a>
             </div>
