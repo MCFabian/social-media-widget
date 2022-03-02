@@ -9,12 +9,12 @@
 <body>
     <div class="full-height flex">
         <div class="popup center-box">
-            <div class="big-icon success">
-                <i class='fas fa-check big-icon'></i>
+            <div class="big-icon error">
+                <i class="fas fa-face-anguished"></i>
             </div>
-            <h2 class="center">Code gespeichert!</h2>
+            <h2 class="center">Es gab Fehler :/</h2>
             <hr>
-            <?php echo"<p class='larger-text'>Der Code wurde erfolgreich gespeichert! Deine gespeicherte ID lautet:<br> <strong class='chip'>$myc</strong></p> ";?>
+            Leider ging was schief, keine Ahnung was, aber irgendwas hast du oder ich kaputt gemacht. Probiers einfach nochmal. Oder versuche mal deinen PC neuzustarten, vielleicht hilft auch das.
             <div class="btn-group center">
                 <a class="button" href="/"><i class="fas fa-plus"></i>Neuen Code erstellen</a>
             </div>

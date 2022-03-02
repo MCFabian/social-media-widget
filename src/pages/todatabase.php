@@ -118,9 +118,8 @@
 
 			else{
 				clearReloadForm();
-				echo"<script src='src/js/script.js'></script>";
-				echo"<script>notification('error', 'Der Code konnte nicht gespeichert werden!');</script>";
-				echo"Fehler";
+                //include error popup
+                include("error-popup.php");
 			}
 		
 		//}

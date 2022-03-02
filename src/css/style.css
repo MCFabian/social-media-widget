@@ -8,6 +8,7 @@
 --accentcolor: #f47b6b;
 --accentcolor2: #175aad;
 --green: #51b15d;
+--red: #d32e2e;
 --dividercolor: #d6d6d6;
 --deactivated: #a5a5a5;
 }
@@ -24,6 +25,7 @@
     --accentcolor: #f47b6b;
     --accentcolor2: #175aad;
     --green: #51b15d;
+    --red: #d32e2e;
     --dividercolor: #ffffff40;
     --deactivated: #a5a5a5;
 }
@@ -788,9 +790,17 @@ button.save i {
     flex-direction: row;
 }
 
-.big-icon {
+.big-icon.success {
     text-align: center;
     color: var(--green);
+    font-size: 4rem;
+    margin: auto;
+    padding: 15px;
+}
+
+.big-icon.error {
+    text-align: center;
+    color: var(--red);
     font-size: 4rem;
     margin: auto;
     padding: 15px;
