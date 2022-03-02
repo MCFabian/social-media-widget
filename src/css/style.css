@@ -790,7 +790,7 @@ button.save i {
     flex-direction: row;
 }
 
-#success .big-icon  {
+#success-icon  {
     text-align: center;
     color: var(--green);
     font-size: 4rem;
@@ -798,7 +798,7 @@ button.save i {
     padding: 15px;
 }
 
-#error .big-icon  {
+#error-icon  {
     text-align: center;
     color: var(--red);
     font-size: 4rem;

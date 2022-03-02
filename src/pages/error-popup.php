@@ -9,7 +9,7 @@
 <body>
     <div class="full-height flex">
         <div class="popup center-box">
-            <div class="big-icon error">
+            <div id="error-icon" class="big-icon">
                 <i class='fas fa-times'></i>
             </div>
             <h2 class="center">Es gab Fehler :/</h2>
