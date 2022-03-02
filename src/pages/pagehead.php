@@ -1,7 +1,6 @@
 <!doctype html>
 <html id="themehere" class="dark">
 <head>
-	<base href="https://www.dev-social-media.fabiar.de/"/> 	
 	<meta charset="utf-8">
 	<meta lang="de">
 	<title>Social Media Generator - PHP Version</title>
