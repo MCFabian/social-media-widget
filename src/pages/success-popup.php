@@ -35,7 +35,7 @@
         console.log('Something went wrong', err);
     })
 
-        //notification('success', 'Der Code wurde erfolgreich in die Zwischenablage kopiert!');
+        notification('error', 'Der Code wurde erfolgreich in die Zwischenablage kopiert!');
     })
 
 </script>
