@@ -44,9 +44,6 @@ function socialmedialist(style, fontcolor, backgroundcolor, alignment, direction
     socialmedialist.style.justifyContent = alignment;
 
     socialmedialist.classList.add(direction);
-    alert(direction);
-
-
 
     // give Icon Size
     var small = document.getElementById("small");
@@ -270,9 +267,6 @@ document.getElementById('generate').addEventListener('click', function(){
     if(directioncol.checked == true) {
         var direction = directioncol.value;
     }
-
-
-    alert(direction);
 
     socialmedialist(style, ifontcolor, ibackgroundcolor, alignment, direction);
 
