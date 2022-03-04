@@ -925,4 +925,8 @@ input[type=checkbox].toogle + label::after {
     align-items: center;
 }
 
+#icon-direction-row {
+    transform: rotate(90deg);
+}
+
 
