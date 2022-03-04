@@ -777,7 +777,7 @@
 				<p class="">Wählen Sie eine Richtung, in der die Icons ausgerichtet werden sollen.</p>
 				<ul class="tab" id="direction">
 					<li><input checked value="direction-row" name="direction" id="direction-row" type="radio"><label for="direction-row"><i class="fas fa-right-left"></i>Nebeneinander</label></li>
-					<li><input value="direction-row" name="direction" id="direction-row" type="radio"><label for="direction-row"><i id="icon-direction-row" class="fas fa-right-left"></i>Unterneinander</label></li>
+					<li><input value="direction-col" name="direction" id="direction-col" type="radio"><label for="direction-col"><i id="icon-direction-col" class="fa-solid fa-arrow-right-arrow-left"></i>Unterneinander</label></li>
 				</ul>
 
 
