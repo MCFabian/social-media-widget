@@ -590,6 +590,22 @@
 			height: 24px;
 		}
 
+		.direction-row {
+			flex-direction: row;
+		}
+
+		.direction-col {
+			flex-direction: column;
+		}
+
+		.direction-col .media {
+			margin: 0;
+		}
+
+		.direction-col .media + .media {
+			margin-top: 5px;
+		}
+
 	</style>
 	<div id="notification"></div>
 	<form id="savecode" method="POST" action="/src/pages/todatabase.php">
@@ -777,11 +793,8 @@
 				<p class="">Wählen Sie eine Richtung, in der die Icons ausgerichtet werden sollen.</p>
 				<ul class="tab" id="direction">
 					<li><input checked value="direction-row" name="direction" id="direction-row" type="radio"><label for="direction-row"><i class="fas fa-right-left"></i>Nebeneinander</label></li>
-					<li><input value="direction-col" name="direction" id="direction-col" type="radio"><label for="direction-col"><i id="icon-direction-col" class="fa-solid fa-arrow-right-arrow-left"></i>Unterneinander</label></li>
+					<li><input value="direction-col" name="direction" id="direction-col" type="radio"><label for="direction-col"><i id="icon-direction-col" class="fas fa-right-left"></i>Unterneinander</label></li>
 				</ul>
-
-
-
 				<hr>
 				<div class="button" id="generate"><i class="fas fa-code"></i>Übernehmen</div>
 			</div>

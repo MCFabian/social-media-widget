@@ -19,11 +19,12 @@ function CreateSocialMediaElement (socialmedianame, socialmedialink, socialmedia
     console.log("Element created! " +socialmedianame +" linked at " +socialmedialink);
 }
 
-function socialmedialist(style, fontcolor, backgroundcolor, alignment, iconsize){
+function socialmedialist(style, fontcolor, backgroundcolor, alignment, direction, iconsize){
     var socialmedialist = document.getElementById("socialmedialist");
     var style;
     var backgroundcolor;
     var alignment;
+    var direction;
 
     var hoverbgcolor = document.getElementById("hoverbg").value;
 
@@ -41,6 +42,11 @@ function socialmedialist(style, fontcolor, backgroundcolor, alignment, iconsize)
     socialmedialist.classList.add(style);
     
     socialmedialist.style.justifyContent = alignment;
+
+    socialmedialist.classList.add(direction);
+    alert(direction);
+
+    
 
     // give Icon Size
     var small = document.getElementById("small");
