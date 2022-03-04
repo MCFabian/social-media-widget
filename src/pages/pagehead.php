@@ -13,3 +13,5 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 	<link rel="shortcut icon" href="src/img/gen.png" type="image/x-icon">
 </head>
+<body>
+	<div id="notification"></div>

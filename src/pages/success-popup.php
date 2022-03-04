@@ -7,6 +7,7 @@
 
 
 <body>
+    
     <div class="full-height flex">
         <div class="popup center-box">
             <div id="success-icon" class="big-icon">

@@ -1,8 +1,5 @@
 <?php include("src/pages/pagehead.php")?>
-
-<body>
-
-	<?php include("src/pages/list.php") ?>
+<?php include("src/pages/list.php") ?>
 
 
 	<style id="hovestyle"></style>
@@ -607,7 +604,7 @@
 		}
 
 	</style>
-	<div id="notification"></div>
+
 	<form id="savecode" method="POST" action="/src/pages/todatabase.php">
 		<div class="wrapper">
 			<div class="box">
