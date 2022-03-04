@@ -270,6 +270,7 @@ p {
     margin-top: 15px;
     padding-right: 18px;
     padding-left: 18px;
+    cursor: pointer;
 }
 
 a.link {

@@ -7,7 +7,7 @@
 
 
 <body>
-    
+
     <div class="full-height flex">
         <div class="popup center-box">
             <div id="success-icon" class="big-icon">
@@ -36,7 +36,7 @@
         console.log('Something went wrong', err);
     })
 
-        notification('error', 'Der Code wurde erfolgreich in die Zwischenablage kopiert!');
+        notification('success', 'Der Code wurde erfolgreich in die Zwischenablage kopiert!');
     })
 
 </script>
