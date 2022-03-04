@@ -272,6 +272,8 @@ document.getElementById('generate').addEventListener('click', function(){
     }
 
 
+    alert(direction);
+
     socialmedialist(style, ifontcolor, ibackgroundcolor, alignment, direction);
 
 
