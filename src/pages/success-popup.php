@@ -26,12 +26,14 @@
 
     document.getElementById("creationcode").addEventListener("click", function(){
         var code = document.getElementById("creationcode").innerHTML;
-        
-        code.select();
-        code.setSelectionRange(0, 99999); /* For mobile devices */
 
-        /* Copy the text inside the text field */
-        navigator.clipboard.writeText(code);
+        navigator.clipboard.writeText(code)
+        .then(() => {
+        console.log("Text code to clipboard...")
+    })
+        .catch(err => {
+        console.log('Something went wrong', err);
+    })
 
         notification('success', 'Der Code wurde erfolgreich in die Zwischenablage kopiert!');
     })
