@@ -46,7 +46,7 @@ function socialmedialist(style, fontcolor, backgroundcolor, alignment, direction
     socialmedialist.classList.add(direction);
     alert(direction);
 
-    
+
 
     // give Icon Size
     var small = document.getElementById("small");
@@ -260,8 +260,19 @@ document.getElementById('generate').addEventListener('click', function(){
         var alignment = "right";
     }
     
+    var directionrow =  document.getElementById("direction-row");
+    var directioncol =  document.getElementById("direction-col");
 
-    socialmedialist(style, ifontcolor, ibackgroundcolor, alignment);
+    if(directionrow.checked == true) {
+        var direction = directionrow.value;
+    }
+
+    if(directioncol.checked == true) {
+        var direction = directioncol.value;
+    }
+
+
+    socialmedialist(style, ifontcolor, ibackgroundcolor, alignment, direction);
 
 
     if((!!document.getElementById("borderwidth").value == '') || (!!document.getElementById("bordertype").value == '') || (!!document.getElementById("bordercolor").value == '')) {
