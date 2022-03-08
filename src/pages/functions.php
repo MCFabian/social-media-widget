@@ -10,6 +10,10 @@
 	}
 
 
+	function MediatNotFound(){
+		echo "nichts gefunden 1";
+	}
+
 	function getMediaData($currentfinderID){
 		include("connection.php");
 
@@ -30,7 +34,7 @@
 
 
 			echo"
-				
+
 			";
 
 			echo"
@@ -41,8 +45,6 @@
 			";
 
 		}
-
-
 	}
 
 ?>
