@@ -5,5 +5,5 @@
 
 
     $socialdata = getMediaData($_GET["id"]);
-    if(!isSet($ProjectInfo)) MediatNotFound();
+    if(!isSet($socialdata)) MediatNotFound();
 ?>
