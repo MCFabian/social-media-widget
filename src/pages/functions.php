@@ -23,13 +23,13 @@
 
 		while ($row = $query->fetch()){
 
-			$id						= $row['id'];
+			$id							= $row['id'];
 			$finderid 					= $row['finderid'];
 			$code 						= $row['code'];
 			$creator 					= $row['creator'];
 
 			echo"
-				ID: $realid <br>
+				ID: $id <br>
 				FINDERID: $finderid <br>
 				CREATOR: $creator <br>
 				$code
