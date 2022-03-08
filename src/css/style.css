@@ -1,16 +1,16 @@
 
 :root, :root.light {
---bodybackground: #f5f5f5;
---background: #fff;
---hintbackground: #f3f3f3;
---fontcolor: #727272;
---fontcolordarker:rgb(61, 70, 80); 
---accentcolor: #f47b6b;
---accentcolor2: #175aad;
---green: #51b15d;
---red: #d32e2e;
---dividercolor: #d6d6d6;
---deactivated: #a5a5a5;
+    --bodybackground: #f5f5f5;
+    --background: #fff;
+    --hintbackground: #f3f3f3;
+    --fontcolor: #727272;
+    --fontcolordarker:rgb(61, 70, 80); 
+    --accentcolor: #f47b6b;
+    --accentcolor2: #175aad;
+    --green: #51b15d;
+    --red: #d32e2e;
+    --dividercolor: #d6d6d6;
+    --deactivated: #a5a5a5;
 }
 
 
@@ -928,6 +928,10 @@ input[type=checkbox].toogle + label::after {
 
 #icon-direction-col {
     transform: rotate(90deg);
+}
+
+#creationcode:hover {
+    background: var(--bodybackground);
 }
 
 
