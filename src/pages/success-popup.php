@@ -15,7 +15,7 @@
             </div>
             <h2 class="center">Code gespeichert!</h2>
             <hr>
-            <?php echo"<p class='larger-text'>Der Code wurde erfolgreich gespeichert! Deine gespeicherte ID lautet:<br> <strong id='creationcode' class='chip expandme'>$myc <div class='expander'>Code kopieren</div></strong></p> ";?>
+            <?php echo"<p class='larger-text'>Der Code wurde erfolgreich gespeichert! Deine gespeicherte ID lautet:<br> <strong id='creationcode' class='chip expandme'>$myc</strong></p> ";?>
             <div class="btn-group center">
                 <a class="button" href="/"><i class="fas fa-plus"></i>Neuen Code erstellen</a>
             </div>
