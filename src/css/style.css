@@ -953,7 +953,10 @@ input[type=checkbox].toogle + label::after {
     border: 3px solid var(--accentcolor);
     border-left: 3px solid transparent;
     margin: auto;
-    animation: spin ease-in-out infinite;
+    animation-name: spin;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 @-moz-keyframes spin {
