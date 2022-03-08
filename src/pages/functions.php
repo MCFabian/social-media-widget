@@ -17,7 +17,7 @@
 
 		global $connection;
 		//SQL-Zugriff auf Datensaetze
-		$query = $connection->prepare("SELECT id AS realid, finderid, code, creator FROM socialcodes WHERE finderid = $currentfinderID");
+		$query = $connection->prepare("SELECT id, finderid, code, creator FROM socialcodes WHERE finderid = $currentfinderID");
 		$query->execute();
 		$query->setFetchMode(PDO::FETCH_ASSOC);
 
