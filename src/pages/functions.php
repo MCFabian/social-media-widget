@@ -21,10 +21,11 @@
 
 		global $connection;
 		//SQL-Zugriff auf Datensaetze
-		$query = $connection->prepare("SELECT id, finderid, code, creator FROM socialcodes WHERE finderid = $currentfinderID");
-		$query->execute();
-		$query->setFetchMode(PDO::FETCH_ASSOC);
-
+		$QueryRes = $DB->query("SELECT id, finderid, code, creator FROM socialcodes WHERE finderid = $currentfinderID");
+		$RESULT = $QueryRes->fetch_assoc();
+		$QueryRes->close();
+		
+		/* 
 		while ($row = $query->fetch()){
 
 			$id							= $row['id'];
@@ -44,7 +45,7 @@
 				$code
 			";
 
-		}
+		} */
 	}
 
 ?>
