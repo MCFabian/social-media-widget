@@ -14,6 +14,14 @@
 	<link rel="shortcut icon" href="src/img/gen.png" type="image/x-icon">
 
 
+
+
+</head>
+<body>
+	<div id="notification"></div>
+	<div id="loader" class="loader">
+			<div class="loaderspin"></div>
+	</div>
 	<script>
 		var loader = document.getElementById("loader");
 
@@ -23,10 +31,3 @@
 			}
 		);
 	</script>
-
-</head>
-<body>
-	<div id="notification"></div>
-	<div id="loader" class="loader">
-			<div class="loaderspin"></div>
-	</div>
