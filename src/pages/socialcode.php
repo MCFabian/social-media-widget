@@ -4,6 +4,6 @@
 	include("functions.php");
 
 
-    $socialdata = getMediaData(($_GET["id"]), true);
-    if(!isSet($socialdata)) echo"nichts gefunden!";
+    $socialdata = getMediaData($_GET["id"]);
+    if(!isset($socialdata)) echo"nichts gefunden!";
 ?>
