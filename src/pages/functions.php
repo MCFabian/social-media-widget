@@ -41,6 +41,7 @@
 			echo"
 
 			<div class='wrapper'>
+			LADENANSICHT
 				<div class='box'>
 					<h2>Kanäle auswählen</h2>
 					<p>Bitte die zutreffenden Kanäle auswählen. Wird keine Verlinkung angebgeben, so wird auf die Hersteller-Seite verlinkt.</p>
@@ -245,8 +246,6 @@
 				</div>
 			</div>
 			<div class='fab-group'>
-				<div id='saveme' onclick='popup()' class='fab save'><i class='fas fa-save'></i>Code speichern</div>
-				<div onclick='opencodelib();' id='load-code' class='fab'><i class='fas fa-folder-open'></i>Code laden</div>
 				<a title='Dark/Light Mode' class='fab' onclick='setTheme()'><i class='fas fa-adjust'></i></a>
 				<div onclick='openmoremenu()' id='morebtn' class='fab'><i class='fas fa-ellipsis-v'></i>Mehr</div>
 				<ul id='moremenu'>
