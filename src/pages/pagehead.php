@@ -14,6 +14,15 @@
 	<link rel="shortcut icon" href="src/img/gen.png" type="image/x-icon">
 
 
+	<script>
+		var loader = document.getElementById("loader");
+
+		window.addEventListener("load", function(){
+				loader.style.display = "none";
+				console.log("Loader stopt");
+			}
+		);
+	</script>
 
 </head>
 <body>
@@ -21,12 +30,3 @@
 	<div id="loader" class="loader">
 			<div class="loaderspin"></div>
 	</div>
-
-	<script>
-		var loader = document.getElementById("loader");
-
-		window.addEventListener("load"), function(){
-			loader.style.display = "none";
-			console.log("Loader stopt");
-		}
-	</script>
