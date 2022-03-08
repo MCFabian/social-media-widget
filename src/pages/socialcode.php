@@ -3,8 +3,8 @@
     include("connection.php");
 	include("functions.php");
 
-    if(isset($_GET["id"]))
-        getMediaData($_GET["id"]);
+    if(isset($_GET["finderid"]))
+        getMediaData($_GET["finderid"]);
     else
         echo "";
 ?>
