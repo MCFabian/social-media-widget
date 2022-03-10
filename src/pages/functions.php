@@ -34,6 +34,9 @@
 			$creator 					= $row['creator'];
 
 			$check_facebook     		= $row['check_facebook'];
+			if($check_facebook = 'on') {
+				$check_facebook = "checked";
+			}
 
 			echo"
 			<div class='wrapper'>
@@ -45,7 +48,7 @@
 					<ul id='medias'>
 						<li>
 	
-							<input value='$check_facebook' class='checkboxes toogle' type='checkbox' name='checkfacebook' id='checkfacebook'>
+							<input $check_facebook class='checkboxes toogle' type='checkbox' name='checkfacebook' id='checkfacebook'>
 							<label for='checkfacebook'>
 								Facebook
 							</label>
