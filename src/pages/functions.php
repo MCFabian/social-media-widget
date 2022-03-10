@@ -39,7 +39,7 @@
 			";
 
 			echo"
-
+			
 			<div class='wrapper'>
 			LADENANSICHT
 				<div class='box'>
@@ -137,7 +137,8 @@
 					<h2>Design auswählen</h2>
 					<label for='style'>Style festlegen</label>
 					<p class=''>Wählen Sie einen der vorgebenen Stile für das Social-Media-Widget.</p>
-					<select value'$style' name='style' id='style'>
+					<select name='style' id='style'>
+						<option value='$style'>Geladener Style</option>
 						<option value='basic'>Basic</option>
 						<option value='basic-invert'>Basic Umgekehrt</option>
 						<option value='round'>Rund</option>
