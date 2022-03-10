@@ -3,7 +3,7 @@
 
 <?php
 	include("pagehead.php"); 	
-    //include("connection.php");
+    include("connection.php");
     include("functions.php");
     include("groundstyles.php");
 

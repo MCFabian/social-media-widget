@@ -32,12 +32,6 @@
 			$finderid 					= $row['finderid'];
 			$code 						= $row['code'];
 			$creator 					= $row['creator'];
-
-
-			echo"
-
-			";
-
 			echo"
 			
 			<div class='wrapper'>
