@@ -38,6 +38,10 @@
 				$check_facebook = "checked";
 			}
 
+			else{
+				$check_facebook = "";
+			}
+
 			echo"
 			<div class='wrapper'>
 				<div class='box'>
