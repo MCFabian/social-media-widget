@@ -34,11 +34,11 @@
 			$creator 					= $row['creator'];
 
 			$check_facebook     		= $row['check_facebook'];
-			if($check_facebook = "on") {
+			if($check_facebook == "on") {
 				$check_facebook = "checked";
 			}
 
-			if($check_facebook = "off") {
+			if($check_facebook == "off") {
 				$check_facebook = "";
 			}
 
