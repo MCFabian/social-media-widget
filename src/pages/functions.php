@@ -240,6 +240,7 @@
 				</div>
 			</div>
 			<div class='fab-group'>
+				<div class'fab static-hint'><i class='fasfa-circle-question'></i>Geladener Code: $finderid</div>
 				<a title='Dark/Light Mode' class='fab' onclick='setTheme()'><i class='fas fa-adjust'></i></a>
 				<div onclick='openmoremenu()' id='morebtn' class='fab'><i class='fas fa-ellipsis-v'></i>Mehr</div>
 				<ul id='moremenu'>
