@@ -35,7 +35,6 @@
 			echo"
 			
 			<div class='wrapper'>
-			LADENANSICHT
 				<div class='box'>
 					<h2>Kanäle auswählen</h2>
 					<p>Bitte die zutreffenden Kanäle auswählen. Wird keine Verlinkung angebgeben, so wird auf die Hersteller-Seite verlinkt.</p>

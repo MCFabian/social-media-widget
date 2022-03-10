@@ -7,7 +7,11 @@
     include("functions.php");
     include("groundstyles.php");
 
+?>
 
+<div class="hint">Sie befinden sich in der Ladenansicht von: <strong><?php $_GET["id"] ?></strong></div>
+
+<?php
     $socialdata = getMediaData($_GET["id"]);
     //if(!isSet($socialdata)) MediatNotFound();
 
