@@ -1,4 +1,4 @@
-<style id="hovestyle"></style>
+    <style id="hovestyle"></style>
 
 	<style id="basic">
 		/* BASIC */

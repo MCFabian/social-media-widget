@@ -4,7 +4,7 @@
 <?php
 	include("pagehead.php"); 	
     include("connection.php");
-    include("groundstyles.php");
+    //include("groundstyles.php");
 
 
     $socialdata = getMediaData($_GET["id"]);
