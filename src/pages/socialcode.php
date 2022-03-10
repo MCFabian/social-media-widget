@@ -9,7 +9,7 @@
 
 ?>
 
-<div class="hint static-hint">Sie befinden sich in der Ladenansicht von: <strong><?php $_GET["id"]?></strong></div>
+
 
 <?php
     $socialdata = getMediaData($_GET["id"]);

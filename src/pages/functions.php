@@ -33,7 +33,7 @@
 			$code 						= $row['code'];
 			$creator 					= $row['creator'];
 			echo"
-			
+			<div class='static-hint hint'>Sie befinden sich in der Ladenansicht von: <strong>$finderid</strong></div>
 			<div class='wrapper'>
 				<div class='box'>
 					<h2>Kanäle auswählen</h2>
