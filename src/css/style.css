@@ -971,6 +971,25 @@ input[type=checkbox].toogle + label::after {
     color: var(--fontcolordarker);
 }
 
+.actionbuttons {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.actionbuttons a {
+    text-decoration: none;
+    color: var(--accentcolor);
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+
+.actionbuttons a i {
+    color: var(--accentcolor);
+    margin: 0 5px;
+    font-size: 1.0rem;
+}
+
 @-moz-keyframes spin {
     from { -moz-transform: rotate(0deg); }
     to { -moz-transform: rotate(360deg); }
