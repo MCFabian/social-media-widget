@@ -959,6 +959,18 @@ input[type=checkbox].toogle + label::after {
     animation-timing-function: ease-in-out;
 }
 
+.static-hint {
+    padding: 25px;
+    font-size: 1.2em;
+    background: var(--background);
+    box-shadow: -9px -1px 15px -6px rgb(0 0 0 / 41%);
+    margin-top: 25px;
+}
+
+.static-hint strong {
+    color: var(--fontcolordarker);
+}
+
 @-moz-keyframes spin {
     from { -moz-transform: rotate(0deg); }
     to { -moz-transform: rotate(360deg); }

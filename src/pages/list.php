@@ -36,9 +36,10 @@
                     </span>
 
                     <hr>
-                    <div class='previewbutton expandme'><i class='fas fa-eye'></i>Vorschau
+                    <span><a href='/src/pages/socialcode.php?id=$finderid'>Code laden</a></span>
+                    <span class='previewbutton expandme'><i class='fas fa-eye'></i>Vorschau
                         <div class='expander'>$code</div>
-                    </div>
+                    </span>
 
                 </li>";
             }
