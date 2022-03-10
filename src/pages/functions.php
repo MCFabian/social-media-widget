@@ -21,7 +21,7 @@
 
 		global $connection;
 		//SQL-Zugriff auf Datensaetze
-		$query = $connection->prepare("SELECT id, style, finderid, code, creator FROM socialcodes WHERE finderid = $currentfinderID");
+		$query = $connection->prepare("SELECT id, style, finderid, check_facebook, code, creator FROM socialcodes WHERE finderid = $currentfinderID");
 		$query->execute();
 		$query->setFetchMode(PDO::FETCH_ASSOC);
 
@@ -32,6 +32,9 @@
 			$finderid 					= $row['finderid'];
 			$code 						= $row['code'];
 			$creator 					= $row['creator'];
+
+			$check_facebook     		= $row['check_facebook'];
+
 			echo"
 			<div class='wrapper'>
 				<div class='box'>
@@ -42,9 +45,8 @@
 					<ul id='medias'>
 						<li>
 	
-							<input class='checkboxes toogle' type='checkbox' name='checkfacebook' id='checkfacebook'>
+							<input value='$check_facebook' class='checkboxes toogle' type='checkbox' name='checkfacebook' id='checkfacebook'>
 							<label for='checkfacebook'>
-								
 								Facebook
 							</label>
 							<input placeholder='Link eingeben' type='text' name='linkfacebook' id='linkfacebook'>
