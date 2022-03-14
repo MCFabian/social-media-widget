@@ -8,7 +8,7 @@
 	include("functions.php");
 
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
-        if(isset($_POST['savecode'])) {
+        if(isset($_POST['directopen'])) {
             $directcode = $_POST['directcode'];
 
             if(empty($directcode)){
