@@ -7,14 +7,18 @@
 	include("connection.php");
 	include("functions.php");
 
-    $directcode = $_POST['directcode'];
+    if($_SERVER['REQUEST_METHOD'] == 'POST') {
+        if(isset($_POST['savecode'])) {
+            $directcode = $_POST['directcode'];
 
-    if(empty($directcode)){
-        echo"Kein Code";
-    }
+            if(empty($directcode)){
+                echo"Kein Code";
+            }
 
-    if(!empty($directcode)){
-        header("Location: https://dev-social-media.fabianr.de/src/pages/socialcode.php?id=$directcode");  
+            if(!empty($directcode)){
+                header("Location: https://dev-social-media.fabianr.de/src/pages/socialcode.php?id=$directcode");  
+            }
+        }
     }
 
 
