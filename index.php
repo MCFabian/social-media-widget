@@ -1,5 +1,5 @@
 <?php include("src/pages/pagehead.php")?>
-<?php include("src/pages/directopen.php") ?>
+<?php include("src/pages/list.php") ?>
 <?php include("src/pages/groundstyles.php") ?>
 
 	<form id="savecode" method="POST" action="/src/pages/todatabase.php">
