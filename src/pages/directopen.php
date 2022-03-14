@@ -12,7 +12,7 @@
             $directcode = $_POST['directcode'];
 
             if(empty($directcode)){
-                echo"Kein Code";
+                echo"<div class='hint'>Kein gültiger Code!</div>";
             }
 
             if(!empty($directcode)){
