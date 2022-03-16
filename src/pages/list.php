@@ -62,8 +62,8 @@
     </div>
 
     <ul>
-        <?php //listcodes(); 
-            include('directopen.php')
+        <?php include('directopen.php') listcodes(); 
+            
         ?>
     </ul>
 </div>
