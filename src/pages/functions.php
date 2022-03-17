@@ -21,19 +21,19 @@
 
 		global $connection;
 		//SQL-Zugriff auf Datensaetze
-		$query = $connection->prepare("SELECT id, style, finderid, check_facebook, code, creator FROM socialcodes WHERE finderid = $currentfinderID");
+		$query = $connection->prepare("SELECT id, style, finderid, check_facebook, check_instagram, check_youtube, code, creator FROM socialcodes WHERE finderid = $currentfinderID");
 		$query->execute();
 		$query->setFetchMode(PDO::FETCH_ASSOC);
 
 		while ($row = $query->fetch()){
 
-			$id							= $row['id'];
+			$id						= $row['id'];
 			$style						= $row['style'];
 			$finderid 					= $row['finderid'];
 			$code 						= $row['code'];
 			$creator 					= $row['creator'];
 
-			$check_facebook     		= $row['check_facebook'];
+			$check_facebook     				= $row['check_facebook'];
 			if($check_facebook == "on") {
 				$check_facebook = "checked";
 			}
@@ -41,6 +41,25 @@
 			if($check_facebook == "off") {
 				$check_facebook = "";
 			}
+			
+			$check_instagram     				= $row['check_instagram'];
+			if($check_instagram == "on") {
+				$check_instagram = "checked";
+			}
+
+			if($check_instagram == "off") {
+				$check_instagram = "";
+			}
+			
+			$check_youtube    				= $row['check_youtube'];
+			if($check_youtube == "on") {
+				$check_youtube = "checked";
+			}
+
+			if($check_youtube == "off") {
+				$check_youtube = "";
+			}
+
 
 			echo"
 			<div class='wrapper'>
@@ -60,12 +79,12 @@
 						</li>
 	
 						<li>
-							<input class='checkboxes toogle' type='checkbox' name='checkinstagram' id='checkinstagram'>
+							<input $check_instagram class='checkboxes toogle' type='checkbox' name='checkinstagram' id='checkinstagram'>
 							<label for='checkinstagram'>Instagram</label>
 							<input placeholder='Link eingeben' type='text' name='linkinstagram' id='linkinstagram'>
 						</li>
 						<li>
-							<input class='checkboxes toogle' type='checkbox' name='checkyoutube' id='checkyoutube'>
+							<input $check_youtube class='checkboxes toogle' type='checkbox' name='checkyoutube' id='checkyoutube'>
 							<label for='checkyoutube'>YouTube</label>
 							<input placeholder='Link eingeben' type='text' name='linkyoutube' id='linkyoutube'>
 						</li>
