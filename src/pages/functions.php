@@ -26,7 +26,7 @@
 		$query->setFetchMode(PDO::FETCH_ASSOC);
 
 		while ($row = $query->fetch()){
-
+echo"Bevor: $check_facebook  $check_instagram  $check_youtube ";
 			$id						= $row['id'];
 			$style						= $row['style'];
 			$finderid 					= $row['finderid'];
@@ -60,7 +60,7 @@
 				$check_youtube = "";
 			}
 
-
+echo"Danach: $check_facebook  $check_instagram  $check_youtube ";
 			echo"
 			<div class='wrapper'>
 				<div class='box'>
