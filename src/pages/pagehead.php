@@ -1,8 +1,3 @@
-<?php
-	session_start();
-	$session_style = $_POST['theme'];
-?>
-
 <!doctype html>
 <html id="themehere" class="dark">
 <head>
