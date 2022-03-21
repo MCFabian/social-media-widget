@@ -768,6 +768,12 @@ button.save i {
     line-height: 1.5;
 }
 
+span #initialpreview {
+    padding: 5px;
+    width: 5px;
+    height: 5px;
+} 
+
 .creator {
     display: inline-block;
     height: 10px;
