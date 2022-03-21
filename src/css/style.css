@@ -773,6 +773,7 @@ span #initialpreview {
     width: 2px;
     height: 2px;
     font-size: .5rem;
+    margin-right: 5px;
 } 
 
 .creator {
