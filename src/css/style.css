@@ -768,7 +768,7 @@ button.save i {
     line-height: 1.5;
 }
 
-span #initialpreview {
+span#initialpreview {
     padding: 5px;
     width: 2px;
     height: 2px;
