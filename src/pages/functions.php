@@ -21,12 +21,12 @@
 
 		global $connection;
 		//SQL-Zugriff auf Datensaetze
-		$query = $connection->prepare("SELECT id, style, finderid, check_facebook, check_instagram, check_youtube, code, creator FROM socialcodes WHERE finderid = $currentfinderID");
+		$query = $connection->prepare("SELECT id, style, finderid, check_facebook, check_instagram, check_youtube, check_twitter, check_tiktok, check_xing, code, creator FROM socialcodes WHERE finderid = $currentfinderID");
 		$query->execute();
 		$query->setFetchMode(PDO::FETCH_ASSOC);
 
 		while ($row = $query->fetch()){
-echo"Bevor: $check_facebook  $check_instagram  $check_youtube ";
+echo"Bevor: $check_facebook  $check_instagram  $check_youtube $check_twitter ";
 			$id						= $row['id'];
 			$style						= $row['style'];
 			$finderid 					= $row['finderid'];
@@ -59,8 +59,35 @@ echo"Bevor: $check_facebook  $check_instagram  $check_youtube ";
 			if($check_youtube == "off") {
 				$check_youtube = "";
 			}
+			
+			$check_twitter   				= $row['check_twitter'];
+			if($check_twitter == "on") {
+				$check_twitter = "checked";
+			}
 
-echo"Danach: $check_facebook  $check_instagram  $check_youtube ";
+			if($check_twitter == "off") {
+				$check_twitter = "";
+			}
+			
+			$check_tiktok  				= $row['check_tiktok'];
+			if($check_tiktok == "on") {
+				$check_tiktok = "checked";
+			}
+
+			if($check_tiktok == "off") {
+				$check_tiktok = "";
+			}
+			
+			$check_xing 				= $row['check_xing'];
+			if($check_xing == "on") {
+				$check_xing = "checked";
+			}
+
+			if($check_xing == "off") {
+				$check_xing = "";
+			}
+
+echo"Danach: $check_facebook  $check_instagram  $check_youtube $check_twitter, $check_tiktok, $check_xing";
 			echo"
 			<div class='wrapper'>
 				<div class='box'>
