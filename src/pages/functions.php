@@ -149,12 +149,12 @@ echo"Danach: $check_facebook  $check_instagram  $check_youtube $check_twitter, $
 							<input placeholder='Link eingeben' type='text' name='linkxing' id='linkxing'>
 						</li>
 						<li>
-							<input class='checkboxes toogle' type='checkbox' name='checklinkedin' id='checklinkedin'>
+							<input $check_linkedin class='checkboxes toogle' type='checkbox' name='checklinkedin' id='checklinkedin'>
 							<label for='checklinkedin'>LinkedIn</label>
 							<input placeholder='Link eingeben' type='text' name='linklinkedin' id='linklinkedin'>
 						</li>
 						<li>
-							<input class='checkboxes toogle' type='checkbox' name='checklinktree' id='checklinktree'>
+							<input $check_linktree class='checkboxes toogle' type='checkbox' name='checklinktree' id='checklinktree'>
 							<label for='checklinktree'>LinkTree</label>
 							<input placeholder='Link eingeben' type='text' name='linklinktree' id='linklinktree'>
 						</li>
