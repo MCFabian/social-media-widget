@@ -21,7 +21,7 @@
 
 		global $connection;
 		//SQL-Zugriff auf Datensaetze
-		$query = $connection->prepare("SELECT id, style, finderid, check_facebook, check_instagram, check_youtube, check_twitter, check_tiktok, check_xing, code, creator FROM socialcodes WHERE finderid = $currentfinderID");
+		$query = $connection->prepare("SELECT id, style, finderid, check_facebook, check_instagram, check_youtube, check_twitter, check_tiktok, check_xing, check_linkedin, check_linktree, code, creator FROM socialcodes WHERE finderid = $currentfinderID");
 		$query->execute();
 		$query->setFetchMode(PDO::FETCH_ASSOC);
 
@@ -85,6 +85,24 @@ echo"Bevor: $check_facebook  $check_instagram  $check_youtube $check_twitter ";
 
 			if($check_xing == "off") {
 				$check_xing = "";
+			}
+			
+			$check_linkedin 				= $row['check_linkedin'];
+			if($check_linkedin == "on") {
+				$check_linkedin = "checked";
+			}
+
+			if($check_linkedin == "off") {
+				$check_linkedin = "";
+			}
+			
+			$check_linktree				= $row['check_linktree'];
+			if($check_linktree == "on") {
+				$check_linktree = "checked";
+			}
+
+			if($check_linktree == "off") {
+				$check_linktree = "";
 			}
 
 echo"Danach: $check_facebook  $check_instagram  $check_youtube $check_twitter, $check_tiktok, $check_xing";
