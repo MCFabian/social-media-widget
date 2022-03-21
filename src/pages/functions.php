@@ -116,17 +116,17 @@ echo"Danach: $check_facebook  $check_instagram  $check_youtube $check_twitter, $
 							<input placeholder='Link eingeben' type='text' name='linkyoutube' id='linkyoutube'>
 						</li>
 						<li>
-							<input class='checkboxes toogle' type='checkbox' name='checktwitter' id='checktwitter'>
+							<input $check_twitter class='checkboxes toogle' type='checkbox' name='checktwitter' id='checktwitter'>
 							<label for='checktwitter'>Twitter</label>
 							<input placeholder='Link eingeben' type='text' name='linktwitter' id='linktwitter'>
 						</li>
 						<li>
-							<input class='checkboxes toogle' type='checkbox' name='checktiktok' id='checktiktok'>
+							<input $check_tiktok class='checkboxes toogle' type='checkbox' name='checktiktok' id='checktiktok'>
 							<label for='checktiktok'>TikTok</label>
 							<input placeholder='Link eingeben' type='text' name='linktiktok' id='linktiktok'>
 						</li>
 						<li>
-							<input class='checkboxes toogle' type='checkbox' name='checkxing' id='checkxing'>
+							<input $check_xing class='checkboxes toogle' type='checkbox' name='checkxing' id='checkxing'>
 							<label for='checkxing'>Xing</label>
 							<input placeholder='Link eingeben' type='text' name='linkxing' id='linkxing'>
 						</li>
