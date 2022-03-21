@@ -770,8 +770,9 @@ button.save i {
 
 span #initialpreview {
     padding: 5px;
-    width: 5px;
-    height: 5px;
+    width: 2px;
+    height: 2px;
+    font-size: .5rem;
 } 
 
 .creator {
