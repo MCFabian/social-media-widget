@@ -314,7 +314,7 @@ echo"Danach: $check_facebook  $check_instagram  $check_youtube $check_twitter, $
 			</div>
 			<div class='fab-group'>
 				<a href='/' class='fab'>Zurück</a>
-				<div class='static-hint fab'><div id='initialpreview'>$creator</div>Geladener Code: $finderid</div>
+				<div class='static-hint fab'><span id='initialpreview'>$creator</span>Geladener Code: $finderid</div>
 				<a title='Dark/Light Mode' class='fab' onclick='setTheme()'><i class='fas fa-adjust'></i></a>
 				<div onclick='openmoremenu()' id='morebtn' class='fab'><i class='fas fa-ellipsis-v'></i>Mehr</div>
 				<ul id='moremenu'>
