@@ -21,13 +21,14 @@
 
 		global $connection;
 		//SQL-Zugriff auf Datensaetze
-		$query = $connection->prepare("SELECT id, style, finderid, check_facebook, check_instagram, check_youtube, check_twitter, check_tiktok, check_xing, check_linkedin, check_linktree, code, creator FROM socialcodes WHERE finderid = $currentfinderID");
+		$query = $connection->prepare("SELECT id, creator, style, finderid, check_facebook, check_instagram, check_youtube, check_twitter, check_tiktok, check_xing, check_linkedin, check_linktree, code, creator FROM socialcodes WHERE finderid = $currentfinderID");
 		$query->execute();
 		$query->setFetchMode(PDO::FETCH_ASSOC);
 
 		while ($row = $query->fetch()){
 echo"Bevor: $check_facebook  $check_instagram  $check_youtube $check_twitter ";
 			$id						= $row['id'];
+			$creator					= $row['creator'];
 			$style						= $row['style'];
 			$finderid 					= $row['finderid'];
 			$code 						= $row['code'];
@@ -313,11 +314,11 @@ echo"Danach: $check_facebook  $check_instagram  $check_youtube $check_twitter, $
 			</div>
 			<div class='fab-group'>
 				<a href='/' class='fab'>Zurück</a>
-				<div class='static-hint fab'> <i class='fas fa-circle-question'></i> Geladener Code: $finderid</div>
+				<div class='static-hint fab'><div id='initialpreview'>$creator</div>Geladener Code: $finderid</div>
 				<a title='Dark/Light Mode' class='fab' onclick='setTheme()'><i class='fas fa-adjust'></i></a>
 				<div onclick='openmoremenu()' id='morebtn' class='fab'><i class='fas fa-ellipsis-v'></i>Mehr</div>
 				<ul id='moremenu'>
-					<li><a target='_blank' href='https://github.com/MCFabian/social-media-widget/issues/new' title='Bug melden via GitHu'><i class='fas fa-bug'></i>Fehler melden</a></li>
+					<li><a target='_blank' href='https://github.com/MCFabian/social-media-widget/issues/new' title='Bug melden via GitHub'><i class='fas fa-bug'></i>Fehler melden</a></li>
 				</ul>
 			</div>
 	
