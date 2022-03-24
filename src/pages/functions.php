@@ -253,7 +253,7 @@ echo"Danach: $check_facebook  $check_instagram  $check_youtube $check_twitter, $
 						<hr>
 						<label for='hoverbg'>Hintergrundfarbe bei Hover</label>
 						<p>Legt die Hintergrundfarbe der Iconcontainer fest, wenn sich der Mauszeiger über diese bewegt. Zugelassene Formate sind Hex, RGB-A, CSS-Farbworte, HSL.</p>
-						<input value='$backgroundcolor' placeholder='#fff' type='text' name='hoverbg' id='hoverbg'>
+						<input placeholder='#fff' type='text' name='hoverbg' id='hoverbg'>
 						<hr>
 						<label >Größe</label>
 						<p>Sie können Sie Größe der Social Media Icons in drei Stufen festlegen.</p>
@@ -275,7 +275,7 @@ echo"Danach: $check_facebook  $check_instagram  $check_youtube $check_twitter, $
 						<li>
 							<label for='background'>Hintergrundfarbe</label>
 							<p class=''>Zugelassene Formate sind Hex, RGB-A, CSS-Farbworte, HSL.</p>
-							<input name='background' placeholder='#fff' type='text' id='background'>
+							<input value='$backgroundcolor' name='background' placeholder='#fff' type='text' id='background'>
 						</li>
 					</ul>
 					<hr>
