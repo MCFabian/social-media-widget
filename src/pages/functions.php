@@ -21,7 +21,7 @@
 
 		global $connection;
 		//SQL-Zugriff auf Datensaetze
-		$query = $connection->prepare("SELECT id, creator, style, finderid, check_facebook, check_instagram, check_youtube, check_twitter, check_tiktok, check_xing, check_linkedin, check_linktree, code, creator FROM socialcodes WHERE finderid = $currentfinderID");
+		$query = $connection->prepare("SELECT id, creator, style, iconcolor, backgroundcolor, finderid, check_facebook, value_facebook, check_instagram, value_instagram, check_youtube, check_twitter, check_tiktok, check_xing, check_linkedin, check_linktree, code, creator FROM socialcodes WHERE finderid = $currentfinderID");
 		$query->execute();
 		$query->setFetchMode(PDO::FETCH_ASSOC);
 
@@ -33,8 +33,10 @@ echo"Bevor: $check_facebook  $check_instagram  $check_youtube $check_twitter ";
 			$finderid 					= $row['finderid'];
 			$code 						= $row['code'];
 			$creator 					= $row['creator'];
-
-			$check_facebook     				= $row['check_facebook'];
+			$iconcolor 					= $row['iconcolor'];
+			$backgroundcolor 			= $row['backgroundcolor'];
+			$value_facebook     		= $row['value_facebook'];
+			$check_facebook     		= $row['check_facebook'];
 			if($check_facebook == "on") {
 				$check_facebook = "checked";
 			}
@@ -42,7 +44,7 @@ echo"Bevor: $check_facebook  $check_instagram  $check_youtube $check_twitter ";
 			if($check_facebook == "off") {
 				$check_facebook = "";
 			}
-			
+			$value_instagram     		= $row['value_instagram'];
 			$check_instagram     				= $row['check_instagram'];
 			if($check_instagram == "on") {
 				$check_instagram = "checked";
@@ -121,13 +123,13 @@ echo"Danach: $check_facebook  $check_instagram  $check_youtube $check_twitter, $
 							<label for='checkfacebook'>
 								Facebook
 							</label>
-							<input placeholder='Link eingeben' type='text' name='linkfacebook' id='linkfacebook'>
+							<input value='$value_facebook' placeholder='Link eingeben' type='text' name='linkfacebook' id='linkfacebook'>
 						</li>
 	
 						<li>
 							<input $check_instagram class='checkboxes toogle' type='checkbox' name='checkinstagram' id='checkinstagram'>
 							<label for='checkinstagram'>Instagram</label>
-							<input placeholder='Link eingeben' type='text' name='linkinstagram' id='linkinstagram'>
+							<input value='$value_instagram' placeholder='Link eingeben' type='text' name='linkinstagram' id='linkinstagram'>
 						</li>
 						<li>
 							<input $check_youtube class='checkboxes toogle' type='checkbox' name='checkyoutube' id='checkyoutube'>
@@ -251,7 +253,7 @@ echo"Danach: $check_facebook  $check_instagram  $check_youtube $check_twitter, $
 						<hr>
 						<label for='hoverbg'>Hintergrundfarbe bei Hover</label>
 						<p>Legt die Hintergrundfarbe der Iconcontainer fest, wenn sich der Mauszeiger über diese bewegt. Zugelassene Formate sind Hex, RGB-A, CSS-Farbworte, HSL.</p>
-						<input placeholder='#fff' type='text' name='hoverbg' id='hoverbg'>
+						<input value='$backgroundcolor' placeholder='#fff' type='text' name='hoverbg' id='hoverbg'>
 						<hr>
 						<label >Größe</label>
 						<p>Sie können Sie Größe der Social Media Icons in drei Stufen festlegen.</p>
@@ -268,7 +270,7 @@ echo"Danach: $check_facebook  $check_instagram  $check_youtube $check_twitter, $
 						<li>
 							<label for='color'>Iconfarbe</label>
 							<p class=''>Zugelassene Formate sind Hex, RGB-A, CSS-Farbworte, HSL.</p>
-							<input value='$finderid' name='color' placeholder='#fff' type='text' id='color'>
+							<input value='$iconcolor' name='color' placeholder='#fff' type='text' id='color'>
 						</li>
 						<li>
 							<label for='background'>Hintergrundfarbe</label>
