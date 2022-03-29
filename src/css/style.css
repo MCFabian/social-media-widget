@@ -625,7 +625,7 @@ button:hover {
 
 .listcontainer #loadcode {
     margin: auto;
-    width: 50%;
+    width: 30%;
     padding: 20px;
     background: var(--background);
 }
@@ -662,10 +662,12 @@ button:hover {
 
 #closelistcontainer {
     right: 0;
+    top: 0;
     text-align: right;
     transition: .3s;
     cursor: pointer;
     color: var(--fontcolor);
+    position: absolute;
 }
 
 #closelistcontainer:hover {
