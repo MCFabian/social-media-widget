@@ -602,7 +602,8 @@ button:hover {
     pointer-events: none;
     opacity: 0;
     top: 50px;
-    transition: .4s ease-in-out;
+    transition: .2s ease-in-out;
+    background:rgba(0, 0, 0, 0.83);
 }
 
 #codelib.active {
@@ -626,6 +627,7 @@ button:hover {
     margin: auto;
     width: 50%;
     padding: 20px;
+    background: var(--background);
 }
 
 .listcontainer ul {

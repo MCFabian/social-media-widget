@@ -54,12 +54,13 @@
 ?>
 <div id="codelib" class="listcontainer">
     <div id="loadcode">
+        <div onclick="opencodelib();" id="closelistcontainer"><i class="fas fa-times"></i></div>
         <div>
             <h2>Code laden</h2>
-            <p>Gebsen Sie einen Code ein, um diesen zu öffnen</p>
+            <p class="larger-text ">Gebsen Sie einen Code ein, um diesen zu öffnen</p>
         </div>
         <?php include('directopen.php'); ?>
-        <div onclick="opencodelib();" id="closelistcontainer"><i class="fas fa-times"></i></div>
+
     </div>
 
     <ul>
