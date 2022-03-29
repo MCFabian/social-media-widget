@@ -54,7 +54,7 @@
 ?>
 <div id="codelib" class="listcontainer">
     <div id="loadcode">
-        <div onclick="opencodelib();" id="closelistcontainer"><i class="fas fa-times"></i></div>
+        <span onclick="opencodelib();" id="closelistcontainer"><i class="fas fa-times"></i></span>
         <div>
             <h2>Code laden</h2>
             <p class="larger-text ">Gebsen Sie einen Code ein, um diesen zu öffnen</p>
