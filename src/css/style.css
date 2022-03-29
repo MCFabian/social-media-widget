@@ -1014,6 +1014,19 @@ input[type=checkbox].toogle + label::after {
     font-size: 1.0rem;
 }
 
+#directcode {
+    border: 1px solid var(--dividercolor);
+    padding: 10px;
+    display: inline-block;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 1.8rem;
+    letter-spacing: 1.1;
+    margin-top: 15px;
+    padding-right: 18px;
+    padding-left: 18px;
+}
+
 @-moz-keyframes spin {
     from { -moz-transform: rotate(0deg); }
     to { -moz-transform: rotate(360deg); }

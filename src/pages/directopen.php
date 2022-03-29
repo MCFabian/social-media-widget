@@ -1,5 +1,4 @@
 <form action="#" method="POST" id="directopen">
-    <label for="directcode">Code eingeben</label>
     <input id='directcode' name='directcode' placeholder='Code' type="text">
     <button class="button" id="directopen" name="directopen" form="directopen"><i class="fas fa-save"></i>Öffnen</button>
 </form>
