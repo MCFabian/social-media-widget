@@ -601,17 +601,16 @@ button:hover {
 #codelib {
     transition: .4s;
     pointer-events: none;
-    left: -100%;
+    opacity: 0;
 }
 
 #codelib.active {
     pointer-events: all;
-    left: 0;
+    opacity: 1;
 }
 
 .listcontainer {
     display: flex;
-    display: none;
     position: fixed;
     left: 0;
     right: 0;
