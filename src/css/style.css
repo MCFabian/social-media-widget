@@ -196,23 +196,36 @@ hr {
 
 input[type=text], input[type=email], input[type=number], select {
     padding: 10px;
-    border: 1px solid var(--dividercolor);
+    border: none;
+    border-bottom: 2px solid var(--dividercolor);
     background-color: var(--background);
     box-shadow: none;
     display: block;
     width: 100%;
     box-sizing: border-box;
     color: var(--fontcolordarker);
+    transition: .3s ease-in-out;
+}
+
+select {
+    border: 1px solid var(--background);
+    border-bottom: 2px solid var(--dividercolor);
+}
+
+select:hover, select:focus {
+    border: 1px solid var(--background);
+    border-bottom: 2px solid var(--accentcolor);
+    background-color: var(--bodybackground);
 }
 
 input[type=checkbox] {
     margin-right: 5px;
     cursor: pointer;
-    accent-color: var(--accentcolor);
 }
 
 input:focus, input:hover {
     border-color: var(--accentcolor);
+    background-color: var(--bodybackground);
 }
 
 textarea {
@@ -340,7 +353,7 @@ button {
     font-size: .6rem;
 }
 
-button, input {
+button {
     border-radius: 3px;
 }
 
@@ -490,18 +503,24 @@ button:hover {
 .tab {
     list-style: none;
     display: flex;
-    padding: 0;
+    padding: 0 0;
     margin: 0;
+  }
+
+  .tab li {
+    flex-grow: 1;
   }
   
   .tab li label  {
-    padding: 7px;
+    padding: 10px;
     font-weight: 400;
     cursor: pointer;
-    border: 1px solid var(--dividercolor);
-    display: inline-block;
+    border-bottom: 2px solid var(--dividercolor);
+    display: block;
     margin: 0;
     font-size: .8rem;
+    text-align: center;
+
   }
 
   .tab li label i {
@@ -511,17 +530,7 @@ button:hover {
   .tab li + li label {
     border-left: 0;
   }
-  
-  .tab li:first-child label {
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-  }
-  
-  .tab li:last-child label {
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    border-left: 0px;
-  }
+
   
   .tab input[type="radio"] {
     opacity: 0;
@@ -530,8 +539,9 @@ button:hover {
   }
   
   .tab input[type="radio"]:checked + label {
-    background: var(--accentcolor);
-    color: #fff;
+    background: var(--bodybackground);
+    border-bottom: 2px solid var(--accentcolor);
+    color: var(--accentcolor);
   }
   
   .tab input[type="radio"]:not(:checked) + label {
