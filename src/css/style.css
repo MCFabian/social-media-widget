@@ -626,8 +626,12 @@ button:hover {
 .listcontainer #loadcode {
     margin: auto;
     width: 30%;
+    min-height: 15%;
+    width: 35%;
+    background-color: var(--background);
+    border: 1px solid var(--dividercolor);
     padding: 20px;
-    background: var(--background);
+    border-radius: 5px;
     position: relative;
     box-shadow: 4px 1px 15px -6px rgb(0 0 0 / 41%);
 }
