@@ -1,3 +1,4 @@
+<script src="../js/script.js"></script>
 <form action="#" method="POST" id="directopen">
     <h2>Code laden</h2>
     <p>Gebsen Sie einen Code ein, um diesen zu öffnen.</p>
@@ -5,6 +6,7 @@
     <hr>
     <button class="button" id="directopen" name="directopen" form="directopen"><i class="fas fa-folder-open"></i>Öffnen</button>
 </form>
+
 <?php
 	include("connection.php");
 	include("functions.php");
@@ -14,7 +16,9 @@
             $directcode = $_POST['directcode'];
 
             if(empty($directcode)){
-                echo"<div class='hint'>Kein gültiger Code!</div>";
+                echo"<script>
+                    notification('error', 'Kein gültiger Code.')
+                </script>";
             }
 
             if(!empty($directcode)){
@@ -25,3 +29,4 @@
 
 
 ?>
+
