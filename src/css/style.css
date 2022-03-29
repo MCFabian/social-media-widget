@@ -661,12 +661,8 @@ button:hover {
 }
 
 #closelistcontainer {
-    margin: 0 0 auto auto;
-    width: 20px;
-    height: 20px;
-    padding: 8px 10px 10px 10px;
     right: 0;
-    text-align: center;
+    text-align: right;
     transition: .3s;
     cursor: pointer;
     color: var(--fontcolor);
