@@ -603,7 +603,6 @@ button:hover {
     opacity: 0;
     top: 50px;
     transition: .2s ease-in-out;
-    background:rgba(0, 0, 0, 0.83);
 }
 
 #codelib.active {
