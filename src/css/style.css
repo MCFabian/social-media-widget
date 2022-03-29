@@ -605,17 +605,18 @@ button:hover {
 }
 
 #codelib.active {
-
     pointer-events: all;
     left: 0;
 }
 
 .listcontainer {
     display: flex;
+    display: none;
+    position: fixed;
     left: 0;
     right: 0;
-    height: auto;
-    width: 50%;
+    height: 100%;
+    width: 100%;
     box-shadow: 4px 1px 15px -6px rgb(0 0 0 / 41%);
     z-index: 99;
 }
