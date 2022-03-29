@@ -619,7 +619,7 @@ button:hover {
     right: 0;
     height: 100%;
     width: 100%;
-    box-shadow: 4px 1px 15px -6px rgb(0 0 0 / 41%);
+
     z-index: 99;
 }
 
@@ -629,6 +629,7 @@ button:hover {
     padding: 20px;
     background: var(--background);
     position: relative;
+    box-shadow: 4px 1px 15px -6px rgb(0 0 0 / 41%);
 }
 
 .listcontainer ul {
@@ -669,6 +670,7 @@ button:hover {
     cursor: pointer;
     color: var(--fontcolor);
     position: absolute;
+    padding: 20px;
 }
 
 #closelistcontainer:hover {

@@ -55,14 +55,7 @@
 <div id="codelib" class="listcontainer">
     <div id="loadcode">
         <div title="Schließen" onclick="opencodelib();" id="closelistcontainer"><i class="fas fa-times"></i></div>
-
         <?php include('directopen.php'); ?>
 
     </div>
-
-    <ul>
-        
-        <hr>
-        <?php //listcodes(); ?>    
-    </ul>
 </div>

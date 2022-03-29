@@ -1,9 +1,9 @@
 <form action="#" method="POST" id="directopen">
     <h2>Code laden</h2>
-    <p>Gebsen Sie einen Code ein, um diesen zu öffnen</p>
+    <p>Gebsen Sie einen Code ein, um diesen zu öffnen.</p>
     <input id='directcode' name='directcode' placeholder='Code' type="text">
     <hr>
-    <button class="button" id="directopen" name="directopen" form="directopen"><i class="fas fa-save"></i>Öffnen</button>
+    <button class="button" id="directopen" name="directopen" form="directopen"><i class="fas fa-folder-open"></i>Öffnen</button>
 </form>
 <?php
 	include("connection.php");
