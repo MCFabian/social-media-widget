@@ -53,17 +53,18 @@
 
 ?>
 <div id="codelib" class="listcontainer">
-    <div id="listcontainerhead">
+    <div id="loadcode">
         <div>
-            <h2>Gespeicherten Codes</h2>
-            <p>In dieser Liste finden Sie alle gespeicherten Code-Kombinationen.</p>
+            <h2>Code laden</h2>
+            <p>Gebsen Sie einen Code ein, um diesen zu öffnen</p>
         </div>
+        <?php include('directopen.php'); ?>
         <div onclick="opencodelib();" id="closelistcontainer"><i class="fas fa-times"></i></div>
     </div>
 
     <ul>
-        <?php include('directopen.php'); ?>
+        
         <hr>
-        <?php listcodes(); ?>    
+        <?php //listcodes(); ?>    
     </ul>
 </div>

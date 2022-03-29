@@ -611,14 +611,17 @@ button:hover {
 }
 
 .listcontainer {
-    position: fixed;
+    display: flex;
     left: 0;
-    height: 100%;
+    right: 0;
+    height: auto;
     width: 50%;
-    top: 0;
-    background-color: var(--background);
     box-shadow: 4px 1px 15px -6px rgb(0 0 0 / 41%);
     z-index: 99;
+}
+
+.listcontainer #loadcode {
+    margin: auto;
 }
 
 .listcontainer ul {
