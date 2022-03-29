@@ -599,14 +599,16 @@ button:hover {
 }
 
 #codelib {
-    transition: .4s;
     pointer-events: none;
     opacity: 0;
+    top: 50px;
+    transition: .4s ease-in-out;
 }
 
 #codelib.active {
     pointer-events: all;
     opacity: 1;
+    top: 0;
 }
 
 .listcontainer {
@@ -622,6 +624,8 @@ button:hover {
 
 .listcontainer #loadcode {
     margin: auto;
+    width: 50%;
+    padding: 20px;
 }
 
 .listcontainer ul {
