@@ -206,7 +206,7 @@ echo"Danach: $check_facebook  $check_instagram  $check_youtube $check_twitter, $
 					<label for='style'>Style festlegen</label>
 					<p class=''>Wählen Sie einen der vorgebenen Stile für das Social-Media-Widget.</p>
 					<select name='style' id='style'>
-						<option value='$style'>Geladener Style</option>
+						<option value='$style'>Geladener Style: $style</option>
 						<option value='basic'>Basic</option>
 						<option value='basic-invert'>Basic Umgekehrt</option>
 						<option value='round'>Rund</option>
