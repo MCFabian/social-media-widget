@@ -34,7 +34,7 @@ echo"Bevor: $check_facebook  $check_instagram  $check_youtube $check_twitter ";
 			$code 						= $row['code'];
 			$creator 					= $row['creator'];
 			$iconcolor 					= $row['iconcolor'];
-			$backgroundhover 				= $row['$backgroundhover'];
+			$backgroundhover 				= $row['backgroundhover'];
 			$backgroundcolor 			= $row['backgroundcolor'];
 			$value_facebook     		= $row['value_facebook'];
 			$check_facebook     		= $row['check_facebook'];
