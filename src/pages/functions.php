@@ -21,7 +21,7 @@
 
 		global $connection;
 		//SQL-Zugriff auf Datensaetze
-		$query = $connection->prepare("SELECT id, creator, style, iconcolor, backgroundcolor, finderid, check_facebook, value_facebook, check_instagram, value_instagram, check_youtube, check_twitter, check_tiktok, check_xing, check_linkedin, check_linktree, code, creator FROM socialcodes WHERE finderid = $currentfinderID");
+		$query = $connection->prepare("SELECT id, creator, style, iconcolor, backgroundcolor, backgroundhover, finderid, check_facebook, value_facebook, check_instagram, value_instagram, check_youtube, check_twitter, check_tiktok, check_xing, check_linkedin, check_linktree, code, creator FROM socialcodes WHERE finderid = $currentfinderID");
 		$query->execute();
 		$query->setFetchMode(PDO::FETCH_ASSOC);
 
@@ -34,6 +34,7 @@ echo"Bevor: $check_facebook  $check_instagram  $check_youtube $check_twitter ";
 			$code 						= $row['code'];
 			$creator 					= $row['creator'];
 			$iconcolor 					= $row['iconcolor'];
+			$backgroundhover 				= $row['$backgroundhover'];
 			$backgroundcolor 			= $row['backgroundcolor'];
 			$value_facebook     		= $row['value_facebook'];
 			$check_facebook     		= $row['check_facebook'];
@@ -253,7 +254,7 @@ echo"Danach: $check_facebook  $check_instagram  $check_youtube $check_twitter, $
 						<hr>
 						<label for='hoverbg'>Hintergrundfarbe bei Hover</label>
 						<p>Legt die Hintergrundfarbe der Iconcontainer fest, wenn sich der Mauszeiger über diese bewegt. Zugelassene Formate sind Hex, RGB-A, CSS-Farbworte, HSL.</p>
-						<input placeholder='#fff' type='text' name='hoverbg' id='hoverbg'>
+						<input value='$backgroundhover' placeholder='#fff' type='text' name='hoverbg' id='hoverbg'>
 						<hr>
 						<label >Größe</label>
 						<p>Sie können Sie Größe der Social Media Icons in drei Stufen festlegen.</p>
