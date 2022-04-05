@@ -797,6 +797,8 @@ span#initialpreview {
     font-size: .6rem;
     margin: auto;
     margin-right: 5px;
+    background: #fff;
+    color var(--accentcolor)
 } 
 
 .creator {
