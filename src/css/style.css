@@ -1,12 +1,16 @@
 
 :root, :root.light {
---bodybackground: #f5f5f5;
---background: #fff;
---hintbackground: #f3f3f3;
---fontcolor: #727272;
---fontcolordarker:rgb(61, 70, 80); 
---accentcolor: #f47b6b;
---dividercolor: #d6d6d6;
+    --bodybackground: #f5f5f5;
+    --background: #fff;
+    --hintbackground: #f3f3f3;
+    --fontcolor: #727272;
+    --fontcolordarker:rgb(61, 70, 80); 
+    --accentcolor: #f47b6b;
+    --accentcolor2: #175aad;
+    --green: #51b15d;
+    --red: #d32e2e;
+    --dividercolor: #d6d6d6;
+    --deactivated: #a5a5a5;
 }
 
 
@@ -19,7 +23,11 @@
     --fontcolor: #ffffff60; 
     --fontcolordarker:#fff; 
     --accentcolor: #f47b6b;
+    --accentcolor2: #175aad;
+    --green: #51b15d;
+    --red: #d32e2e;
     --dividercolor: #ffffff40;
+    --deactivated: #a5a5a5;
 }
     
 
@@ -174,6 +182,8 @@ hr {
     color: #fff;
     background-color: var(--accentcolor);
     transition: .3s;
+    text-align: center;
+    display: inline-block;
 }
 
 .button > i {
@@ -186,13 +196,26 @@ hr {
 
 input[type=text], input[type=email], input[type=number], select {
     padding: 10px;
-    border: 1px solid var(--dividercolor);
+    border: none;
+    border-bottom: 2px solid var(--dividercolor);
     background-color: var(--background);
     box-shadow: none;
     display: block;
     width: 100%;
     box-sizing: border-box;
     color: var(--fontcolordarker);
+    transition: .3s ease-in-out;
+}
+
+select {
+    border: 1px solid var(--background);
+    border-bottom: 2px solid var(--dividercolor);
+}
+
+select:hover, select:focus {
+    border: 1px solid var(--background);
+    border-bottom: 2px solid var(--accentcolor);
+    background-color: var(--bodybackground);
 }
 
 input[type=checkbox] {
@@ -202,6 +225,7 @@ input[type=checkbox] {
 
 input:focus, input:hover {
     border-color: var(--accentcolor);
+    background-color: var(--bodybackground);
 }
 
 textarea {
@@ -238,6 +262,28 @@ p {
     font-size: .8rem;
     color: var(--fontcolor);
     margin: 5px 0;
+}
+
+.larger-text {
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--fontcolor);
+    margin: 15px 0;
+    padding: 15px 0;
+}
+
+.larger-text > strong {
+    color: var(--fontcolordarker);
+}
+
+.larger-text > strong.chip {
+    border-radius: 5px;
+    font-size: 1.8rem;
+    letter-spacing: 1.1;
+    margin-top: 15px;
+    padding-right: 18px;
+    padding-left: 18px;
+    cursor: pointer;
 }
 
 a.link {
@@ -290,22 +336,11 @@ label {
 }
 
 button {
-
-    position: relative;
+    border: none;
     box-sizing: border-box;
-    outline: currentcolor none 0px;
-    border: 0px none;
-    margin: 0px;
-    cursor: pointer;
-    appearance: none;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 0.875rem;
-    min-width: 64px;
-    padding: 15px 16px;
-    border-radius: 4px;
-    color: rgb(255, 255, 255);
-    background-color: var(--accentcolor);
+    height: auto;
+    font-family: 'Inria Sans', sans-serif;
+    font-size: inherit;
     }
 
 #morestyles {
@@ -318,7 +353,7 @@ button {
     font-size: .6rem;
 }
 
-button, input {
+button {
     border-radius: 3px;
 }
 
@@ -334,7 +369,7 @@ button:hover {
 }
 
 .wrapper > div {
-    flex: 1;
+    flex: 1 1 350px;
 }
 
 #notification {
@@ -468,18 +503,24 @@ button:hover {
 .tab {
     list-style: none;
     display: flex;
-    padding: 0;
+    padding: 0 0;
     margin: 0;
+  }
+
+  .tab li {
+    flex-grow: 1;
   }
   
   .tab li label  {
-    padding: 7px;
+    padding: 10px;
     font-weight: 400;
     cursor: pointer;
-    border: 1px solid var(--dividercolor);
-    display: inline-block;
+    border-bottom: 2px solid var(--dividercolor);
+    display: block;
     margin: 0;
     font-size: .8rem;
+    text-align: center;
+
   }
 
   .tab li label i {
@@ -489,17 +530,7 @@ button:hover {
   .tab li + li label {
     border-left: 0;
   }
-  
-  .tab li:first-child label {
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-  }
-  
-  .tab li:last-child label {
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    border-left: 0px;
-  }
+
   
   .tab input[type="radio"] {
     opacity: 0;
@@ -508,8 +539,9 @@ button:hover {
   }
   
   .tab input[type="radio"]:checked + label {
-    background: var(--accentcolor);
-    color: #fff;
+    background: var(--bodybackground);
+    border-bottom: 2px solid var(--accentcolor);
+    color: var(--accentcolor);
   }
   
   .tab input[type="radio"]:not(:checked) + label {
@@ -564,6 +596,446 @@ button:hover {
     margin: 0 5px;
     color: #fff;
     font-size: 1.0rem;
+}
+
+#codelib {
+    pointer-events: none;
+    opacity: 0;
+    top: 50px;
+    transition: .2s ease-in-out;
+}
+
+#codelib.active {
+    pointer-events: all;
+    opacity: 1;
+    top: 0;
+}
+
+.listcontainer {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+
+    z-index: 99;
+}
+
+.listcontainer #loadcode {
+    margin: auto;
+    width: 30%;
+    min-height: 15%;
+    width: 35%;
+    background-color: var(--background);
+    border: 1px solid var(--dividercolor);
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 4px 1px 15px -6px rgb(0 0 0 / 41%);
+}
+
+.listcontainer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+    height: 92%;
+}
+
+.listcontainer ul li {
+    list-style: none;
+    padding: 15px;
+    background: var(--background);
+    cursor: pointer;
+}
+
+.listcontainer ul li + li {
+    border-top: 1px solid var(--dividercolor);
+}
+
+.listcontainer ul li:nth-child(even){
+    background-color: var(--hintbackground);
+}
+
+#listcontainerhead {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    border-bottom: 2px solid var(--dividercolor);
+}
+
+#closelistcontainer {
+    right: 0;
+    top: 0;
+    text-align: right;
+    transition: .3s;
+    cursor: pointer;
+    color: var(--fontcolor);
+    position: absolute;
+    padding: 20px;
+}
+
+#closelistcontainer:hover {
+    color: var(--fontcolordarker);
+}
+
+#load-code {
+    background: var(--accentcolor2);
+}
+
+button#savecode,
+#saveme,
+button.save {
+    color: #fff;
+    background: var(--green);
+    height: auto !important;
+}
+
+button#savecode i,
+#saveme,
+button.save i {
+    margin-right: 5px;
+}
+
+.socialmedialist {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    overflow: scroll;
+}
+
+.tag {
+    border-radius: 50px;
+    font-size: .65rem;
+    padding: 4px 8px;
+    border: 1px solid var(--dividercolor);
+    background-color: var(--hintbackground);
+    color: var(--fontcolor);
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 5px 0 5px 0;
+}
+
+.tag i {
+    margin-right: 4px;
+}
+
+.tag +.tag {
+    margin-left: 5px;
+}
+
+.styleingtag {
+    color: #fff;
+    background-color: var(--accentcolor);
+}
+
+#morebtn {
+    position: relative;
+}
+
+#moremenu {
+    display: block;
+    list-style: none;
+    background: var(--background);
+    color: var(--fontcolordarker);
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    transition:  .3s;
+    opacity: 0;
+    box-shadow: -9px -1px 15px -6px rgba(0,0,0,0.41);
+}
+
+#moremenu.active {
+    opacity: 1;
+    pointer-events: all;
+    bottom: 50px;
+}
+
+#moremenu li {
+    padding: 15px;
+    transition: .3s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+#moremenu li a {
+    text-decoration: none;
+    color: var(--fontcolordarker);
+}
+
+#moremenu li i {
+    margin-right: 5px;
+    color: var(--accentcolor);
+}
+
+#moremenu li:hover {
+    background: var(--hintbackground);
+}
+
+#initialpreview {
+    height: 25px;
+    width: 25px;
+    padding: 8px 10px 10px 10px;
+    border-radius: 100%;
+    border: 1px solid var(--dividercolor);
+    background: var(--accentcolor);
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+
+span#initialpreview {
+    padding: 5px;
+    width: 5px;
+    height: 5px;
+    font-size: .6rem;
+    margin: auto;
+    margin-right: 5px;
+    background: #fff;
+    color: var(--accentcolor);
+} 
+
+.creator {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    padding: 8px 10px 10px 10px;
+    border-radius: 100%;
+    border: 1px solid var(--dividercolor);
+    background: rgb(255,255,255);
+    background: linear-gradient(160deg, rgba(255,255,255,1) 0%, rgba(193,193,193,1) 100%);
+    color: var(--accentcolor);
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-size: .7rem;
+    margin-right: 5px;
+}
+
+.row {
+    display: flex;
+    align-content: flex-start;
+    flex-direction: row;
+}
+
+#success-icon  {
+    text-align: center;
+    color: var(--green);
+    font-size: 4rem;
+    margin: auto;
+    padding: 15px;
+}
+
+#error-icon  {
+    text-align: center;
+    color: var(--red);
+    font-size: 4rem;
+    margin: auto;
+    padding: 15px;
+}
+
+.full-height.flex {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.center-box {
+    align-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    width: auto !important;
+}
+
+.center-box.popup {
+    width: 35%;
+    margin: auto;
+}
+
+.row > div {
+    margin: auto;
+    margin-top: 0;
+}
+
+.row > div:first-child {
+    margin-left: 0;
+    margin-top: auto;
+}
+
+.row > div:last-child {
+    margin-right: 0;
+    width: 90%;
+}
+
+.chip {
+    border: 1px solid var(--dividercolor);
+    padding: 10px;
+    border-radius: 25px;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+input[type=checkbox].toogle {
+    opacity: 0;
+    position: absolute;
+}
+
+input[type=checkbox].toogle + label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    cursor: pointer;
+}
+
+
+input[type=checkbox]:checked.toogle + label {
+    position: relative;
+}
+
+input[type=checkbox].toogle + label::before {
+    height: .2em;
+    width: 1.3em;
+    display: flex;
+    content: "";
+    border-radius: 2px;
+    background: var(--dividercolor);
+    margin-right: 10px;
+}
+
+input[type=checkbox]:checked.toogle + label::after {
+    height: .8em;
+    width: .8em;
+    display: flex;
+    content: "";
+    background: grey;
+    border-radius: 50%;
+    position: absolute;
+    left: .5em;
+    background: var(--green);
+}
+
+input[type=checkbox].toogle + label::after {
+    height: .8em;
+    width: .8em;
+    content: "";
+    background: grey;
+    border-radius: 50%;
+    position: absolute;
+    background: var(--deactivated);
+    border-radius: 50%;
+    left: 0;
+    transition: .3s;
+}
+
+.previewbutton {
+    text-align: center;
+    color: var(--accentcolor);
+}
+
+.previewbutton i {
+    margin-right: 5px;
+}
+
+#success-icon {
+    color: var(--green);
+    font-size: 3rem;
+    padding: 15px;
+    margin: 5px auto;
+    text-align: center;
+}
+
+.btn-group .center {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+#icon-direction-col {
+    transform: rotate(90deg);
+}
+
+#creationcode:hover {
+    background: var(--bodybackground);
+}
+
+.loader {
+    position: fixed;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.83);
+    z-index: 99;
 
 }
+
+.loader > .loaderspin {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 3px solid var(--accentcolor);
+    border-left: 3px solid transparent;
+    margin: auto;
+    animation-name: spin;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.static-hint {
+    background: var(--accentcolor2a);
+}
+
+.static-hint strong {
+    color: var(--fontcolordarker);
+}
+
+.actionbuttons {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.actionbuttons a {
+    text-decoration: none;
+    color: var(--accentcolor);
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+
+.actionbuttons a i {
+    color: var(--accentcolor);
+    margin: 0 5px;
+    font-size: 1.0rem;
+}
+
+#directcode {
+
+}
+
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+
+
 
